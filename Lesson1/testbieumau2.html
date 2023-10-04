@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sơ yếu lí lịch</title>
+</head>
+
+<body style="background-color:aliceblue;" style="font-size:150%;">
+    <form action="" name="SYLL" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>
+                <h1>Sơ yếu lí lịch:</h1>
+            </legend>
+            Họ và tên:<br>
+            <input name="name" type="text" style="width:350px ;"><br><br>
+            Ngày sinh: <input type="date"><br><br>
+            Giới tính:
+            <input name="gender" type="radio">Nam
+            <input name="gender" type="radio">Nữ
+            <input name="gender" type="radio">Khác<br><br>
+            Số điện thoại:<br>
+            <input type="number" style="width:350px ;"><br><br>
+            Địa chỉ:<br>
+            <input type="text" style="width:350px ;"><br><br>
+            Số CMT/CCCD:<br>
+            <input type="number" style="width:350px ;"><br><br>
+            Ngày và giờ cấp CMT/CCCD:<br>
+            <input type="datetime-local" style="width:350px ;"><br><br>
+            Điểm yếu và điểm mạnh của bạn là gì?<br>
+            <table border="1" width="550" height="50">
+                <tr>
+                    <td style="text-align:center;">Điểm mạnh</td>
+                    <td style="text-align:center;">Điểm yếu</td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                            <li><input style="border:none" type="text"></li>
+                        </ul>
+                    </td>
+                </tr>
+            </table><br>
+            Sở thích:<br>
+            <ul>
+                <li><input style="width:500px; border:none;" type="text"></li>
+                <li><input style="width:500px; border:none;" type="text"></li>
+                <li><input style="width:500px; border:none;" type="text"></li>
+                <li><input style="width:500px; border:none;" type="text"></li>
+                <li><input style="width:500px; border:none;" type="text"></li>
+            </ul>
+            Học vấn: <sup><input style="width:50px" type="number"></sup> /12<br><br>
+            <input style="width: 100px;;" style="height: 100px;" type="reset"> <input style="width: 100px;;"
+                style="height: 100px;" type="submit"><br><br>
+        </fieldset>
+    </form>
+</body>
+
+</html>

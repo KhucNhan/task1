@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>th3 (Done)</title>
+    <style>
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #menu,
+        #menu ul,
+        #menu li {
+            margin: 0;
+            padding: 0;
+        }
+
+        .hoso {
+            font-size: 150%;
+            background-color: aqua;
+        }
+
+        body {
+            font-size: 150%;
+            background-color: lightyellow;
+        }
+
+        #menu li {
+            width: 250px;
+            position: relative;
+            transition: 0.1s background-color;
+        }
+
+        #menu li:hover {
+            background-color: violet;
+        }
+
+        #menu ul {
+            position: absolute;
+        }
+
+        .d101 {
+            position: relative;
+            left: 250px;
+            bottom: 40px;
+            background-color: lightgreen;
+        }
+
+        #menu ul ul {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            visibility: hidden;
+        }
+
+        #menu ul li:hover ul {
+            visibility: visible;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <ul>
+            <li><a class="hoso" href=".#.">Hồ sơ lớp D101</a>
+                <ul>
+                    <li class="d101"><a class="name" href=".#.">Nguyễn Thị Phương Anh</a></li>
+                    <li class="d101"><a class="name" href=".#.">Nguyễn Chí Anh</a></li>
+                    <li class="d101"><a class="name" href=".#.">Vũ Thị Ngọc Ánh</a></li>
+                    <li class="d101"><a class="name" href=".#.">Phạm Tiến Công</a></li>
+                    <li class="d101"><a class="name" href=".#.">Phạm Văn Đam</a></li>
+                    <li class="d101"><a class="name" href=".#.">Lê Văn Dân</a></li>
+                    <li class="d101"><a class="name" href=".#.">Kiều Tấn Dũng</a></li>
+                    <li class="d101"><a class="name" href=".#.">Trương Đức Duy</a></li>
+                    <li class="d101"><a class="name" href=".#.">Đỗ Minh Hiếu</a></li>
+                    <li class="d101"><a class="name" href=".#.">Lê Minh Hòa</a></li>
+                    <li class="d101"><a class="name" href=".#.">Vũ Đức Hoàng</a></li>
+                    <li class="d101"><a class="name" href=".#.">Đỗ Quốc Huy</a></li>
+                    <li class="d101"><a class="name" href=".#.">Thế Hồng Bảo Khánh</a></li>
+                    <li class="d101"><a class="name" href=".#.">Nguyễn Đức Khánh</a></li>
+                    <li class="d101"><a class="name" href=".#.">Vương Tuấn Minh</a></li>
+                    <li class="d101"><a class="name" href=".#.">Khúc Chí Nhân</a></li>
+                    <li class="d101"><a class="name" href=".#.">Nguyễn Nhân Sâm</a></li>
+                    <li class="d101"><a class="name" href=".#.">Nguyễn Bình Sơn</a></li>
+                    <li class="d101"><a class="name" href=".#.">Nguyễn Viết Tâm</a></li>
+                    <li class="d101"><a class="name" href=".#.">Nguyễn Thiên</a></li>
+                    <li class="d101"><a class="name" href=".#.">Phạm Thị Kim Thủy</a></li>
+                    <li class="d101"><a class="name" href=".#.">Trần Thị Huyền Trang</a></li>
+                </ul>
+            </li>
+            <li><a class="hoso" href=".#.">Hồ sơ lớp D102</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

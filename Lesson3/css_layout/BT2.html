@@ -4,8 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        header {
+            position: fixed;
+            top:0;
+            width: 100%;
+            line-height: 50 px;
+            background-color: lightgray;
+            font-size: 150%;
+            text-align:center;
+            z-index: 2;
+        }
+        ul li {
+            list-style-type: none;
+            margin-bottom:20px;
+            margin-top:10px;
+        }
+        li {
+            display: inline-block;
+            line-height: 30px;
+            font-size: 130%;
+            margin-inline: 50px;
+        }
+        #left {
+            float:left !important;
+            width: 15%;
+            height:1500px;
+            background-color: lightyellow;
+        }
+        #right {
+            float:right !important;
+            width: 15%;
+            height: 1500px;
+            background-color: lightyellow;
+            position: relative;
+            bottom: 30px;
+        }
+        footer {
+            width: 100%;
+            clear:both;
+            height: 50px;
+            color:gray;
+            background-color: lightgray;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            z-index: 1;
+        }
+        nav {
+            text-align: center;
+            background-color: pink;
+            position: relative;
+            top:10px;
+        }
+        h1 {
+            position: relative;
+            top:30px;
+        }
+        body {
+            font-size:150%;
+        }
+        div {
+            display: inline-block;
+            width: 600px;
+            border: 1px solid black;
+            margin: 0;
+        }
+        article {
+            margin: auto;
+            padding:0;
+            width: 65%;
+        }
+    </style>
 </head>
 <body>
-    
+    <section>
+        <header>This is header</header>
+        <h1>This is headlink</h1>
+    </section>
+    <nav>
+        <ul>
+            <li>1</li>|
+            <li>2</li>|
+            <li>3</li>|
+            <li>4</li>|
+            <li>5</li>
+        </ul>
+    </nav>
+    <aside id="left">Side bar - left</aside>
+    <article>
+    <div id="nd1">ND1</div>
+    <div id="nd2">ND2</div>
+    </article>
+    <aside id="right">Side bar - right</aside>
+    <footer>This web was made by Khuc Chi Nhan</footer>
 </body>
 </html>

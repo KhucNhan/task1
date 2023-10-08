@@ -244,6 +244,7 @@
         #div1-sec5 {
             width: 50%;
             margin-top: 20px;
+            margin-right: 20px;
             float: right;
             height: 50%;
             background-color: white;
@@ -380,12 +381,107 @@
         #sec7 #table2 .div-table2-sec7 b {
             text-align: center;
         }
+
         #sec7 #table3 {
-            margin-top:100px;
+            margin-top: 150px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 1200px;
+        }
+
+        .img-table3-sec7 {
+            width: 100%;
+            height: 400px;
+            border-top-right-radius: 25px;
+            border-top-left-radius: 25px;
+        }
+
+        #sec7 #table3 td {
+            text-align: center;
+        }
+
+        #sec7 #table3 div {
+            margin-inline: 20px;
+        }
+
+        #sec8 {
+            margin-top: 100px;
+            position: relative;
+            top: 200px;
+        }
+
+        #div1-sec8 {
+            margin-left: 50px;
+            width: 45%;
+            float: left;
+        }
+
+        #div1-sec8 input {
+            height: 50px;
+            width: 400px;
+        }
+
+        #sub-sec8 {
+            background-color: white;
+            border-left: none;
+            transition: color background-color;
+            cursor: pointer;
+        }
+
+        #sub-sec8:hover {
+            color: white;
+            background-color: black;
+        }
+
+        #sec8 ul li {
+            list-style-type: none;
+        }
+
+        #sec8 nav ul {
+            display: inline;
+            float: left;
+        }
+
+        #div2-sec8 {
+            float: right;
+            width: 45%;
+        }
+
+        #div2-sec8 a {
+            text-decoration: underline;
+            color: gray;
+        }
+
+        #sec9 {
+            margin-top: 700px;
+            clear: both;
+            background-color: black;
+        }
+
+        #sec9 table {
+            margin-left: auto;
+            margin-right: auto;
+            height: 500px;
+        }
+
+        #sec9 table td {
+            width: 300px;
+            color: white;
+        }
+
+        #ava {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+        footer {
+            background-color: gray;
+            height: 60px;
+            text-align: center;
         }
 
         body {
-            overflow-inline: hidden;
+            overscroll-behavior-inline: none;
         }
     </style>
 </head>
@@ -1040,31 +1136,231 @@
         </table>
         <table id="table3">
             <tr>
-                <td><img class="img-table3-sec7"
-                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8baae157ffbe56548790d776/yty.jpg">
+                <td>
+                    <div><img class="img-table3-sec7"
+                            src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8baae157ffbe56548790d776/yty.jpg">
+                    </div>
                 </td>
-                <td><img class="img-table3-sec7"
-                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8d481fe712f85027870c837e/rtrtrt.jpg">
+                <td>
+                    <div><img class="img-table3-sec7"
+                            src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8d481fe712f85027870c837e/rtrtrt.jpg">
+                    </div>
                 </td>
-                <td><img class="img-table3-sec7"
-                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/9765013a9a185d16adf414dd/b1182e8f-cee4-f571-00ff-b553b7f96898.jpg">
+                <td>
+                    <div><img class="img-table3-sec7"
+                            src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/9765013a9a185d16adf414dd/b1182e8f-cee4-f571-00ff-b553b7f96898.jpg">
+                    </div>
                 </td>
             </tr>
             <tr>
-                <td><b>Breads</b></td>
-                <td><b>Cookies</b></td>
-                <td><b>Pastries</b></td>
+                <td style="text-align: start;">
+                    <div>
+                        <b>Breads</b>
+                    </div>
+                </td>
+                <td style="text-align: start;">
+                    <div>
+                        <b>Cookies</b>
+                    </div>
+                </td>
+                <td style="text-align: start;">
+                    <div>
+                        <b>Pastries</b>
+                    </div>
+                </td>
             </tr>
             <tr>
-                <td>Sample text. Click to select the text box. Click again or double click to start editing the text.
+                <td style="text-align: start;">
+                    <div>
+                        <p>Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
                 </td>
-                <td>Sample text. Click to select the text box. Click again or double click to start editing the text.
+                <td style="text-align: start;">
+                    <div>
+                        <p>Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
                 </td>
-                <td>Sample text. Click to select the text box. Click again or double click to start editing the text.
+                <td style="text-align: start;">
+                    <div>
+                        <p>Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
                 </td>
             </tr>
         </table>
     </section>
+    <section id="sec8">
+        <div id="div1-sec8">
+            <b>Sign up for the newsletter</b><br>
+            <p>Want to be the first to read our news? Subscribe to the newsletter to keep abreast of all events.</p><br>
+            <input type="email" placeholder="Enter a valid email address"><input id="sub-sec8"
+                style="width: auto;height:56px ;" type="submit"><br><br>
+            <nav>
+                <ul>
+                    <li><a href="#">
+                            <svg width="64px" height="64px" viewBox="0 -0.5 25 25" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M11.75 19C11.75 19.4142 12.0858 19.75 12.5 19.75C12.9142 19.75 13.25 19.4142 13.25 19H11.75ZM13.25 11C13.25 10.5858 12.9142 10.25 12.5 10.25C12.0858 10.25 11.75 10.5858 11.75 11H13.25ZM15.5 5.75C15.9142 5.75 16.25 5.41421 16.25 5C16.25 4.58579 15.9142 4.25 15.5 4.25V5.75ZM12.5 8H11.75H12.5ZM11.75 11C11.75 11.4142 12.0858 11.75 12.5 11.75C12.9142 11.75 13.25 11.4142 13.25 11H11.75ZM12.5 10.25C12.0858 10.25 11.75 10.5858 11.75 11C11.75 11.4142 12.0858 11.75 12.5 11.75V10.25ZM14.5 11.75C14.9142 11.75 15.25 11.4142 15.25 11C15.25 10.5858 14.9142 10.25 14.5 10.25V11.75ZM12.5 11.75C12.9142 11.75 13.25 11.4142 13.25 11C13.25 10.5858 12.9142 10.25 12.5 10.25V11.75ZM10.5 10.25C10.0858 10.25 9.75 10.5858 9.75 11C9.75 11.4142 10.0858 11.75 10.5 11.75V10.25ZM13.25 19V11H11.75V19H13.25ZM15.5 4.25C13.4289 4.25 11.75 5.92893 11.75 8H13.25C13.25 6.75736 14.2574 5.75 15.5 5.75V4.25ZM11.75 8V11H13.25V8H11.75ZM12.5 11.75H14.5V10.25H12.5V11.75ZM12.5 10.25H10.5V11.75H12.5V10.25Z"
+                                        fill="#000000"></path>
+                                </g>
+                            </svg></a></li>
+                    <li><a href="#"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.7828 3.91825C20.1313 3.83565 20.3743 3.75444 20.5734 3.66915C20.8524 3.54961 21.0837 3.40641 21.4492 3.16524C21.7563 2.96255 22.1499 2.9449 22.4739 3.11928C22.7979 3.29366 23 3.6319 23 3.99986C23 5.08079 22.8653 5.96673 22.5535 6.7464C22.2911 7.40221 21.9225 7.93487 21.4816 8.41968C21.2954 11.7828 20.3219 14.4239 18.8336 16.4248C17.291 18.4987 15.2386 19.8268 13.0751 20.5706C10.9179 21.3121 8.63863 21.4778 6.5967 21.2267C4.56816 20.9773 2.69304 20.3057 1.38605 19.2892C1.02813 19.0108 0.902313 18.5264 1.07951 18.109C1.25671 17.6916 1.69256 17.4457 2.14144 17.5099C3.42741 17.6936 4.6653 17.4012 5.6832 16.9832C5.48282 16.8742 5.29389 16.7562 5.11828 16.6346C4.19075 15.9925 3.4424 15.1208 3.10557 14.4471C2.96618 14.1684 2.96474 13.8405 3.10168 13.5606C3.17232 13.4161 3.27562 13.293 3.40104 13.1991C2.04677 12.0814 1.49999 10.5355 1.49999 9.49986C1.49999 9.19192 1.64187 8.90115 1.88459 8.71165C1.98665 8.63197 2.10175 8.57392 2.22308 8.53896C2.12174 8.24222 2.0431 7.94241 1.98316 7.65216C1.71739 6.3653 1.74098 4.91284 2.02985 3.75733C2.1287 3.36191 2.45764 3.06606 2.86129 3.00952C3.26493 2.95299 3.6625 3.14709 3.86618 3.50014C4.94369 5.36782 6.93116 6.50943 8.78086 7.18568C9.6505 7.50362 10.4559 7.70622 11.0596 7.83078C11.1899 6.61019 11.5307 5.6036 12.0538 4.80411C12.7439 3.74932 13.7064 3.12525 14.74 2.84698C16.5227 2.36708 18.5008 2.91382 19.7828 3.91825ZM10.7484 9.80845C10.0633 9.67087 9.12171 9.43976 8.09412 9.06408C6.7369 8.56789 5.16088 7.79418 3.84072 6.59571C3.86435 6.81625 3.89789 7.03492 3.94183 7.24766C4.16308 8.31899 4.5742 8.91899 4.94721 9.10549C5.40342 9.3336 5.61484 9.8685 5.43787 10.3469C5.19827 10.9946 4.56809 11.0477 3.99551 10.9046C4.45603 11.595 5.28377 12.2834 6.66439 12.5135C7.14057 12.5929 7.49208 13.0011 7.49986 13.4838C7.50765 13.9665 7.16949 14.3858 6.69611 14.4805L5.82565 14.6546C5.95881 14.7703 6.103 14.8838 6.2567 14.9902C6.95362 15.4727 7.65336 15.6808 8.25746 15.5298C8.70991 15.4167 9.18047 15.6313 9.39163 16.0472C9.60278 16.463 9.49846 16.9696 9.14018 17.2681C8.49626 17.8041 7.74425 18.2342 6.99057 18.5911C6.63675 18.7587 6.24134 18.9241 5.8119 19.0697C6.14218 19.1402 6.48586 19.198 6.84078 19.2417C8.61136 19.4594 10.5821 19.3126 12.4249 18.6792C14.2614 18.0479 15.9589 16.9385 17.2289 15.2312C18.497 13.5262 19.382 11.1667 19.5007 7.96291C19.51 7.71067 19.6144 7.47129 19.7929 7.29281C20.2425 6.84316 20.6141 6.32777 20.7969 5.7143C20.477 5.81403 20.1168 5.90035 19.6878 5.98237C19.3623 6.04459 19.0272 5.94156 18.7929 5.70727C18.0284 4.94274 16.5164 4.43998 15.2599 4.77822C14.6686 4.93741 14.1311 5.28203 13.7274 5.89906C13.3153 6.52904 13 7.51045 13 8.9999C13 9.28288 12.8801 9.5526 12.6701 9.74221C12.1721 10.1917 11.334 9.92603 10.7484 9.80845Z"
+                                        fill="#0F0F0F"></path>
+                                </g>
+                            </svg></a></li>
+                    <li><a href="#"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z"
+                                        fill="#0F0F0F"></path>
+                                    <path
+                                        d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z"
+                                        fill="#0F0F0F"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z"
+                                        fill="#0F0F0F"></path>
+                                </g>
+                            </svg></a></li>
+                    <li><a href="#"><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"
+                                        fill="#0F0F0F"></path>
+                                </g>
+                            </svg></a></li>
+                    <li><a href="#"><svg width="64px" height="64px" viewBox="0 0 48 48" id="a"
+                                xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <defs>
+                                        <style>
+                                            .b {
+                                                fill: none;
+                                                stroke: #000000;
+                                                stroke-linecap: round;
+                                                stroke-linejoin: round;
+                                            }
+                                        </style>
+                                    </defs>
+                                    <polyline class="b"
+                                        points="12.466 19.2658 19.182 19.2658 12.466 29.4028 19.182 29.4028"></polyline>
+                                    <path class="b"
+                                        d="m41.517,4.5018l-29.011.0354C3.882,11.9372,1.282,21.9552,8.976,36.4482c.4875,1.7082-.359,3.42-1.9992,5.1283,2.3642.3218,4.7693-.1218,6.863-1.266,13.983,6.27,21.919,2.1805,29.644-2.7323l.0355-31.074c.0013-1.1046-.8931-2.001-1.9977-2.0023-.0015,0-.003,0-.0045,0h0Z">
+                                    </path>
+                                    <path class="b"
+                                        d="m25.63,26.791c0,1.4425-1.2196,2.6118-2.724,2.6118s-2.724-1.1694-2.724-2.6118v-1.6978c0-1.4425,1.2196-2.6118,2.724-2.6118s2.724,1.1694,2.724,2.6118">
+                                    </path>
+                                    <path class="b"
+                                        d="m34.7606,22.483h0c1.4987,0,2.7136,1.2149,2.7136,2.7136v1.4948c0,1.4987-1.2149,2.7136-2.7136,2.7136h0c-1.4987,0-2.7136-1.2149-2.7136-2.7136v-1.4948c0-1.4987,1.2149-2.7136,2.7136-2.7136Z">
+                                    </path>
+                                    <line class="b" x1="25.63" y1="29.403" x2="25.63" y2="22.482"></line>
+                                    <path class="b" d="m28.311,18.955v9.1434c0,.7214.5848,1.3062,1.3062,1.3062h.3918">
+                                    </path>
+                                </g>
+                            </svg></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="div2-sec8">
+            <b>Hours & Location</b><br><br>
+            <a id="loacation" href="#">Không cần biết địa chỉ nhà của Nhân đâu nhó</a><br>
+            <p>Monday - Sunday<br>
+                7:00am - 8:00pm</p>
+        </div>
+    </section>
+    <section id="sec9">
+        <table id="table-sec9">
+            <tr>
+                <th colspan="4"><img id="ava"
+                        src="https://scontent.fhan5-6.fna.fbcdn.net/v/t39.30808-6/323709880_699122681613584_1811813546570495365_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a2f6c7&_nc_ohc=2_945wLIkcoAX_Bmo5B&_nc_ht=scontent.fhan5-6.fna&oh=00_AfCkp66vWEBc0-EsRx6eNqUQDlwOnrtwSE7wZwMPuW9eCw&oe=6526EA18">
+                </th>
+            </tr>
+            <tr>
+                <td><b>Headline</b><br>
+                    Sample footer text</td>
+                <td><b>Headline</b><br>
+                    Sample footer text</td>
+                <td><b>Headline</b><br>
+                    Sample footer text</td>
+                <td><b>Headline</b><br>
+                    Sample footer text</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">
+                    <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="-143 145 512 512" xml:space="preserve" stroke="#ffffff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path
+                                    d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7 c-20.8,20.8-44.9,37.1-71.8,48.4c-27.8,11.8-57.4,17.7-88,17.7c-30.5,0-60.1-6-88-17.7c-26.9-11.4-51.1-27.7-71.8-48.4 c-20.8-20.8-37.1-44.9-48.4-71.8C-107,461.1-113,431.5-113,401s6-60.1,17.7-88c11.4-26.9,27.7-51.1,48.4-71.8 c20.9-20.8,45-37.1,71.9-48.5C52.9,181,82.5,175,113,175s60.1,6,88,17.7c26.9,11.4,51.1,27.7,71.8,48.4 c20.8,20.8,37.1,44.9,48.4,71.8c11.8,27.8,17.7,57.4,17.7,88c0,30.5-6,60.1-17.7,88C309.8,515.8,293.5,540,272.8,560.7z">
+                                </path>
+                                <path
+                                    d="M146.8,313.7c10.3,0,21.3,3.2,21.3,3.2l6.6-39.2c0,0-14-4.8-47.4-4.8c-20.5,0-32.4,7.8-41.1,19.3 c-8.2,10.9-8.5,28.4-8.5,39.7v25.7H51.2v38.3h26.5v133h49.6v-133h39.3l2.9-38.3h-42.2v-29.9C127.3,317.4,136.5,313.7,146.8,313.7z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg> <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="-143 145 512 512" xml:space="preserve" stroke="#ffffff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path
+                                    d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7 c-20.8,20.8-44.9,37.1-71.8,48.4c-27.8,11.8-57.4,17.7-88,17.7c-30.5,0-60.1-6-88-17.7c-26.9-11.4-51.1-27.7-71.8-48.4 c-20.8-20.8-37.1-44.9-48.4-71.8C-107,461.1-113,431.5-113,401s6-60.1,17.7-88c11.4-26.9,27.7-51.1,48.4-71.8 c20.9-20.8,45-37.1,71.9-48.5C52.9,181,82.5,175,113,175s60.1,6,88,17.7c26.9,11.4,51.1,27.7,71.8,48.4 c20.8,20.8,37.1,44.9,48.4,71.8c11.8,27.8,17.7,57.4,17.7,88c0,30.5-6,60.1-17.7,88C309.8,515.8,293.5,540,272.8,560.7z">
+                                </path>
+                                <path
+                                    d="M234.3,313.1c-10.2,6-21.4,10.4-33.4,12.8c-9.6-10.2-23.3-16.6-38.4-16.6c-29,0-52.6,23.6-52.6,52.6c0,4.1,0.4,8.1,1.4,12 c-43.7-2.2-82.5-23.1-108.4-55c-4.5,7.8-7.1,16.8-7.1,26.5c0,18.2,9.3,34.3,23.4,43.8c-8.6-0.3-16.7-2.7-23.8-6.6v0.6 c0,25.5,18.1,46.8,42.2,51.6c-4.4,1.2-9.1,1.9-13.9,1.9c-3.4,0-6.7-0.3-9.9-0.9c6.7,20.9,26.1,36.1,49.1,36.5 c-18,14.1-40.7,22.5-65.3,22.5c-4.2,0-8.4-0.2-12.6-0.7c23.3,14.9,50.9,23.6,80.6,23.6c96.8,0,149.7-80.2,149.7-149.7 c0-2.3,0-4.6-0.1-6.8c10.3-7.5,19.2-16.7,26.2-27.3c-9.4,4.2-19.6,7-30.2,8.3C222.1,335.7,230.4,325.4,234.3,313.1z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg> <svg fill="#ffffff" height="64px" width="64px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="-143 145 512 512" xml:space="preserve" stroke="#ffffff">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <path
+                                    d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M272.8,560.7 c-20.8,20.8-44.9,37.1-71.8,48.4c-27.8,11.8-57.4,17.7-88,17.7c-30.5,0-60.1-6-88-17.7c-26.9-11.4-51.1-27.7-71.8-48.4 c-20.8-20.8-37.1-44.9-48.4-71.8C-107,461.1-113,431.5-113,401s6-60.1,17.7-88c11.4-26.9,27.7-51.1,48.4-71.8 c20.9-20.8,45-37.1,71.9-48.5C52.9,181,82.5,175,113,175s60.1,6,88,17.7c26.9,11.4,51.1,27.7,71.8,48.4 c20.8,20.8,37.1,44.9,48.4,71.8c11.8,27.8,17.7,57.4,17.7,88c0,30.5-6,60.1-17.7,88C309.8,515.8,293.5,540,272.8,560.7z">
+                                </path>
+                                <path
+                                    d="M191.6,273h-157c-27.3,0-49.5,22.2-49.5,49.5v52.3v104.8c0,27.3,22.2,49.5,49.5,49.5h157c27.3,0,49.5-22.2,49.5-49.5V374.7 v-52.3C241,295.2,218.8,273,191.6,273z M205.8,302.5h5.7v5.6v37.8l-43.3,0.1l-0.1-43.4L205.8,302.5z M76.5,374.7 c8.2-11.3,21.5-18.8,36.5-18.8s28.3,7.4,36.5,18.8c5.4,7.4,8.5,16.5,8.5,26.3c0,24.8-20.2,45.1-45.1,45.1C88,446.1,68,425.8,68,401 C68,391.2,71.2,382.1,76.5,374.7z M216.1,479.5c0,13.5-11,24.5-24.5,24.5h-157c-13.5,0-24.5-11-24.5-24.5V374.7h38.2 c-3.3,8.1-5.2,17-5.2,26.3c0,38.6,31.4,70,70,70c38.6,0,70-31.4,70-70c0-9.3-1.9-18.2-5.2-26.3h38.2V479.5z">
+                                </path>
+                            </g>
+                        </g>
+                    </svg>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        Designer: Khúc Chí Nhân<br>
+        <small>cấm ăn cắp</small>
+    </footer>
+
 </body>
 
 </html>

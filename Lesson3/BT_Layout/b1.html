@@ -10,6 +10,7 @@
             width: 100%;
             display: block;
         }
+
         #header {
             font-family: Georgia, 'Times New Roman', Times, serif;
             color: lightgray;
@@ -90,6 +91,7 @@
             border: 2px solid black;
             height: 80px;
             width: 200px;
+            background-color: white;
             transition: 0.1s color background-color;
             cursor: pointer;
         }
@@ -171,20 +173,22 @@
 
         #sec4 {
             margin-bottom: 100px;
+            clear: both;
+            height: 700px;
         }
 
-        #div1-sec4 {
+        #div1_sec4 {
             float: left;
             margin-left: 150px;
             height: 500px;
             width: 35%;
         }
 
-        #div1-sec4 table tr td h1 {
+        #div1_sec4 table tr td h1 {
             font-size: 200%;
         }
 
-        #div1-sec4 table tr td hr {
+        #div1_sec4 table tr td hr {
             width: 70%;
             float: left;
         }
@@ -203,19 +207,15 @@
 
         #sec5 {
             background-color: rgb(187, 133, 66);
+            width: 100%;
+            height: 1000px;
+            z-index: -1;
         }
-        #div1-sec5 {
-            border-radius: 25px;
-            padding:20px;
-            margin-right: 25px;
-            width: 30%;
-            float: right;
-            position: relative;
-            left: 600px;
-        }
+
         #but-sec5 {
             border-radius: 25px;
             border: 2px solid black;
+            background-color: white;
             height: 80px;
             width: 200px;
             transition: 0.1s color background-color;
@@ -225,6 +225,167 @@
         #but-sec5:hover {
             color: white;
             background-color: black;
+        }
+
+        #sec5 h1 {
+            font-size: 200%;
+        }
+
+        #img1-sec5 {
+            width: 50%;
+            height: 50%;
+            border-radius: 25px;
+            position: relative;
+            bottom: 150px;
+            left: 200px;
+            z-index: 1;
+        }
+
+        #div1-sec5 {
+            width: 50%;
+            margin-top: 20px;
+            float: right;
+            height: 50%;
+            background-color: white;
+            border: 10px solid white;
+            border-radius: 25px;
+            height: max-content;
+            padding: 20px;
+            z-index: 2;
+            position: relative;
+        }
+
+        #img2-sec5 {
+            border: 10px solid white;
+            border-radius: 25px;
+            width: 25%;
+            height: 25%;
+            position: relative;
+            bottom: 350px;
+            left: 750px;
+            z-index: 2;
+        }
+
+        #sec6 {
+            margin-top: 100px;
+            position: relative;
+        }
+
+        #img1-sec6 {
+            width: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+        }
+
+        #div2-sec6 {
+            width: 45%;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        #but-sec6 {
+            border-radius: 25px;
+            border: 2px solid black;
+            background-color: white;
+            height: 80px;
+            width: 200px;
+            transition: 0.1s color background-color;
+            cursor: pointer;
+        }
+
+        #but-sec6:hover {
+            color: white;
+            background-color: black;
+        }
+
+        #sec6 h1 {
+            font-size: 200%;
+        }
+
+        #sec6 b {
+            font-size: 150%;
+        }
+
+        #sec6 sup {
+            font-size: 125%;
+        }
+
+        #sec7 {
+            margin-top: 100px;
+            background-color: rgb(187, 133, 66);
+            height: 2200px;
+        }
+
+        #sec7 table {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #sec7 #th1 {
+            font-size: 200%;
+            text-align: center;
+            height: 200px;
+            color: white;
+        }
+
+        #sec7 #table1 td {
+            height: 400px;
+            width: 270px;
+            border-radius: 25px;
+            padding: 10px;
+            padding-inline: 20px;
+            text-align: center;
+        }
+
+        .div-sec7 {
+            padding: 20px;
+            background-color: white;
+            border-radius: 25px;
+        }
+
+        .img-sec7 {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+        }
+
+        .div-table2-sec7 {
+            padding: 0;
+            margin: 20px;
+            background-color: white;
+            border-radius: 25px;
+            width: 350px;
+            height: 250px;
+        }
+
+        #sec7 #table2 td {
+            height: 400px;
+            width: 270px;
+            border-radius: 25px;
+            padding: 20px;
+            padding-inline: 20px;
+            text-align: center;
+        }
+
+        #sec7 #th2 {
+            font-size: 200%;
+            color: white;
+        }
+
+        #sec7 #table2 .div-tabl2-sec7 p {
+            text-align: center;
+        }
+
+        #sec7 #table2 .div-table2-sec7 b {
+            text-align: center;
+        }
+        #sec7 #table3 {
+            margin-top:100px;
+        }
+
+        body {
+            overflow-inline: hidden;
         }
     </style>
 </head>
@@ -591,7 +752,7 @@
         </table>
     </section>
     <section id="sec4">
-        <div id="div1-sec4">
+        <div id="div1_sec4">
             <table>
                 <tr>
                     <td colspan="2">
@@ -642,6 +803,267 @@
             </p>
             <button id="but-sec5">VIEW PRODUCTS</button>
         </div>
+        <div id="div2-sec5"><img id="img1-sec5" src="https://assets.nicepagecdn.com/d2cc3eaa/3266805/images/tttt.jpg">
+        </div>
+        <div id="div3-sec5"><img id="img2-sec5"
+                src="https://images03.nicepagecdn.com/c461c07a441a5d220e8feb1a/d53eb45d6ab2536296072ef0/sx.jpg"></div>
+    </section>
+    <section id="sec6">
+        <div id="div1-sec6"><img id="img1-sec6"
+                src="https://img.freepik.com/premium-photo/breads_87414-2654.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=sph">
+        </div>
+        <div id="div2-sec6">
+            <p><b>Fresh baked breads</b></p>
+            <h1>Baked fresh daily by bakers with passion</h1>
+            <p>Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor
+                smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but
+                wishes. You day real less till dear read.</p>
+            <p><span><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 35px;height:35px;">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4.89163 13.2687L9.16582 17.5427L18.7085 8" stroke="#000000" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg></span><sup>Tasty, fresh bread baked daily</sup></p>
+            <p><span><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        style="width: 35px;height:35px;">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path d="M4.89163 13.2687L9.16582 17.5427L18.7085 8" stroke="#000000" stroke-width="2.5"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </svg></span><sup>We bake real, clean-label bread</sup></p><br>
+            <button id="but-sec6">VIEW PRODUCTS</button>
+        </div>
+    </section>
+    <section id="sec7">
+        <table id="table1">
+            <tr>
+                <th id="th1" colspan="4" id="head-table">Brownies, Pastries, etc</th>
+            </tr>
+            <tr>
+                <td>
+                    <div class="div-sec7"> <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/croissants-wooden-cutting-board_1150-28480.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=sph"><br>
+                        <b>CROISSANT</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the
+                            text.</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-sec7">
+                        <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/chocolate-brownies-sackcloth-coffee-beans-wooden-table_1150-20938.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=sph"><br>
+                        <b>BROWNIES</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-sec7">
+                        <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/top-view-delicious-pastry-concept_23-2148648832.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=ais"><br>
+                        <b>CINNAMON BUN</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-sec7">
+                        <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/top-view-woman-holding-turkish-bagel-dark-wooden-surface-horizontal_176474-6267.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=ais"><br>
+                        <b>TURKISH BAGELS</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div class="div-sec7">
+                        <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/pink-donuts-with-milk-black-tea_140725-3661.jpg?size=626&ext=jpg&ga=GA1.2.104076861.1696649272&semt=sph"><br>
+                        <b>DOUGHNUTS</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-sec7">
+                        <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/egg-tart-wood_1150-12281.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=sph"><br>
+                        <b>TARTS</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-sec7">
+                        <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/indulgent-homemade-chocolate-chip-cookies-rustic-wood-generated-by-ai_24640-80880.jpg?size=626&ext=jpg&ga=GA1.2.104076861.1696649272&semt=sph"><br>
+                        <b>SHORTBREAD</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="div-sec7">
+                        <img class="img-sec7"
+                            src="https://img.freepik.com/free-photo/delicious-cookies-with-glass-milk_23-2148837137.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=sph"><br>
+                        <b>COOKIES</b><br>
+                        <p class="p-sec7">Sample text. Click to select the text box. Click again or double click to
+                            start editing the text.</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table id="table2-sec7">
+            <tr>
+                <th id="th2" colspan="3">Testimonials</th>
+            </tr>
+            <tr>
+                <td class="td-table2-sec7">
+                    <div class="div-table2-sec7">
+                        <p style="text-align: center;"><svg fill="#000000" width="64px" height="64px"
+                                viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M6.937 9.146a5.657 5.657 0 0 1-.73 3.199 6.037 6.037 0 0 1-2.195 2.166 6.984 6.984 0 0 1-1.493.655q-.204.062-.41.113a2.795 2.795 0 0 1-.396.081.792.792 0 0 1-.422-1.499 1.49 1.49 0 0 1 .339-.096 5.753 5.753 0 0 0 .808-.245 4.68 4.68 0 0 0 2.415-2 3.063 3.063 0 0 1-.353.176 3.11 3.11 0 0 1-3.106-.43 3.152 3.152 0 0 1 .743-5.372 3.479 3.479 0 0 1 3.247.356 3.61 3.61 0 0 1 1.007 1.092 4.195 4.195 0 0 1 .51 1.424c.015.126.028.253.036.38zm8.848.076a5.649 5.649 0 0 1-.758 3.161 6.052 6.052 0 0 1-2.2 2.145 6.982 6.982 0 0 1-1.5.649q-.203.06-.41.11a2.253 2.253 0 0 1-.389.075.792.792 0 0 1-.633-1.32.786.786 0 0 1 .248-.185 1.66 1.66 0 0 1 .354-.098 5.774 5.774 0 0 0 .806-.247 4.675 4.675 0 0 0 2.393-1.991 3.038 3.038 0 0 1-.352.176 3.11 3.11 0 0 1-3.115-.437 3.152 3.152 0 0 1 .794-5.383 3.48 3.48 0 0 1 3.248.404 3.625 3.625 0 0 1 .996 1.116 3.735 3.735 0 0 1 .315.717 3.33 3.33 0 0 1 .165.676q.027.215.038.432z">
+                                    </path>
+                                </g>
+                            </svg></p>
+                        <p style="text-align: center;">Sample text. Click to select the text box. Click again or double
+                            click to start editing the
+                            text.</p>
+                        <p style="text-align: center;"><b>STELLA LARSON</b></p>
+                    </div>
+                </td>
+                <td class="td-table2-sec7">
+                    <div class="div-table2-sec7">
+                        <p style="text-align: center;"><svg fill="#000000" width="64px" height="64px"
+                                viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M6.937 9.146a5.657 5.657 0 0 1-.73 3.199 6.037 6.037 0 0 1-2.195 2.166 6.984 6.984 0 0 1-1.493.655q-.204.062-.41.113a2.795 2.795 0 0 1-.396.081.792.792 0 0 1-.422-1.499 1.49 1.49 0 0 1 .339-.096 5.753 5.753 0 0 0 .808-.245 4.68 4.68 0 0 0 2.415-2 3.063 3.063 0 0 1-.353.176 3.11 3.11 0 0 1-3.106-.43 3.152 3.152 0 0 1 .743-5.372 3.479 3.479 0 0 1 3.247.356 3.61 3.61 0 0 1 1.007 1.092 4.195 4.195 0 0 1 .51 1.424c.015.126.028.253.036.38zm8.848.076a5.649 5.649 0 0 1-.758 3.161 6.052 6.052 0 0 1-2.2 2.145 6.982 6.982 0 0 1-1.5.649q-.203.06-.41.11a2.253 2.253 0 0 1-.389.075.792.792 0 0 1-.633-1.32.786.786 0 0 1 .248-.185 1.66 1.66 0 0 1 .354-.098 5.774 5.774 0 0 0 .806-.247 4.675 4.675 0 0 0 2.393-1.991 3.038 3.038 0 0 1-.352.176 3.11 3.11 0 0 1-3.115-.437 3.152 3.152 0 0 1 .794-5.383 3.48 3.48 0 0 1 3.248.404 3.625 3.625 0 0 1 .996 1.116 3.735 3.735 0 0 1 .315.717 3.33 3.33 0 0 1 .165.676q.027.215.038.432z">
+                                    </path>
+                                </g>
+                            </svg></p>
+                        <p style="text-align: center;">Sample text. Click to select the text box. Click again or double
+                            click to start editing the
+                            text.</p>
+                        <p style="text-align: center;"><b>NICK JHONSON</b></p>
+                    </div>
+                </td>
+                <td class="td-table2-sec7">
+                    <div class="div-table2-sec7">
+                        <p style="text-align: center;"><svg fill="#000000" width="64px" height="64px"
+                                viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M6.937 9.146a5.657 5.657 0 0 1-.73 3.199 6.037 6.037 0 0 1-2.195 2.166 6.984 6.984 0 0 1-1.493.655q-.204.062-.41.113a2.795 2.795 0 0 1-.396.081.792.792 0 0 1-.422-1.499 1.49 1.49 0 0 1 .339-.096 5.753 5.753 0 0 0 .808-.245 4.68 4.68 0 0 0 2.415-2 3.063 3.063 0 0 1-.353.176 3.11 3.11 0 0 1-3.106-.43 3.152 3.152 0 0 1 .743-5.372 3.479 3.479 0 0 1 3.247.356 3.61 3.61 0 0 1 1.007 1.092 4.195 4.195 0 0 1 .51 1.424c.015.126.028.253.036.38zm8.848.076a5.649 5.649 0 0 1-.758 3.161 6.052 6.052 0 0 1-2.2 2.145 6.982 6.982 0 0 1-1.5.649q-.203.06-.41.11a2.253 2.253 0 0 1-.389.075.792.792 0 0 1-.633-1.32.786.786 0 0 1 .248-.185 1.66 1.66 0 0 1 .354-.098 5.774 5.774 0 0 0 .806-.247 4.675 4.675 0 0 0 2.393-1.991 3.038 3.038 0 0 1-.352.176 3.11 3.11 0 0 1-3.115-.437 3.152 3.152 0 0 1 .794-5.383 3.48 3.48 0 0 1 3.248.404 3.625 3.625 0 0 1 .996 1.116 3.735 3.735 0 0 1 .315.717 3.33 3.33 0 0 1 .165.676q.027.215.038.432z">
+                                    </path>
+                                </g>
+                            </svg></p>
+                        <p style="text-align: center;">Sample text. Click to select the text box. Click again or double
+                            click to start editing the
+                            text.</p>
+                        <p style="text-align: center;"><b>OLGA IVANOVA</b></p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="td-table2-sec7">
+                    <div class="div-table2-sec7">
+                        <p style="text-align: center;"><svg fill="#000000" width="64px" height="64px"
+                                viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M6.937 9.146a5.657 5.657 0 0 1-.73 3.199 6.037 6.037 0 0 1-2.195 2.166 6.984 6.984 0 0 1-1.493.655q-.204.062-.41.113a2.795 2.795 0 0 1-.396.081.792.792 0 0 1-.422-1.499 1.49 1.49 0 0 1 .339-.096 5.753 5.753 0 0 0 .808-.245 4.68 4.68 0 0 0 2.415-2 3.063 3.063 0 0 1-.353.176 3.11 3.11 0 0 1-3.106-.43 3.152 3.152 0 0 1 .743-5.372 3.479 3.479 0 0 1 3.247.356 3.61 3.61 0 0 1 1.007 1.092 4.195 4.195 0 0 1 .51 1.424c.015.126.028.253.036.38zm8.848.076a5.649 5.649 0 0 1-.758 3.161 6.052 6.052 0 0 1-2.2 2.145 6.982 6.982 0 0 1-1.5.649q-.203.06-.41.11a2.253 2.253 0 0 1-.389.075.792.792 0 0 1-.633-1.32.786.786 0 0 1 .248-.185 1.66 1.66 0 0 1 .354-.098 5.774 5.774 0 0 0 .806-.247 4.675 4.675 0 0 0 2.393-1.991 3.038 3.038 0 0 1-.352.176 3.11 3.11 0 0 1-3.115-.437 3.152 3.152 0 0 1 .794-5.383 3.48 3.48 0 0 1 3.248.404 3.625 3.625 0 0 1 .996 1.116 3.735 3.735 0 0 1 .315.717 3.33 3.33 0 0 1 .165.676q.027.215.038.432z">
+                                    </path>
+                                </g>
+                            </svg></p>
+                        <p style="text-align: center;">Sample text. Click to select the text box. Click again or double
+                            click to start editing the
+                            text.</p>
+                        <p style="text-align: center;"> <b>PAUL HUDSON</b> </p>
+                    </div>
+                </td>
+                <td class="td-table2-sec7">
+                    <div class="div-table2-sec7">
+                        <p style="text-align: center;"><svg fill="#000000" width="64px" height="64px"
+                                viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M6.937 9.146a5.657 5.657 0 0 1-.73 3.199 6.037 6.037 0 0 1-2.195 2.166 6.984 6.984 0 0 1-1.493.655q-.204.062-.41.113a2.795 2.795 0 0 1-.396.081.792.792 0 0 1-.422-1.499 1.49 1.49 0 0 1 .339-.096 5.753 5.753 0 0 0 .808-.245 4.68 4.68 0 0 0 2.415-2 3.063 3.063 0 0 1-.353.176 3.11 3.11 0 0 1-3.106-.43 3.152 3.152 0 0 1 .743-5.372 3.479 3.479 0 0 1 3.247.356 3.61 3.61 0 0 1 1.007 1.092 4.195 4.195 0 0 1 .51 1.424c.015.126.028.253.036.38zm8.848.076a5.649 5.649 0 0 1-.758 3.161 6.052 6.052 0 0 1-2.2 2.145 6.982 6.982 0 0 1-1.5.649q-.203.06-.41.11a2.253 2.253 0 0 1-.389.075.792.792 0 0 1-.633-1.32.786.786 0 0 1 .248-.185 1.66 1.66 0 0 1 .354-.098 5.774 5.774 0 0 0 .806-.247 4.675 4.675 0 0 0 2.393-1.991 3.038 3.038 0 0 1-.352.176 3.11 3.11 0 0 1-3.115-.437 3.152 3.152 0 0 1 .794-5.383 3.48 3.48 0 0 1 3.248.404 3.625 3.625 0 0 1 .996 1.116 3.735 3.735 0 0 1 .315.717 3.33 3.33 0 0 1 .165.676q.027.215.038.432z">
+                                    </path>
+                                </g>
+                            </svg></p>
+                        <p style="text-align: center;">Sample text. Click to select the text box. Click again or double
+                            click to start editing the
+                            text.</p>
+                        <p style="text-align: center;"> <b>CASH HUDSON</b></p>
+                    </div>
+                </td>
+                <td class="td-table2-sec7">
+                    <div class="div-table2-sec7">
+                        <p style="text-align: center;"><svg fill="#000000" width="64px" height="64px"
+                                viewBox="-1.5 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M6.937 9.146a5.657 5.657 0 0 1-.73 3.199 6.037 6.037 0 0 1-2.195 2.166 6.984 6.984 0 0 1-1.493.655q-.204.062-.41.113a2.795 2.795 0 0 1-.396.081.792.792 0 0 1-.422-1.499 1.49 1.49 0 0 1 .339-.096 5.753 5.753 0 0 0 .808-.245 4.68 4.68 0 0 0 2.415-2 3.063 3.063 0 0 1-.353.176 3.11 3.11 0 0 1-3.106-.43 3.152 3.152 0 0 1 .743-5.372 3.479 3.479 0 0 1 3.247.356 3.61 3.61 0 0 1 1.007 1.092 4.195 4.195 0 0 1 .51 1.424c.015.126.028.253.036.38zm8.848.076a5.649 5.649 0 0 1-.758 3.161 6.052 6.052 0 0 1-2.2 2.145 6.982 6.982 0 0 1-1.5.649q-.203.06-.41.11a2.253 2.253 0 0 1-.389.075.792.792 0 0 1-.633-1.32.786.786 0 0 1 .248-.185 1.66 1.66 0 0 1 .354-.098 5.774 5.774 0 0 0 .806-.247 4.675 4.675 0 0 0 2.393-1.991 3.038 3.038 0 0 1-.352.176 3.11 3.11 0 0 1-3.115-.437 3.152 3.152 0 0 1 .794-5.383 3.48 3.48 0 0 1 3.248.404 3.625 3.625 0 0 1 .996 1.116 3.735 3.735 0 0 1 .315.717 3.33 3.33 0 0 1 .165.676q.027.215.038.432z">
+                                    </path>
+                                </g>
+                            </svg></p>
+                        <p style="text-align: center;">Sample text. Click to select the text box. Click again or double
+                            click to start editing the
+                            text.</p>
+                        <p style="text-align: center;"> <b>MIKE PERRY</b></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table id="table3">
+            <tr>
+                <td><img class="img-table3-sec7"
+                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8baae157ffbe56548790d776/yty.jpg">
+                </td>
+                <td><img class="img-table3-sec7"
+                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/8d481fe712f85027870c837e/rtrtrt.jpg">
+                </td>
+                <td><img class="img-table3-sec7"
+                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/9765013a9a185d16adf414dd/b1182e8f-cee4-f571-00ff-b553b7f96898.jpg">
+                </td>
+            </tr>
+            <tr>
+                <td><b>Breads</b></td>
+                <td><b>Cookies</b></td>
+                <td><b>Pastries</b></td>
+            </tr>
+            <tr>
+                <td>Sample text. Click to select the text box. Click again or double click to start editing the text.
+                </td>
+                <td>Sample text. Click to select the text box. Click again or double click to start editing the text.
+                </td>
+                <td>Sample text. Click to select the text box. Click again or double click to start editing the text.
+                </td>
+            </tr>
+        </table>
     </section>
 </body>
 

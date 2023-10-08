@@ -1,650 +1,965 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			section {
+				width: 100%;
+				display: block;
+			}
+			#header {
+				font-family: Georgia, 'Times New Roman', Times, serif;
+				color: lightgray;
+				cursor: pointer;
+			}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        section {
-            width: 100%;
-            display: block;
-        }
-        #header {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: lightgray;
-            cursor: pointer;
-        }
+			header {
+				margin-bottom: 100px;
+			}
 
-        header {
-            margin-bottom: 100px;
-        }
+			nav {
+				list-style-type: none;
+				text-align: end;
+			}
 
-        nav {
-            list-style-type: none;
-            text-align: end;
-        }
+			nav li {
+				display: inline-block;
+			}
 
-        nav li {
-            display: inline-block;
-        }
+			.link-menu:hover {
+				color: lightgray;
+			}
 
-        .link-menu:hover {
-            color: lightgray;
-        }
+			.menu {
+				margin-right: 40px;
+			}
 
-        .menu {
-            margin-right: 40px;
-        }
+			a {
+				text-decoration: none;
+			}
 
-        a {
-            text-decoration: none;
-        }
+			.link-menu {
+				color: black;
+			}
 
-        .link-menu {
-            color: black;
+			.landing {
+				color: lightgray;
+			}
 
-        }
+			body {
+				font-size: 150%;
+			}
 
-        .landing {
-            color: lightgray;
-        }
+			#sec1 {
+				padding-left: 20px;
+				margin-bottom: 150px;
+			}
 
-        body {
-            font-size: 150%;
-        }
+			#sec1 div {
+				display: inline-block;
+			}
 
-        #sec1 {
-            padding-left: 20px;
-            margin-bottom: 150px;
-        }
+			#div1-set1 {
+				width: 400px;
+			}
 
-        #sec1 div {
-            display: inline-block;
-        }
+			#div1-sec1 p {
+				width: max-content;
+			}
 
-        #div1-set1 {
-            width: 400px;
-        }
+			.local1 {
+				height: 30px;
+				width: 30px;
+			}
 
-        #div1-sec1 p {
-            width: max-content;
-        }
+			#local {
+				line-height: 30px;
+			}
 
-        .local1 {
-            height: 30px;
-            width: 30px;
-        }
+			#Layer_1.local1 {
+				width: 23px;
+				height: 23px;
+			}
 
-        #local {
-            line-height: 30px;
-        }
+			#view-product {
+				border-radius: 25px;
+				border: 2px solid black;
+				height: 80px;
+				width: 200px;
+				background-color: white;
+				transition: 0.1s color background-color;
+				cursor: pointer;
+			}
 
-        #Layer_1.local1 {
-            width: 23px;
-            height: 23px;
-        }
+			#view-product:hover {
+				color: white;
+				background-color: black;
+			}
 
-        #view-product {
-            border-radius: 25px;
-            border: 2px solid black;
-            height: 80px;
-            width: 200px;
-            background-color:white;
-            transition: 0.1s color background-color;
-            cursor: pointer;
-        }
+			#div2-sec1 {
+				float: right;
+			}
 
-        #view-product:hover {
-            color: white;
-            background-color: black;
-        }
+			#img-sec1 {
+				width: 900px;
+				height: 500px;
+				border-top-left-radius: 25px;
+				border-bottom-left-radius: 25px;
+			}
 
-        #div2-sec1 {
-            float: right;
-        }
+			#sec2 {
+				margin-bottom: 100px;
+			}
 
-        #img-sec1 {
-            width: 900px;
-            height: 500px;
-            border-top-left-radius: 25px;
-            border-bottom-left-radius: 25px;
-        }
+			#h1-sec2 {
+				text-align: center;
+				height: 180px;
+				font-size: 200%;
+			}
 
-        #sec2 {
-            margin-bottom: 100px;
-        }
+			#sec2 table tr td {
+				width: 170px;
+				text-align: center;
+			}
 
-        #h1-sec2 {
-            text-align: center;
-            height: 180px;
-            font-size: 200%;
-        }
+			#sec2 table {
+				margin-left: auto;
+				margin-right: auto;
+			}
 
-        #sec2 table tr td {
-            width: 170px;
-            text-align: center;
-        }
+			.td-sec2 {
+				padding-top: 20px;
+				padding-inline: 20px;
+			}
 
-        #sec2 table {
-            margin-left: auto;
-            margin-right: auto;
-        }
+			.up-sec2 {
+				vertical-align: top;
+			}
 
-        .td-sec2 {
-            padding-top: 20px;
-            padding-inline: 20px;
-        }
+			#sec3 {
+				margin-bottom: 100px;
+			}
 
-        .up-sec2 {
-            vertical-align: top;
-        }
+			#sec3 table {
+				width: 100%;
+			}
 
-        #sec3 {
-            margin-bottom: 100px;
-        }
+			#sec3 table tr td {
+				text-align: center;
+			}
 
-        #sec3 table {
-            width: 100%;
-        }
+			#sec3 table h1 {
+				font-size: 200%;
+			}
 
-        #sec3 table tr td {
-            text-align: center;
-        }
+			#sec3 #under-h1-sec3 {
+				font-size: 150%;
+			}
 
-        #sec3 table h1 {
-            font-size: 200%;
-        }
+			.img-sec3 {
+				width: 370px;
+				height: 500px;
+				cursor: pointer;
+			}
 
-        #sec3 #under-h1-sec3 {
-            font-size: 150%;
-        }
+			.td-img-sec3 {
+				padding: 0;
+			}
 
-        .img-sec3 {
-            width: 370px;
-            height: 500px;
-            cursor: pointer;
-        }
+			#sec4 {
+				margin-bottom: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
 
-        .td-img-sec3 {
-            padding: 0;
-        }
+			#div1-sec4 {
+				/* float: left; */
+				margin-left: 150px;
+				/* height: 500px; */
+				width: 35%;
+			}
 
-        #sec4 {
-            margin-bottom: 100px;
-        }
+			#div1-sec4 table tr td h1 {
+				/* font-size: 200%; */
+			}
 
-        #div1-sec4 {
-            float: left;
-            margin-left: 150px;
-            height: 500px;
-            width: 35%;
-        }
+			#div1-sec4 table tr td hr {
+				width: 70%;
+				float: left;
+			}
 
-        #div1-sec4 table tr td h1 {
-            font-size: 200%;
-        }
+			#div2-sec4 {
+				/* float: right; */
+				/* position: relative; */
+				/* top: 70px; */
+			}
 
-        #div1-sec4 table tr td hr {
-            width: 70%;
-            float: left;
-        }
+			#div2-sec4 img {
+				/* width: 800px;
+				height: 534.185304px; */
+				width: 100%;
+				height: auto;
+				border-radius: 50%;
+			}
 
-        #div2-sec4 {
-            float: right;
-            position: relative;
-            top: 70px;
-        }
+			#sec5 {
+				background-color: rgb(187, 133, 66);
+			}
+			#div1-sec5 {
+				border-radius: 25px;
+				padding: 20px;
+				margin-right: 25px;
+				width: 30%;
+				/* float: right; */
+				position: relative;
+				left: 600px;
+			}
+			#but-sec5 {
+				border-radius: 25px;
+				border: 2px solid black;
+				height: 80px;
+				width: 200px;
+				background-color: white;
+				transition: 0.1s color background-color;
+				cursor: pointer;
+			}
 
-        #div2-sec4 img {
-            width: 800px;
-            height: 534.185304px;
-            border-radius: 50%;
-        }
+			#but-sec5:hover {
+				color: white;
+				background-color: black;
+			}
+		</style>
+	</head>
 
-        #sec5 {
-            background-color: rgb(187, 133, 66);
-        }
-        #div1-sec5 {
-            border-radius: 25px;
-            padding:20px;
-            margin-right: 25px;
-            width: 30%;
-            float: right;
-            position: relative;
-            left: 600px;
-        }
-        #but-sec5 {
-            border-radius: 25px;
-            border: 2px solid black;
-            height: 80px;
-            width: 200px;
-            background-color:white;
-            transition: 0.1s color background-color;
-            cursor: pointer;
-        }
-
-        #but-sec5:hover {
-            color: white;
-            background-color: black;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <h1><a id="header" href="#">logo</a></h1>
-        <nav id="head-link">
-            <li class="menu"><a class="link-menu" href=".#">Bakery</a></li>
-            <li class="menu"><a class="link-menu" href=".#">Page 4</a></li>
-            <li class="menu"><a class="link-menu" href=".#">Page 5</a></li>
-            <li class="menu"><a class="link-menu" href=".#">Page 6</a></li>
-            <li class="menu"><a class="landing" href=".#">Landing</a></li>
-        </nav>
-    </header>
-    <section id="sec1">
-        <div id="div1-sec1">
-            <p>FRESH BREAD & BAKED GOODS</p>
-            <p class="big"><b>Baked fresh daily</b></p>
-            <p id="local"><span><svg class="loca1" version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="64px" viewBox="0 0 64 64"
-                        enable-background="new 0 0 64 64" xml:space="preserve" fill="#000000" stroke="#000000" style="
-                width: 20px;
-                height: 20px;
-            ">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path fill="#231F20"
-                                d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z">
-                            </path>
-                        </g>
-                    </svg></span>​254 W 27ST ST, NEW YORK, NY 10011</p>
-            <p><span><svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                        style="width:21px;height:21px;">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                d="M14.795 2h-5.59c-1.115 0-1.519.116-1.926.334a2.272 2.272 0 0 0-.945.945C6.116 3.686 6 4.09 6 5.205v13.59c0 1.114.116 1.519.334 1.926.218.407.538.727.945.945.407.218.811.334 1.926.334h5.59c1.114 0 1.519-.116 1.926-.334.407-.218.727-.538.945-.945.218-.407.334-.811.334-1.926V5.205c0-1.115-.116-1.519-.334-1.926a2.272 2.272 0 0 0-.945-.945C16.314 2.116 15.91 2 14.795 2zM8 17.995V6.005h8v11.99H8z"
-                                fill="#000000"></path>
-                        </g>
-                    </svg></span>(212)123-4567</p>
-            <p>Monday - Wednesday 9am - 7pm<br>
-                Thursday - Saturday 9am - 8pm<br>
-                Sunday 9am - 6pm</p>
-            <button id="view-product">VIEW PRODUCTS</button>
-        </div>
-        <div id="div2-sec1"><img id="img-sec1"
-                src="https://food-images.files.bbci.co.uk/food/recipes/paul_hollywoods_crusty_83536_16x9.jpg"></div>
-    </section>
-    <section id="sec2">
-        <table>
-            <tr>
-                <td colspan="5">
-                    <h1 id="h1-sec2">We bake fresh, handmade bread, pastries and cakes every day</h1>
-                </td>
-            </tr>
-            <tr>
-                <td><svg fill="#000000" width="64px" height="64px" viewBox="0 0 64 64"
-                        style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
-                        version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <g transform="matrix(1,0,0,1,-288,-288)">
-                                <g id="Icon">
-                                    <path
-                                        d="M341.92,327.476C341.92,321.972 337.458,317.509 331.954,317.509C324.951,317.509 315.265,317.509 308.262,317.509C302.757,317.509 298.295,321.972 298.295,327.476C298.295,330.299 298.295,333.156 298.295,334.992C298.295,336.649 299.638,337.992 301.295,337.992C308.33,337.992 331.886,337.992 338.92,337.992C340.577,337.992 341.92,336.649 341.92,334.992L341.92,327.476Z"
-                                        style="fill:#f8ac3a;"></path>
-                                    <path
-                                        d="M337.057,318.913C337.948,320.406 338.46,322.151 338.46,324.016L338.46,331.532C338.46,333.189 337.117,334.532 335.46,334.532L298.295,334.532L298.295,334.992C298.295,336.649 299.638,337.992 301.295,337.992C308.33,337.992 331.886,337.992 338.92,337.992C340.577,337.992 341.92,336.649 341.92,334.992L341.92,327.476C341.92,323.836 339.969,320.653 337.057,318.913Z"
-                                        style="fill:#f39404;"></path>
-                                    <path
-                                        d="M345.062,335.992L295.062,335.992C294.267,335.992 293.504,336.308 292.941,336.871C292.378,337.434 292.062,338.197 292.062,338.992C292.062,339.254 292.062,339.521 292.062,339.783C292.062,340.578 292.378,341.341 292.941,341.904C293.504,342.467 294.267,342.783 295.062,342.783L345.062,342.783C345.858,342.783 346.621,342.467 347.184,341.904C347.746,341.341 348.062,340.578 348.062,339.783C348.062,339.521 348.062,339.254 348.062,338.992C348.062,338.197 347.746,337.434 347.184,336.871C346.621,336.308 345.858,335.992 345.062,335.992Z"
-                                        style="fill:#f5f0e5;"></path>
-                                    <path
-                                        d="M345.361,336.007C345.576,336.427 345.692,336.897 345.692,337.378C345.692,337.639 345.692,337.907 345.692,338.168C345.692,338.964 345.376,339.727 344.813,340.289C344.251,340.852 343.488,341.168 342.692,341.168L292.692,341.168C292.592,341.168 292.492,341.163 292.394,341.153C292.535,341.428 292.719,341.682 292.941,341.904C293.504,342.467 294.267,342.783 295.062,342.783L345.062,342.783C345.858,342.783 346.621,342.467 347.184,341.904C347.746,341.341 348.062,340.578 348.062,339.783C348.062,339.521 348.062,339.254 348.062,338.992C348.062,338.197 347.746,337.434 347.184,336.871C346.692,336.379 346.047,336.076 345.361,336.007Z"
-                                        style="fill:#eadec7;"></path>
-                                    <g transform="matrix(1.19758,0,0,1.31169,281.785,295.515)">
-                                        <path
-                                            d="M31.127,17.534L31.165,24.004C31.167,24.425 31.544,24.765 32.004,24.762C32.465,24.76 32.837,24.417 32.835,23.996L32.797,17.526C32.795,17.105 32.418,16.766 31.958,16.768C31.497,16.77 31.125,17.114 31.127,17.534Z"
-                                            style="fill:#f39404;"></path>
-                                    </g>
-                                    <g transform="matrix(1.19758,0,0,1.31169,281.785,295.515)">
-                                        <path
-                                            d="M25.453,17.534L25.491,24.004C25.493,24.425 25.869,24.765 26.33,24.762C26.791,24.76 27.163,24.417 27.161,23.996L27.123,17.526C27.12,17.105 26.744,16.766 26.283,16.768C25.822,16.77 25.45,17.114 25.453,17.534Z"
-                                            style="fill:#f39404;"></path>
-                                    </g>
-                                    <g transform="matrix(1.19758,0,0,1.31169,281.785,295.515)">
-                                        <path
-                                            d="M36.763,17.534L36.801,24.004C36.804,24.425 37.18,24.765 37.641,24.762C38.102,24.76 38.474,24.417 38.471,23.996L38.433,17.526C38.431,17.105 38.055,16.766 37.594,16.768C37.133,16.77 36.761,17.114 36.763,17.534Z"
-                                            style="fill:#f39404;"></path>
-                                    </g>
-                                    <g transform="matrix(-1.125,-1.94342e-16,1.23391e-16,-1.50552,349.291,333.314)">
-                                        <path
-                                            d="M31.145,15.136C31.145,15.136 31.347,15.542 31.57,15.988C31.901,16.65 31.901,17.35 31.57,18.012L30.719,19.715C30.299,20.555 30.299,21.445 30.719,22.285C30.942,22.731 31.145,23.136 31.145,23.136C31.278,23.403 31.769,23.558 32.241,23.483C32.714,23.408 32.989,23.13 32.855,22.864C32.855,22.864 32.653,22.458 32.43,22.012C32.099,21.35 32.099,20.65 32.43,19.988L33.281,18.285C33.701,17.445 33.701,16.555 33.281,15.715C33.058,15.269 32.855,14.864 32.855,14.864C32.722,14.597 32.231,14.442 31.759,14.517C31.286,14.592 31.011,14.87 31.145,15.136Z"
-                                            style="fill:#f5f0e5;"></path>
-                                    </g>
-                                    <g transform="matrix(-1.125,-1.94342e-16,1.23391e-16,-1.50552,356.062,333.314)">
-                                        <path
-                                            d="M31.145,15.136C31.145,15.136 31.347,15.542 31.57,15.988C31.901,16.65 31.901,17.35 31.57,18.012L30.719,19.715C30.299,20.555 30.299,21.445 30.719,22.285C30.942,22.731 31.145,23.136 31.145,23.136C31.278,23.403 31.769,23.558 32.241,23.483C32.714,23.408 32.989,23.13 32.855,22.864C32.855,22.864 32.653,22.458 32.43,22.012C32.099,21.35 32.099,20.65 32.43,19.988L33.281,18.285C33.701,17.445 33.701,16.555 33.281,15.715C33.058,15.269 32.855,14.864 32.855,14.864C32.722,14.597 32.231,14.442 31.759,14.517C31.286,14.592 31.011,14.87 31.145,15.136Z"
-                                            style="fill:#f5f0e5;"></path>
-                                    </g>
-                                    <g transform="matrix(-1.125,-1.94342e-16,1.23391e-16,-1.50552,362.834,333.314)">
-                                        <path
-                                            d="M31.145,15.136C31.145,15.136 31.347,15.542 31.57,15.988C31.901,16.65 31.901,17.35 31.57,18.012L30.719,19.715C30.299,20.555 30.299,21.445 30.719,22.285C30.942,22.731 31.145,23.136 31.145,23.136C31.278,23.403 31.769,23.558 32.241,23.483C32.714,23.408 32.989,23.13 32.855,22.864C32.855,22.864 32.653,22.458 32.43,22.012C32.099,21.35 32.099,20.65 32.43,19.988L33.281,18.285C33.701,17.445 33.701,16.555 33.281,15.715C33.058,15.269 32.855,14.864 32.855,14.864C32.722,14.597 32.231,14.442 31.759,14.517C31.286,14.592 31.011,14.87 31.145,15.136Z"
-                                            style="fill:#f5f0e5;width:22px;height:22px"></path>
-                                    </g>
-                                </g>
-                            </g>
-                        </g>
-                    </svg></td>
-                <td><svg width="64px" height="64px" viewBox="0 0 1024 1024" class="icon" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M175.4 866.3c39.1 25.7 166.1 114.6 488.5-229.7s223-425.9 196.2-454.9c-26.8-29-263.6-149.6-556 122.5C21.6 567 175.4 866.3 175.4 866.3z"
-                                fill="#EAAD6A"></path>
-                            <path
-                                d="M241.9 696.5s26.7 26.1 48.6 4.5c21.9-21.7-2.2-40.2-2.2-40.2L171.6 514l-27.3 67.4 97.6 115.1zM623.3 323.5s26.7 26.1 48.6 4.5c21.9-21.7-2.2-40.2-2.2-40.2L565.9 153.9l-62.1 19.2 119.5 150.4zM386.5 463.8s26.7 26.1 48.6 4.5c21.9-21.7-2.2-40.2-2.2-40.2L322.4 287.5 280.8 332l105.7 131.8z"
-                                fill="#FFC661"></path>
-                            <path
-                                d="M604.8 577.4c-227.5 243-389.5 280.3-455.1 229.3 10.4 34.3 20.7 54.5 20.7 54.5 39.1 25.7 166.1 114.6 488.5-229.7s223-425.9 196.2-454.9c-6.1-6.6-22.9-17.8-48.6-28.1 36.5 54.7 15.2 197.1-201.7 428.9z"
-                                fill="#D19152"></path>
-                            <path
-                                d="M310.5 281c-4.3 4-8.6 8.1-12.9 12.4-0.7 0.7-1.5 1.4-2.2 2.1-0.4 0.4-0.7 0.8-1.1 1.1-3.8 3.8-7.7 7.9-11.7 12.2-183.1 193.9-212.5 464-112.4 564.1 90.5 90.5 259.8 16.9 489.7-213 229.8-229.8 303.5-399.2 213-489.7C773.1 70.4 504.2 99.3 310.5 281z m349.1 7.6c3.5 3.1 5.5 7.4 5.6 12 0.2 4.7-1.6 9.1-4.9 12.4-6.3 6.3-16.3 6.6-23 0.7l-2.8-2.4c-37-32.7-69.3-70.4-95.9-112L524.3 177c1.2-0.5 2.5-0.9 3.7-1.4 8.8-3.4 17.6-6.6 26.3-9.4 0.4-0.1 0.7-0.2 1.1-0.4l3.4 5.3c28.1 43.6 61.9 83.2 100.8 117.5z m-225 154.5c3.5 3.1 5.5 7.4 5.6 12 0.2 4.7-1.6 9.1-4.9 12.4-6.3 6.3-16.3 6.6-23 0.7l-2.8-2.4c-37-32.7-69.3-70.4-95.9-112l-14.9-23.4c6.7-7.2 13.6-14.3 20.7-21.2 0.8-0.8 1.7-1.6 2.5-2.4l11.9 18.7c28.1 43.6 61.9 83.2 100.8 117.6z m-154.5 225c3.5 3.1 5.5 7.4 5.6 12 0.2 4.7-1.6 9.1-4.9 12.4-6.3 6.3-16.3 6.6-23 0.7l-2.8-2.4c-37-32.7-69.3-70.4-95.8-112l-0.4-0.6c3.7-13.1 7.9-26.5 12.8-39.9l7.8 12.2c28 43.6 61.9 83.2 100.7 117.6z m361-27c-124.2 124.2-348 317-452 213-47.2-47.2-60.4-139.1-38.7-241.5 25.2 35.9 54.2 69 87.2 98.1l2.8 2.4c17.1 15.1 43.2 14.3 59.4-1.8 8.4-8.4 13.1-20.1 12.7-32-0.4-11.9-5.7-23.3-14.6-31.2-37-32.7-69.3-70.4-95.9-112l-18.1-28.3c23-54 55.2-107.7 96.7-156.7l10.9 17c27.9 43.7 61.8 83.3 100.6 117.6l2.8 2.4c17.1 15.1 43.2 14.4 59.4-1.8 8.4-8.4 13.1-20.1 12.7-32-0.4-11.9-5.7-23.3-14.6-31.2-37-32.7-69.3-70.4-95.9-112L342 288.4c49-43.2 103.1-76.9 157.6-101.2l16.8 26.3c27.9 43.7 61.8 83.3 100.6 117.6l2.8 2.4c17.1 15.1 43.2 14.3 59.4-1.8 8.4-8.4 13.1-20.1 12.7-32-0.4-11.9-5.7-23.3-14.6-31.2-36.7-32.4-68.6-69.8-95.1-110.9 114.4-31.4 220.1-20.6 272 31.3 103.9 104.2-88.9 328-213.1 452.2z"
-                                fill="#004364"></path>
-                            <path d="M462 257.8m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z" fill="#004364">
-                            </path>
-                            <path d="M686.7 188.2m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
-                                fill="#004364"></path>
-                            <path d="M681 520.2m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z" fill="#004364">
-                            </path>
-                            <path d="M607 601.3m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z" fill="#004364">
-                            </path>
-                            <path d="M249.5 457.8m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
-                                fill="#004364"></path>
-                            <path d="M392.9 292.7m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
-                                fill="#004364"></path>
-                            <path d="M197 758.3m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z" fill="#004364">
-                            </path>
-                        </g>
-                    </svg></td>
-                <td><svg width="64px" height="64px" viewBox="0 0 1024 1024" class="icon" version="1.1"
-                        xmlns="http://www.w3.org/2000/svg" fill="#000000">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M0.000976 0.999024h1023.000975v1023.000976H0.000976z" fill="#FFFFFF"></path>
-                            <path
-                                d="M844.176585 208.796098l-41.959024-11.988293 41.959024-10.989268 11.988293-42.958049 10.989268 42.958049 42.958049 10.989268-42.958049 11.988293-10.989268 41.959024-11.988293-41.959024zM104.898537 717.299512l-31.968781-6.993171 31.968781-7.992195 7.992195-31.96878 6.99317 31.96878 32.967805 7.992195-32.967805 6.993171-6.99317 32.967805-7.992195-32.967805zM883.138537 261.74439l-14.985366-2.997073 14.985366-3.996097 2.997073-13.986342 2.997073 13.986342 14.985366 3.996097-14.985366 2.997073-2.997073 14.985366-2.997073-14.985366zM109.893659 544.468293l-14.985366-2.997073 14.985366-2.997074 2.997073-14.985366 2.997073 14.985366 14.985366 2.997074-14.985366 2.997073-2.997073 14.985366-2.997073-14.985366z"
-                                fill="#FDCD60"></path>
-                            <path
-                                d="M114.88878 348.659512m-8.991219 0a8.99122 8.99122 0 1 0 17.982439 0 8.99122 8.99122 0 1 0-17.982439 0Z"
-                                fill="#5546CB"></path>
-                            <path
-                                d="M910.112195 711.305366a24.97561 24.97561 0 1 1 24.97561-24.97561 24.97561 24.97561 0 0 1-24.97561 24.97561z m0-35.964878a9.990244 9.990244 0 1 1 0 0.999024z"
-                                fill="#5546CB"></path>
-                            <path d="M626.389268 469.541463h69.931708v204.650147h-69.931708z" fill="#FDCD60"></path>
-                            <path d="M190.814634 734.282927h644.370732v34.965853H190.814634z" fill="#AFBCF3"></path>
-                            <path
-                                d="M855.165854 714.302439H170.834146v74.926829h684.331708z m-19.980488 54.946341H190.814634v-34.965853h644.370732z"
-                                fill="#5546CB"></path>
-                            <path d="M150.853659 837.182439h722.294634v34.965854H150.853659z" fill="#AFBCF3"></path>
-                            <path
-                                d="M127.876098 817.201951v74.926829h767.250731v-74.926829z m745.272195 54.946342H150.853659v-34.965854h722.294634z"
-                                fill="#5546CB"></path>
-                            <path d="M487.524878 483.527805h49.95122v182.821463h-49.95122z" fill="#FDCD60"></path>
-                            <path
-                                d="M467.54439 686.329756h89.912195V463.547317h-89.912195z m19.980488-202.801951h49.95122v182.821463h-49.95122z"
-                                fill="#5546CB"></path>
-                            <path d="M339.669268 483.527805h49.95122v182.821463h-49.95122z" fill="#FDCD60"></path>
-                            <path
-                                d="M319.68878 686.329756h89.912196V463.547317h-89.912196z m19.980488-202.801951h49.95122v182.821463h-49.95122z"
-                                fill="#5546CB"></path>
-                            <path d="M190.814634 373.635122h49.95122v40.96h-49.95122z" fill="#FF8859"></path>
-                            <path
-                                d="M260.746341 353.654634h-89.912195v80.920976h89.912195z m-19.980487 60.940488h-49.95122v-40.96h49.95122z"
-                                fill="#5546CB"></path>
-                            <path d="M784.235122 373.635122h49.951219v40.96h-49.951219z" fill="#FF8859"></path>
-                            <path
-                                d="M854.166829 353.654634h-89.912195v80.920976h89.912195z m-19.980488 60.940488h-49.951219v-40.96h49.951219z"
-                                fill="#5546CB"></path>
-                            <path d="M636.379512 373.635122h49.95122v40.96h-49.95122z" fill="#FF8859"></path>
-                            <path
-                                d="M706.31122 353.654634h-89.912196v80.920976h89.912196z m-19.980488 60.940488h-49.95122v-40.96h49.95122z"
-                                fill="#5546CB"></path>
-                            <path d="M487.524878 373.635122h49.95122v40.96h-49.95122z" fill="#FF8859"></path>
-                            <path
-                                d="M557.456585 353.654634h-89.912195v80.920976h89.912195z m-19.980487 60.940488h-49.95122v-40.96h49.95122z"
-                                fill="#5546CB"></path>
-                            <path d="M339.669268 373.635122h49.95122v40.96h-49.95122z" fill="#FF8859"></path>
-                            <path
-                                d="M409.600976 353.654634h-89.912196v80.920976h89.912196z m-19.980488 60.940488h-49.95122v-40.96h49.95122z"
-                                fill="#5546CB"></path>
-                            <path d="M515.497561 140.862439L241.764878 305.701463h542.470244L515.497561 140.862439z"
-                                fill="#FDCD60"></path>
-                            <path
-                                d="M515.497561 116.885854L170.834146 325.681951h683.332683z m0 23.976585l268.737561 164.839024H241.764878zM615.4 688.327805h89.912195V465.545366h-89.912195z m19.980488-202.801951h49.951219v182.821463h-49.951219z"
-                                fill="#5546CB"></path>
-                            <path d="M783.236098 485.525854h49.951219v182.821463h-49.951219z" fill="#FDCD60"></path>
-                            <path
-                                d="M763.25561 688.327805h89.912195V465.545366h-89.912195z m19.980488-202.801951h49.951219v182.821463h-49.951219z"
-                                fill="#5546CB"></path>
-                            <path d="M189.81561 666.349268h49.951219V481.529756h-48.952195l-0.999024 184.819512z"
-                                fill="#FDCD60"></path>
-                            <path
-                                d="M260.746341 461.549268h-89.912195v224.780488h88.913171z m-20.979512 204.8h-49.951219V481.529756h48.952195z"
-                                fill="#5546CB"></path>
-                        </g>
-                    </svg></td>
-                <td><svg width="64px" height="64px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-                        class="iconify iconify--emojione" preserveAspectRatio="xMidYMid meet" fill="#000000">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path
-                                d="M62 50.8c0-1-.8-1.9-1.9-1.9H3.9c-1 0-1.9.8-1.9 1.9v1.9c0 1 .8 1.9 1.9 1.9h56.2c1 0 1.9-.8 1.9-1.9v-1.9"
-                                fill="#b2c1c0"> </path>
-                            <ellipse cx="12.3" cy="55.5" rx="6.6" ry="6.5" fill="#3e4347"> </ellipse>
-                            <ellipse cx="12.3" cy="55.5" rx="3.8" ry="3.7" fill="#b2c1c0"> </ellipse>
-                            <ellipse cx="50.8" cy="55.5" rx="6.6" ry="6.5" fill="#3e4347"> </ellipse>
-                            <ellipse cx="50.8" cy="55.5" rx="3.8" ry="3.7" fill="#b2c1c0"> </ellipse>
-                            <path d="M54.5 19H28.2c-3.1 0-5.6 2.5-5.6 5.6v24.3h37.5V24.6c0-3.1-2.5-5.6-5.6-5.6"
-                                fill="#62727a"> </path>
-                            <path d="M15.1 26.5c-4.5 0-5.6 0-5.6 7.5c0 5.6-5.6 5.6-5.6 11.2v3.7h18.8V26.5h-7.6"
-                                fill="#f15744"> </path>
-                            <path fill="#ffce31" d="M5.8 43.3h1.9V47H5.8z"> </path>
-                            <path
-                                d="M12.8 39.6c-1.1 0-1.7.8-1.3 1.8l1.6 4c.4 1 1.6 1.7 2.7 1.7h3c1.1 0 2-.8 2-1.9v-3.7c0-1-.9-1.9-2-1.9h-6"
-                                fill="#d33b23"> </path>
-                            <g fill="#3e4347">
-                                <path d="M20.8 28.3h-7.5s-1.9.2-1.9 2.8v4.5s0 2.1 1.9 2.1h7.5v-9.4"> </path>
-                                <circle cx="12.3" cy="51.7" r=".9"> </circle>
-                                <circle cx="9.1" cy="53.6" r=".9"> </circle>
-                                <path
-                                    d="M8.6 56.5c.4-.3 1-.1 1.3.3c.3.4.1 1-.3 1.3c-.4.3-1 .1-1.3-.3c-.3-.5-.2-1 .3-1.3">
-                                </path>
-                                <circle cx="12.3" cy="59.2" r=".9"> </circle>
-                                <circle cx="15.6" cy="57.3" r=".9"> </circle>
-                                <circle cx="15.6" cy="53.6" r=".9"> </circle>
-                            </g>
-                            <circle cx="12.3" cy="55.5" fill="#62727a" r="1.9"> </circle>
-                            <g fill="#3e4347">
-                                <circle cx="50.8" cy="51.7" r=".9"> </circle>
-                                <circle cx="47.5" cy="53.6" r=".9"> </circle>
-                                <path
-                                    d="M47 56.5c.4-.3 1-.1 1.3.3c.3.4.1 1-.3 1.3c-.4.3-1 .1-1.3-.3c-.3-.5-.1-1 .3-1.3">
-                                </path>
-                                <circle cx="50.8" cy="59.2" r=".9"> </circle>
-                                <circle cx="54" cy="57.3" r=".9"> </circle>
-                                <circle cx="54" cy="53.6" r=".9"> </circle>
-                            </g>
-                            <circle cx="50.8" cy="55.5" fill="#62727a" r="1.9"> </circle>
-                            <g fill="#ffffff">
-                                <path
-                                    d="M28.4 32.7c-.5-.4-1.2-.6-2.2-.6c-.6 0-1.2 0-1.6.1v5.4c.3 0 .8.1 1.4.1c1.1 0 1.9-.3 2.5-.8c.5-.5.9-1.2.9-2.2c-.2-.9-.5-1.5-1-2m-2.3 4.2h-.6V33c.1 0 .4-.1.7-.1c1.3 0 2 .7 2 1.9c0 1.4-.8 2.1-2.1 2.1">
-                                </path>
-                                <path d="M33.2 35.2h-2.1v1.6h2.3v.8h-3.3v-5.5h3.2v.9h-2.2v1.4h2.1v.8"> </path>
-                                <path d="M35.3 36.8v-4.7h-1v5.5h3.3v-.8z"> </path>
-                                <path d="M38.3 32.1h1v5.5h-1z"> </path>
-                                <path
-                                    d="M43.7 32.1l-.8 2.5c-.2.7-.4 1.3-.6 2c-.1-.7-.3-1.3-.5-2l-.8-2.5h-1l1.8 5.5H43l1.9-5.5h-1.2">
-                                </path>
-                                <path d="M46.4 36.8v-1.6h2.1v-.8h-2.1V33h2.2v-.9h-3.2v5.5h3.3v-.8z"> </path>
-                                <path
-                                    d="M53.1 36.1c-.1-.5-.4-.9-.8-1.1c.5-.2 1-.7 1-1.4c0-.5-.2-.8-.5-1.1c-.4-.3-.9-.4-1.7-.4c-.6 0-1.1 0-1.5.1v5.4h1v-2.3h.5c.6 0 .8.2 1 1c.2.7.3 1.1.4 1.3h1c-.1-.2-.2-.8-.4-1.5m-1.9-1.5h-.6v-1.7h.6c.7 0 1.1.3 1.1.9c0 .5-.4.8-1.1.8">
-                                </path>
-                                <path
-                                    d="M57.1 32.1l-.7 1.4c-.2.4-.3.7-.5 1.1c-.1-.4-.3-.7-.5-1.1l-.7-1.4h-1.1l1.7 3.2v2.3h1v-2.3l1.8-3.2h-1">
-                                </path>
-                            </g>
-                            <g fill="#3e4347">
-                                <path
-                                    d="M27.3 30.2v-5.6c0-.5.4-.9.9-.9h26.2c.5 0 .9.4.9.9v5.6h1.9v-5.6c0-1.5-1.3-2.8-2.8-2.8H28.2c-1.6 0-2.8 1.3-2.8 2.8v5.6h1.9">
-                                </path>
-                                <path
-                                    d="M55.4 39.6v3.7c0 .5-.4.9-.9.9H28.2c-.5 0-.9-.4-.9-.9v-3.7h-1.9v3.7c0 1.5 1.3 2.8 2.8 2.8h26.2c1.6 0 2.8-1.3 2.8-2.8v-3.7h-1.8">
-                                </path>
-                            </g>
-                            <g fill="#b2c1c0">
-                                <circle cx="29.2" cy="25.5" r=".9"> </circle>
-                                <circle cx="53.6" cy="25.5" r=".9"> </circle>
-                                <circle cx="29.2" cy="42.4" r=".9"> </circle>
-                                <circle cx="53.6" cy="42.4" r=".9"> </circle>
-                            </g>
-                            <path
-                                d="M37.6 55.5c0 1-.8 1.9-1.9 1.9h-7.5c-1 0-1.9-.8-1.9-1.9v-1.9c0-1 .8-1.9 1.9-1.9h7.5c1 0 1.9.8 1.9 1.9v1.9"
-                                fill="#62727a"> </path>
-                            <path d="M28.5 52.7c-.6 0-1.2.4-1.2.9s.5.9 1.2.9h7c.6 0 1.2-.4 1.2-.9s-.5-.9-1.2-.9h-7"
-                                fill="#b2c1c0"> </path>
-                        </g>
-                    </svg></td>
-                <td><svg width="64px" height="64px" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"
-                        fill="#000000">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#FBF063"
-                                d="M7 22L50 0l43 22-43 21.001L7 22z"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#F29C1F"
-                                d="M50.003 42.997L7 22v54.28l43.006 21.714-.003-54.997z"></path>
-                            <path fill-rule="evenodd" clip-rule="evenodd" fill="#F0C419"
-                                d="M50 97.994L93.006 76.28V22L50.003 42.997 50 97.994z"></path>
-                            <path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" fill="#F29C1F"
-                                d="M27.036 11.705l42.995 21.498 2.263-1.105-43.047-21.524z"></path>
-                            <path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"
-                                d="M21.318 14.674L63.3 36.505l15.99-7.809L35.788 7.271z"></path>
-                            <path opacity=".5" fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff"
-                                d="M63.312 36.505l15.978-7.818v11l-15.978 8.817V36.505z"></path>
-                        </g>
-                    </svg></td>
-            </tr>
-            <tr>
-                <td class="up-sec2"><b>Baked Fresh Daily</b></td>
-                <td class="up-sec2"><b>Great Value</b></td>
-                <td class="up-sec2"><b>Institutions</b></td>
-                <td class="up-sec2"><b>Delivery To Your Door</b></td>
-                <td class="up-sec2"><b>No Order Too Large</b></td>
-            </tr>
-            <tr>
-                <td class="td-sec2">Our bread is baked fresh daily, contains no preservatives and is very high in
-                    quality. It is also especially nice and soft</td>
-                <td class="td-sec2">With the most competitive prices on the market we are able to deliver great value
-                    without compromising on taste</td>
-                <td class="td-sec2">We serve a wide range of institutions including universities, airlines, hotels and
-                    schools. Order daily for tomorrow</td>
-                <td class="td-sec2">Sample text. Click to select the text box. Click again or double click to start
-                    editing the text</td>
-                <td class="td-sec2">Sample text. Click to select the text box. Click again or double click to start
-                    editing the text</td>
-            </tr>
-        </table>
-    </section>
-    <section id="sec3">
-        <table>
-            <tr>
-                <td colspan="4">
-                    <h1 id="h1-sec3">Our Bread</h1>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="4" id="under-h1-sec3">A values-driven bakery<br><br><br></td>
-            </tr>
-            <tr>
-                <td class="td-img-sec3"><img class="img-sec3"
-                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/39e83d9d106355578ff86ac2/80fd24bc-f01b-aac5-2941-18f4ec01acbf.jpg">
-                </td>
-                <td class="td-img-sec3"><img class="img-sec3"
-                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/34a9503fba495a6e9a5428d1/aaa90fbe-1b90-3607-4d63-f1658876c83f.jpg">
-                </td>
-                <td class="td-img-sec3"><img class="img-sec3"
-                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/89d3b9222ade58f094587c3e/55.jpg">
-                </td>
-                <td class="td-img-sec3"><img class="img-sec3"
-                        src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/b3aca416bb8b5c328a8476b7/trt.jpg">
-                </td>
-            </tr>
-        </table>
-    </section>
-    <section id="sec4">
-        <div id="div1-sec4">
-            <table>
-                <tr>
-                    <td colspan="2">
-                        <h1>About Bakery</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br><br></td>
-                </tr>
-                <tr>
-                    <td>Our People
-                        <hr><br><br><br><br>
-                    </td>
-                    <td>Our Values
-                        <hr><br><br><br><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Our History
-                        <hr><br><br><br><br>
-                    </td>
-                    <td>Our Culture
-                        <hr><br><br><br><br>
-                    </td>
-                </tr>
-                <tr>
-                    <td>ingridients
-                        <hr><br><br><br><br>
-                    </td>
-                    <td>Our Bakery
-                        <hr><br><br><br><br>
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <div id="div2-sec4"><img
-                src="https://img.freepik.com/free-photo/smiling-male-baker-holding-baked-bread-chopping-board_23-2147883367.jpg?size=626&ext=jpg&ga=GA1.2.104076861.1696649272&semt=ais">
-        </div>
-    </section>
-    <section id="sec5">
-        <div id="div1-sec5">
-            <h1>We've had one goal: to bake the best tasting breads, cakes and pastries.</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
-            </p>
-            <button id="but-sec5">VIEW PRODUCTS</button>
-        </div>
-    </section>
-</body>
-
+	<body>
+		<header>
+			<h1><a id="header" href="#">logo</a></h1>
+			<nav id="head-link">
+				<li class="menu"><a class="link-menu" href=".#">Bakery</a></li>
+				<li class="menu"><a class="link-menu" href=".#">Page 4</a></li>
+				<li class="menu"><a class="link-menu" href=".#">Page 5</a></li>
+				<li class="menu"><a class="link-menu" href=".#">Page 6</a></li>
+				<li class="menu"><a class="landing" href=".#">Landing</a></li>
+			</nav>
+		</header>
+		<section id="sec1">
+			<div id="div1-sec1">
+				<p>FRESH BREAD & BAKED GOODS</p>
+				<p class="big"><b>Baked fresh daily</b></p>
+				<p id="local">
+					<span
+						><svg
+							class="loca1"
+							version="1.0"
+							id="Layer_1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							width="64px"
+							height="64px"
+							viewBox="0 0 64 64"
+							enable-background="new 0 0 64 64"
+							xml:space="preserve"
+							fill="#000000"
+							stroke="#000000"
+							style="width: 20px; height: 20px"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								<path
+									fill="#231F20"
+									d="M32,0C18.746,0,8,10.746,8,24c0,5.219,1.711,10.008,4.555,13.93c0.051,0.094,0.059,0.199,0.117,0.289l16,24 C29.414,63.332,30.664,64,32,64s2.586-0.668,3.328-1.781l16-24c0.059-0.09,0.066-0.195,0.117-0.289C54.289,34.008,56,29.219,56,24 C56,10.746,45.254,0,32,0z M32,32c-4.418,0-8-3.582-8-8s3.582-8,8-8s8,3.582,8,8S36.418,32,32,32z"
+								></path>
+							</g></svg></span
+					>​254 W 27ST ST, NEW YORK, NY 10011
+				</p>
+				<p>
+					<span
+						><svg
+							width="64px"
+							height="64px"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+							style="width: 21px; height: 21px"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									d="M14.795 2h-5.59c-1.115 0-1.519.116-1.926.334a2.272 2.272 0 0 0-.945.945C6.116 3.686 6 4.09 6 5.205v13.59c0 1.114.116 1.519.334 1.926.218.407.538.727.945.945.407.218.811.334 1.926.334h5.59c1.114 0 1.519-.116 1.926-.334.407-.218.727-.538.945-.945.218-.407.334-.811.334-1.926V5.205c0-1.115-.116-1.519-.334-1.926a2.272 2.272 0 0 0-.945-.945C16.314 2.116 15.91 2 14.795 2zM8 17.995V6.005h8v11.99H8z"
+									fill="#000000"
+								></path>
+							</g></svg></span
+					>(212)123-4567
+				</p>
+				<p>
+					Monday - Wednesday 9am - 7pm<br />
+					Thursday - Saturday 9am - 8pm<br />
+					Sunday 9am - 6pm
+				</p>
+				<button id="view-product">VIEW PRODUCTS</button>
+			</div>
+			<div id="div2-sec1">
+				<img
+					id="img-sec1"
+					src="https://food-images.files.bbci.co.uk/food/recipes/paul_hollywoods_crusty_83536_16x9.jpg"
+				/>
+			</div>
+		</section>
+		<section id="sec2">
+			<table>
+				<tr>
+					<td colspan="5">
+						<h1 id="h1-sec2">
+							We bake fresh, handmade bread, pastries and cakes every day
+						</h1>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<svg
+							fill="#000000"
+							width="64px"
+							height="64px"
+							viewBox="0 0 64 64"
+							style="
+								fill-rule: evenodd;
+								clip-rule: evenodd;
+								stroke-linejoin: round;
+								stroke-miterlimit: 2;
+							"
+							version="1.1"
+							xml:space="preserve"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:serif="http://www.serif.com/"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								<g transform="matrix(1,0,0,1,-288,-288)">
+									<g id="Icon">
+										<path
+											d="M341.92,327.476C341.92,321.972 337.458,317.509 331.954,317.509C324.951,317.509 315.265,317.509 308.262,317.509C302.757,317.509 298.295,321.972 298.295,327.476C298.295,330.299 298.295,333.156 298.295,334.992C298.295,336.649 299.638,337.992 301.295,337.992C308.33,337.992 331.886,337.992 338.92,337.992C340.577,337.992 341.92,336.649 341.92,334.992L341.92,327.476Z"
+											style="fill: #f8ac3a"
+										></path>
+										<path
+											d="M337.057,318.913C337.948,320.406 338.46,322.151 338.46,324.016L338.46,331.532C338.46,333.189 337.117,334.532 335.46,334.532L298.295,334.532L298.295,334.992C298.295,336.649 299.638,337.992 301.295,337.992C308.33,337.992 331.886,337.992 338.92,337.992C340.577,337.992 341.92,336.649 341.92,334.992L341.92,327.476C341.92,323.836 339.969,320.653 337.057,318.913Z"
+											style="fill: #f39404"
+										></path>
+										<path
+											d="M345.062,335.992L295.062,335.992C294.267,335.992 293.504,336.308 292.941,336.871C292.378,337.434 292.062,338.197 292.062,338.992C292.062,339.254 292.062,339.521 292.062,339.783C292.062,340.578 292.378,341.341 292.941,341.904C293.504,342.467 294.267,342.783 295.062,342.783L345.062,342.783C345.858,342.783 346.621,342.467 347.184,341.904C347.746,341.341 348.062,340.578 348.062,339.783C348.062,339.521 348.062,339.254 348.062,338.992C348.062,338.197 347.746,337.434 347.184,336.871C346.621,336.308 345.858,335.992 345.062,335.992Z"
+											style="fill: #f5f0e5"
+										></path>
+										<path
+											d="M345.361,336.007C345.576,336.427 345.692,336.897 345.692,337.378C345.692,337.639 345.692,337.907 345.692,338.168C345.692,338.964 345.376,339.727 344.813,340.289C344.251,340.852 343.488,341.168 342.692,341.168L292.692,341.168C292.592,341.168 292.492,341.163 292.394,341.153C292.535,341.428 292.719,341.682 292.941,341.904C293.504,342.467 294.267,342.783 295.062,342.783L345.062,342.783C345.858,342.783 346.621,342.467 347.184,341.904C347.746,341.341 348.062,340.578 348.062,339.783C348.062,339.521 348.062,339.254 348.062,338.992C348.062,338.197 347.746,337.434 347.184,336.871C346.692,336.379 346.047,336.076 345.361,336.007Z"
+											style="fill: #eadec7"
+										></path>
+										<g transform="matrix(1.19758,0,0,1.31169,281.785,295.515)">
+											<path
+												d="M31.127,17.534L31.165,24.004C31.167,24.425 31.544,24.765 32.004,24.762C32.465,24.76 32.837,24.417 32.835,23.996L32.797,17.526C32.795,17.105 32.418,16.766 31.958,16.768C31.497,16.77 31.125,17.114 31.127,17.534Z"
+												style="fill: #f39404"
+											></path>
+										</g>
+										<g transform="matrix(1.19758,0,0,1.31169,281.785,295.515)">
+											<path
+												d="M25.453,17.534L25.491,24.004C25.493,24.425 25.869,24.765 26.33,24.762C26.791,24.76 27.163,24.417 27.161,23.996L27.123,17.526C27.12,17.105 26.744,16.766 26.283,16.768C25.822,16.77 25.45,17.114 25.453,17.534Z"
+												style="fill: #f39404"
+											></path>
+										</g>
+										<g transform="matrix(1.19758,0,0,1.31169,281.785,295.515)">
+											<path
+												d="M36.763,17.534L36.801,24.004C36.804,24.425 37.18,24.765 37.641,24.762C38.102,24.76 38.474,24.417 38.471,23.996L38.433,17.526C38.431,17.105 38.055,16.766 37.594,16.768C37.133,16.77 36.761,17.114 36.763,17.534Z"
+												style="fill: #f39404"
+											></path>
+										</g>
+										<g
+											transform="matrix(-1.125,-1.94342e-16,1.23391e-16,-1.50552,349.291,333.314)"
+										>
+											<path
+												d="M31.145,15.136C31.145,15.136 31.347,15.542 31.57,15.988C31.901,16.65 31.901,17.35 31.57,18.012L30.719,19.715C30.299,20.555 30.299,21.445 30.719,22.285C30.942,22.731 31.145,23.136 31.145,23.136C31.278,23.403 31.769,23.558 32.241,23.483C32.714,23.408 32.989,23.13 32.855,22.864C32.855,22.864 32.653,22.458 32.43,22.012C32.099,21.35 32.099,20.65 32.43,19.988L33.281,18.285C33.701,17.445 33.701,16.555 33.281,15.715C33.058,15.269 32.855,14.864 32.855,14.864C32.722,14.597 32.231,14.442 31.759,14.517C31.286,14.592 31.011,14.87 31.145,15.136Z"
+												style="fill: #f5f0e5"
+											></path>
+										</g>
+										<g
+											transform="matrix(-1.125,-1.94342e-16,1.23391e-16,-1.50552,356.062,333.314)"
+										>
+											<path
+												d="M31.145,15.136C31.145,15.136 31.347,15.542 31.57,15.988C31.901,16.65 31.901,17.35 31.57,18.012L30.719,19.715C30.299,20.555 30.299,21.445 30.719,22.285C30.942,22.731 31.145,23.136 31.145,23.136C31.278,23.403 31.769,23.558 32.241,23.483C32.714,23.408 32.989,23.13 32.855,22.864C32.855,22.864 32.653,22.458 32.43,22.012C32.099,21.35 32.099,20.65 32.43,19.988L33.281,18.285C33.701,17.445 33.701,16.555 33.281,15.715C33.058,15.269 32.855,14.864 32.855,14.864C32.722,14.597 32.231,14.442 31.759,14.517C31.286,14.592 31.011,14.87 31.145,15.136Z"
+												style="fill: #f5f0e5"
+											></path>
+										</g>
+										<g
+											transform="matrix(-1.125,-1.94342e-16,1.23391e-16,-1.50552,362.834,333.314)"
+										>
+											<path
+												d="M31.145,15.136C31.145,15.136 31.347,15.542 31.57,15.988C31.901,16.65 31.901,17.35 31.57,18.012L30.719,19.715C30.299,20.555 30.299,21.445 30.719,22.285C30.942,22.731 31.145,23.136 31.145,23.136C31.278,23.403 31.769,23.558 32.241,23.483C32.714,23.408 32.989,23.13 32.855,22.864C32.855,22.864 32.653,22.458 32.43,22.012C32.099,21.35 32.099,20.65 32.43,19.988L33.281,18.285C33.701,17.445 33.701,16.555 33.281,15.715C33.058,15.269 32.855,14.864 32.855,14.864C32.722,14.597 32.231,14.442 31.759,14.517C31.286,14.592 31.011,14.87 31.145,15.136Z"
+												style="fill: #f5f0e5; width: 22px; height: 22px"
+											></path>
+										</g>
+									</g>
+								</g>
+							</g>
+						</svg>
+					</td>
+					<td>
+						<svg
+							width="64px"
+							height="64px"
+							viewBox="0 0 1024 1024"
+							class="icon"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="#000000"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								<path
+									d="M175.4 866.3c39.1 25.7 166.1 114.6 488.5-229.7s223-425.9 196.2-454.9c-26.8-29-263.6-149.6-556 122.5C21.6 567 175.4 866.3 175.4 866.3z"
+									fill="#EAAD6A"
+								></path>
+								<path
+									d="M241.9 696.5s26.7 26.1 48.6 4.5c21.9-21.7-2.2-40.2-2.2-40.2L171.6 514l-27.3 67.4 97.6 115.1zM623.3 323.5s26.7 26.1 48.6 4.5c21.9-21.7-2.2-40.2-2.2-40.2L565.9 153.9l-62.1 19.2 119.5 150.4zM386.5 463.8s26.7 26.1 48.6 4.5c21.9-21.7-2.2-40.2-2.2-40.2L322.4 287.5 280.8 332l105.7 131.8z"
+									fill="#FFC661"
+								></path>
+								<path
+									d="M604.8 577.4c-227.5 243-389.5 280.3-455.1 229.3 10.4 34.3 20.7 54.5 20.7 54.5 39.1 25.7 166.1 114.6 488.5-229.7s223-425.9 196.2-454.9c-6.1-6.6-22.9-17.8-48.6-28.1 36.5 54.7 15.2 197.1-201.7 428.9z"
+									fill="#D19152"
+								></path>
+								<path
+									d="M310.5 281c-4.3 4-8.6 8.1-12.9 12.4-0.7 0.7-1.5 1.4-2.2 2.1-0.4 0.4-0.7 0.8-1.1 1.1-3.8 3.8-7.7 7.9-11.7 12.2-183.1 193.9-212.5 464-112.4 564.1 90.5 90.5 259.8 16.9 489.7-213 229.8-229.8 303.5-399.2 213-489.7C773.1 70.4 504.2 99.3 310.5 281z m349.1 7.6c3.5 3.1 5.5 7.4 5.6 12 0.2 4.7-1.6 9.1-4.9 12.4-6.3 6.3-16.3 6.6-23 0.7l-2.8-2.4c-37-32.7-69.3-70.4-95.9-112L524.3 177c1.2-0.5 2.5-0.9 3.7-1.4 8.8-3.4 17.6-6.6 26.3-9.4 0.4-0.1 0.7-0.2 1.1-0.4l3.4 5.3c28.1 43.6 61.9 83.2 100.8 117.5z m-225 154.5c3.5 3.1 5.5 7.4 5.6 12 0.2 4.7-1.6 9.1-4.9 12.4-6.3 6.3-16.3 6.6-23 0.7l-2.8-2.4c-37-32.7-69.3-70.4-95.9-112l-14.9-23.4c6.7-7.2 13.6-14.3 20.7-21.2 0.8-0.8 1.7-1.6 2.5-2.4l11.9 18.7c28.1 43.6 61.9 83.2 100.8 117.6z m-154.5 225c3.5 3.1 5.5 7.4 5.6 12 0.2 4.7-1.6 9.1-4.9 12.4-6.3 6.3-16.3 6.6-23 0.7l-2.8-2.4c-37-32.7-69.3-70.4-95.8-112l-0.4-0.6c3.7-13.1 7.9-26.5 12.8-39.9l7.8 12.2c28 43.6 61.9 83.2 100.7 117.6z m361-27c-124.2 124.2-348 317-452 213-47.2-47.2-60.4-139.1-38.7-241.5 25.2 35.9 54.2 69 87.2 98.1l2.8 2.4c17.1 15.1 43.2 14.3 59.4-1.8 8.4-8.4 13.1-20.1 12.7-32-0.4-11.9-5.7-23.3-14.6-31.2-37-32.7-69.3-70.4-95.9-112l-18.1-28.3c23-54 55.2-107.7 96.7-156.7l10.9 17c27.9 43.7 61.8 83.3 100.6 117.6l2.8 2.4c17.1 15.1 43.2 14.4 59.4-1.8 8.4-8.4 13.1-20.1 12.7-32-0.4-11.9-5.7-23.3-14.6-31.2-37-32.7-69.3-70.4-95.9-112L342 288.4c49-43.2 103.1-76.9 157.6-101.2l16.8 26.3c27.9 43.7 61.8 83.3 100.6 117.6l2.8 2.4c17.1 15.1 43.2 14.3 59.4-1.8 8.4-8.4 13.1-20.1 12.7-32-0.4-11.9-5.7-23.3-14.6-31.2-36.7-32.4-68.6-69.8-95.1-110.9 114.4-31.4 220.1-20.6 272 31.3 103.9 104.2-88.9 328-213.1 452.2z"
+									fill="#004364"
+								></path>
+								<path
+									d="M462 257.8m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
+									fill="#004364"
+								></path>
+								<path
+									d="M686.7 188.2m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
+									fill="#004364"
+								></path>
+								<path
+									d="M681 520.2m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
+									fill="#004364"
+								></path>
+								<path
+									d="M607 601.3m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
+									fill="#004364"
+								></path>
+								<path
+									d="M249.5 457.8m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
+									fill="#004364"
+								></path>
+								<path
+									d="M392.9 292.7m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
+									fill="#004364"
+								></path>
+								<path
+									d="M197 758.3m-15.4 0a15.4 15.4 0 1 0 30.8 0 15.4 15.4 0 1 0-30.8 0Z"
+									fill="#004364"
+								></path>
+							</g>
+						</svg>
+					</td>
+					<td>
+						<svg
+							width="64px"
+							height="64px"
+							viewBox="0 0 1024 1024"
+							class="icon"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="#000000"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								<path
+									d="M0.000976 0.999024h1023.000975v1023.000976H0.000976z"
+									fill="#FFFFFF"
+								></path>
+								<path
+									d="M844.176585 208.796098l-41.959024-11.988293 41.959024-10.989268 11.988293-42.958049 10.989268 42.958049 42.958049 10.989268-42.958049 11.988293-10.989268 41.959024-11.988293-41.959024zM104.898537 717.299512l-31.968781-6.993171 31.968781-7.992195 7.992195-31.96878 6.99317 31.96878 32.967805 7.992195-32.967805 6.993171-6.99317 32.967805-7.992195-32.967805zM883.138537 261.74439l-14.985366-2.997073 14.985366-3.996097 2.997073-13.986342 2.997073 13.986342 14.985366 3.996097-14.985366 2.997073-2.997073 14.985366-2.997073-14.985366zM109.893659 544.468293l-14.985366-2.997073 14.985366-2.997074 2.997073-14.985366 2.997073 14.985366 14.985366 2.997074-14.985366 2.997073-2.997073 14.985366-2.997073-14.985366z"
+									fill="#FDCD60"
+								></path>
+								<path
+									d="M114.88878 348.659512m-8.991219 0a8.99122 8.99122 0 1 0 17.982439 0 8.99122 8.99122 0 1 0-17.982439 0Z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M910.112195 711.305366a24.97561 24.97561 0 1 1 24.97561-24.97561 24.97561 24.97561 0 0 1-24.97561 24.97561z m0-35.964878a9.990244 9.990244 0 1 1 0 0.999024z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M626.389268 469.541463h69.931708v204.650147h-69.931708z"
+									fill="#FDCD60"
+								></path>
+								<path
+									d="M190.814634 734.282927h644.370732v34.965853H190.814634z"
+									fill="#AFBCF3"
+								></path>
+								<path
+									d="M855.165854 714.302439H170.834146v74.926829h684.331708z m-19.980488 54.946341H190.814634v-34.965853h644.370732z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M150.853659 837.182439h722.294634v34.965854H150.853659z"
+									fill="#AFBCF3"
+								></path>
+								<path
+									d="M127.876098 817.201951v74.926829h767.250731v-74.926829z m745.272195 54.946342H150.853659v-34.965854h722.294634z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M487.524878 483.527805h49.95122v182.821463h-49.95122z"
+									fill="#FDCD60"
+								></path>
+								<path
+									d="M467.54439 686.329756h89.912195V463.547317h-89.912195z m19.980488-202.801951h49.95122v182.821463h-49.95122z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M339.669268 483.527805h49.95122v182.821463h-49.95122z"
+									fill="#FDCD60"
+								></path>
+								<path
+									d="M319.68878 686.329756h89.912196V463.547317h-89.912196z m19.980488-202.801951h49.95122v182.821463h-49.95122z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M190.814634 373.635122h49.95122v40.96h-49.95122z"
+									fill="#FF8859"
+								></path>
+								<path
+									d="M260.746341 353.654634h-89.912195v80.920976h89.912195z m-19.980487 60.940488h-49.95122v-40.96h49.95122z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M784.235122 373.635122h49.951219v40.96h-49.951219z"
+									fill="#FF8859"
+								></path>
+								<path
+									d="M854.166829 353.654634h-89.912195v80.920976h89.912195z m-19.980488 60.940488h-49.951219v-40.96h49.951219z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M636.379512 373.635122h49.95122v40.96h-49.95122z"
+									fill="#FF8859"
+								></path>
+								<path
+									d="M706.31122 353.654634h-89.912196v80.920976h89.912196z m-19.980488 60.940488h-49.95122v-40.96h49.95122z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M487.524878 373.635122h49.95122v40.96h-49.95122z"
+									fill="#FF8859"
+								></path>
+								<path
+									d="M557.456585 353.654634h-89.912195v80.920976h89.912195z m-19.980487 60.940488h-49.95122v-40.96h49.95122z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M339.669268 373.635122h49.95122v40.96h-49.95122z"
+									fill="#FF8859"
+								></path>
+								<path
+									d="M409.600976 353.654634h-89.912196v80.920976h89.912196z m-19.980488 60.940488h-49.95122v-40.96h49.95122z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M515.497561 140.862439L241.764878 305.701463h542.470244L515.497561 140.862439z"
+									fill="#FDCD60"
+								></path>
+								<path
+									d="M515.497561 116.885854L170.834146 325.681951h683.332683z m0 23.976585l268.737561 164.839024H241.764878zM615.4 688.327805h89.912195V465.545366h-89.912195z m19.980488-202.801951h49.951219v182.821463h-49.951219z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M783.236098 485.525854h49.951219v182.821463h-49.951219z"
+									fill="#FDCD60"
+								></path>
+								<path
+									d="M763.25561 688.327805h89.912195V465.545366h-89.912195z m19.980488-202.801951h49.951219v182.821463h-49.951219z"
+									fill="#5546CB"
+								></path>
+								<path
+									d="M189.81561 666.349268h49.951219V481.529756h-48.952195l-0.999024 184.819512z"
+									fill="#FDCD60"
+								></path>
+								<path
+									d="M260.746341 461.549268h-89.912195v224.780488h88.913171z m-20.979512 204.8h-49.951219V481.529756h48.952195z"
+									fill="#5546CB"
+								></path>
+							</g>
+						</svg>
+					</td>
+					<td>
+						<svg
+							width="64px"
+							height="64px"
+							viewBox="0 0 64 64"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							aria-hidden="true"
+							role="img"
+							class="iconify iconify--emojione"
+							preserveAspectRatio="xMidYMid meet"
+							fill="#000000"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								<path
+									d="M62 50.8c0-1-.8-1.9-1.9-1.9H3.9c-1 0-1.9.8-1.9 1.9v1.9c0 1 .8 1.9 1.9 1.9h56.2c1 0 1.9-.8 1.9-1.9v-1.9"
+									fill="#b2c1c0"
+								></path>
+								<ellipse
+									cx="12.3"
+									cy="55.5"
+									rx="6.6"
+									ry="6.5"
+									fill="#3e4347"
+								></ellipse>
+								<ellipse
+									cx="12.3"
+									cy="55.5"
+									rx="3.8"
+									ry="3.7"
+									fill="#b2c1c0"
+								></ellipse>
+								<ellipse
+									cx="50.8"
+									cy="55.5"
+									rx="6.6"
+									ry="6.5"
+									fill="#3e4347"
+								></ellipse>
+								<ellipse
+									cx="50.8"
+									cy="55.5"
+									rx="3.8"
+									ry="3.7"
+									fill="#b2c1c0"
+								></ellipse>
+								<path
+									d="M54.5 19H28.2c-3.1 0-5.6 2.5-5.6 5.6v24.3h37.5V24.6c0-3.1-2.5-5.6-5.6-5.6"
+									fill="#62727a"
+								></path>
+								<path
+									d="M15.1 26.5c-4.5 0-5.6 0-5.6 7.5c0 5.6-5.6 5.6-5.6 11.2v3.7h18.8V26.5h-7.6"
+									fill="#f15744"
+								></path>
+								<path fill="#ffce31" d="M5.8 43.3h1.9V47H5.8z"></path>
+								<path
+									d="M12.8 39.6c-1.1 0-1.7.8-1.3 1.8l1.6 4c.4 1 1.6 1.7 2.7 1.7h3c1.1 0 2-.8 2-1.9v-3.7c0-1-.9-1.9-2-1.9h-6"
+									fill="#d33b23"
+								></path>
+								<g fill="#3e4347">
+									<path
+										d="M20.8 28.3h-7.5s-1.9.2-1.9 2.8v4.5s0 2.1 1.9 2.1h7.5v-9.4"
+									></path>
+									<circle cx="12.3" cy="51.7" r=".9"></circle>
+									<circle cx="9.1" cy="53.6" r=".9"></circle>
+									<path
+										d="M8.6 56.5c.4-.3 1-.1 1.3.3c.3.4.1 1-.3 1.3c-.4.3-1 .1-1.3-.3c-.3-.5-.2-1 .3-1.3"
+									></path>
+									<circle cx="12.3" cy="59.2" r=".9"></circle>
+									<circle cx="15.6" cy="57.3" r=".9"></circle>
+									<circle cx="15.6" cy="53.6" r=".9"></circle>
+								</g>
+								<circle cx="12.3" cy="55.5" fill="#62727a" r="1.9"></circle>
+								<g fill="#3e4347">
+									<circle cx="50.8" cy="51.7" r=".9"></circle>
+									<circle cx="47.5" cy="53.6" r=".9"></circle>
+									<path
+										d="M47 56.5c.4-.3 1-.1 1.3.3c.3.4.1 1-.3 1.3c-.4.3-1 .1-1.3-.3c-.3-.5-.1-1 .3-1.3"
+									></path>
+									<circle cx="50.8" cy="59.2" r=".9"></circle>
+									<circle cx="54" cy="57.3" r=".9"></circle>
+									<circle cx="54" cy="53.6" r=".9"></circle>
+								</g>
+								<circle cx="50.8" cy="55.5" fill="#62727a" r="1.9"></circle>
+								<g fill="#ffffff">
+									<path
+										d="M28.4 32.7c-.5-.4-1.2-.6-2.2-.6c-.6 0-1.2 0-1.6.1v5.4c.3 0 .8.1 1.4.1c1.1 0 1.9-.3 2.5-.8c.5-.5.9-1.2.9-2.2c-.2-.9-.5-1.5-1-2m-2.3 4.2h-.6V33c.1 0 .4-.1.7-.1c1.3 0 2 .7 2 1.9c0 1.4-.8 2.1-2.1 2.1"
+									></path>
+									<path
+										d="M33.2 35.2h-2.1v1.6h2.3v.8h-3.3v-5.5h3.2v.9h-2.2v1.4h2.1v.8"
+									></path>
+									<path d="M35.3 36.8v-4.7h-1v5.5h3.3v-.8z"></path>
+									<path d="M38.3 32.1h1v5.5h-1z"></path>
+									<path
+										d="M43.7 32.1l-.8 2.5c-.2.7-.4 1.3-.6 2c-.1-.7-.3-1.3-.5-2l-.8-2.5h-1l1.8 5.5H43l1.9-5.5h-1.2"
+									></path>
+									<path
+										d="M46.4 36.8v-1.6h2.1v-.8h-2.1V33h2.2v-.9h-3.2v5.5h3.3v-.8z"
+									></path>
+									<path
+										d="M53.1 36.1c-.1-.5-.4-.9-.8-1.1c.5-.2 1-.7 1-1.4c0-.5-.2-.8-.5-1.1c-.4-.3-.9-.4-1.7-.4c-.6 0-1.1 0-1.5.1v5.4h1v-2.3h.5c.6 0 .8.2 1 1c.2.7.3 1.1.4 1.3h1c-.1-.2-.2-.8-.4-1.5m-1.9-1.5h-.6v-1.7h.6c.7 0 1.1.3 1.1.9c0 .5-.4.8-1.1.8"
+									></path>
+									<path
+										d="M57.1 32.1l-.7 1.4c-.2.4-.3.7-.5 1.1c-.1-.4-.3-.7-.5-1.1l-.7-1.4h-1.1l1.7 3.2v2.3h1v-2.3l1.8-3.2h-1"
+									></path>
+								</g>
+								<g fill="#3e4347">
+									<path
+										d="M27.3 30.2v-5.6c0-.5.4-.9.9-.9h26.2c.5 0 .9.4.9.9v5.6h1.9v-5.6c0-1.5-1.3-2.8-2.8-2.8H28.2c-1.6 0-2.8 1.3-2.8 2.8v5.6h1.9"
+									></path>
+									<path
+										d="M55.4 39.6v3.7c0 .5-.4.9-.9.9H28.2c-.5 0-.9-.4-.9-.9v-3.7h-1.9v3.7c0 1.5 1.3 2.8 2.8 2.8h26.2c1.6 0 2.8-1.3 2.8-2.8v-3.7h-1.8"
+									></path>
+								</g>
+								<g fill="#b2c1c0">
+									<circle cx="29.2" cy="25.5" r=".9"></circle>
+									<circle cx="53.6" cy="25.5" r=".9"></circle>
+									<circle cx="29.2" cy="42.4" r=".9"></circle>
+									<circle cx="53.6" cy="42.4" r=".9"></circle>
+								</g>
+								<path
+									d="M37.6 55.5c0 1-.8 1.9-1.9 1.9h-7.5c-1 0-1.9-.8-1.9-1.9v-1.9c0-1 .8-1.9 1.9-1.9h7.5c1 0 1.9.8 1.9 1.9v1.9"
+									fill="#62727a"
+								></path>
+								<path
+									d="M28.5 52.7c-.6 0-1.2.4-1.2.9s.5.9 1.2.9h7c.6 0 1.2-.4 1.2-.9s-.5-.9-1.2-.9h-7"
+									fill="#b2c1c0"
+								></path>
+							</g>
+						</svg>
+					</td>
+					<td>
+						<svg
+							width="64px"
+							height="64px"
+							viewBox="0 0 100 100"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="#000000"
+						>
+							<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+							<g
+								id="SVGRepo_tracerCarrier"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></g>
+							<g id="SVGRepo_iconCarrier">
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									fill="#FBF063"
+									d="M7 22L50 0l43 22-43 21.001L7 22z"
+								></path>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									fill="#F29C1F"
+									d="M50.003 42.997L7 22v54.28l43.006 21.714-.003-54.997z"
+								></path>
+								<path
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									fill="#F0C419"
+									d="M50 97.994L93.006 76.28V22L50.003 42.997 50 97.994z"
+								></path>
+								<path
+									opacity=".5"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									fill="#F29C1F"
+									d="M27.036 11.705l42.995 21.498 2.263-1.105-43.047-21.524z"
+								></path>
+								<path
+									opacity=".5"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									fill="#ffffff"
+									d="M21.318 14.674L63.3 36.505l15.99-7.809L35.788 7.271z"
+								></path>
+								<path
+									opacity=".5"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+									fill="#ffffff"
+									d="M63.312 36.505l15.978-7.818v11l-15.978 8.817V36.505z"
+								></path>
+							</g>
+						</svg>
+					</td>
+				</tr>
+				<tr>
+					<td class="up-sec2"><b>Baked Fresh Daily</b></td>
+					<td class="up-sec2"><b>Great Value</b></td>
+					<td class="up-sec2"><b>Institutions</b></td>
+					<td class="up-sec2"><b>Delivery To Your Door</b></td>
+					<td class="up-sec2"><b>No Order Too Large</b></td>
+				</tr>
+				<tr>
+					<td class="td-sec2">
+						Our bread is baked fresh daily, contains no preservatives and is
+						very high in quality. It is also especially nice and soft
+					</td>
+					<td class="td-sec2">
+						With the most competitive prices on the market we are able to
+						deliver great value without compromising on taste
+					</td>
+					<td class="td-sec2">
+						We serve a wide range of institutions including universities,
+						airlines, hotels and schools. Order daily for tomorrow
+					</td>
+					<td class="td-sec2">
+						Sample text. Click to select the text box. Click again or double
+						click to start editing the text
+					</td>
+					<td class="td-sec2">
+						Sample text. Click to select the text box. Click again or double
+						click to start editing the text
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section id="sec3">
+			<table>
+				<tr>
+					<td colspan="4">
+						<h1 id="h1-sec3">Our Bread</h1>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="4" id="under-h1-sec3">
+						A values-driven bakery<br /><br /><br />
+					</td>
+				</tr>
+				<tr>
+					<td class="td-img-sec3">
+						<img
+							class="img-sec3"
+							src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/39e83d9d106355578ff86ac2/80fd24bc-f01b-aac5-2941-18f4ec01acbf.jpg"
+						/>
+					</td>
+					<td class="td-img-sec3">
+						<img
+							class="img-sec3"
+							src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/34a9503fba495a6e9a5428d1/aaa90fbe-1b90-3607-4d63-f1658876c83f.jpg"
+						/>
+					</td>
+					<td class="td-img-sec3">
+						<img
+							class="img-sec3"
+							src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/89d3b9222ade58f094587c3e/55.jpg"
+						/>
+					</td>
+					<td class="td-img-sec3">
+						<img
+							class="img-sec3"
+							src="https://images01.nicepagecdn.com/c461c07a441a5d220e8feb1a/b3aca416bb8b5c328a8476b7/trt.jpg"
+						/>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section id="sec4">
+			<div id="div1-sec4">
+				<table>
+					<tr>
+						<td colspan="2">
+							<h1>About Bakery</h1>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+							enim ad minim veniam, quis nostrud exercitation ullamco laboris
+							nisi ut aliquip ex ea commodo consequat.<br /><br /><br />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Our People
+							<hr />
+							<br /><br /><br /><br />
+						</td>
+						<td>
+							Our Values
+							<hr />
+							<br /><br /><br /><br />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Our History
+							<hr />
+							<br /><br /><br /><br />
+						</td>
+						<td>
+							Our Culture
+							<hr />
+							<br /><br /><br /><br />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							ingridients
+							<hr />
+							<br /><br /><br /><br />
+						</td>
+						<td>
+							Our Bakery
+							<hr />
+							<br /><br /><br /><br />
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="div2-sec4">
+				<img
+					src="https://img.freepik.com/free-photo/smiling-male-baker-holding-baked-bread-chopping-board_23-2147883367.jpg?size=626&ext=jpg&ga=GA1.2.104076861.1696649272&semt=ais"
+				/>
+			</div>
+		</section>
+		<section id="sec5">
+			<div id="div1-sec5">
+				<h1>
+					We've had one goal: to bake the best tasting breads, cakes and
+					pastries.
+				</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+					eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+					aliquip ex ea commodo consequat.
+				</p>
+				<button id="but-sec5">VIEW PRODUCTS</button>
+			</div>
+		</section>
+	</body>
 </html>

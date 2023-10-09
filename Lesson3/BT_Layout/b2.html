@@ -1,49 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-
-        html, body {
+        html,
+        body {
             width: 100%;
             height: 100%;
-            margin:0;
+            margin: 0;
             padding: 0;
         }
-        
-        header nav ul {
-            list-style-type: none;
-            display: flex;
-            align-items: center;
-        }
 
-        header nav ul li {
-            display:inline-flex;
-            margin-inline:30px;
-        }
-
-        header a {
-            text-decoration: none;
-            color: black;
-            font-size: 120%;
-        }
-
-        header nav ul li a img {
-            width: 70px;
-            height: 50px;
-        }
-        #main {
-            height: 40%;
+        #header {
             width: 100%;
-            position: absolute;
-            top:0;
+            height: max-content;
+        }
+
+        .slider-container {
+            height: 400px;
+            width: 100%;
+            position: relative;
             overflow: hidden;
             text-align: center;
-            z-index: -1;
         }
-
 
         .menu {
             position: absolute;
@@ -88,7 +70,7 @@
         }
 
         .slide-1 {
-            background-image: url("https://source.unsplash.com/t7YycgAoVSw/1600x900");
+            background-image: url("https://img.freepik.com/free-photo/umbrella-chair-around-swimming-pool-neary-sea-ocean-beach-sunrise-sunset-time_74190-8446.jpg?size=626&ext=jpg&ga=GA1.2.104076861.1696649272&semt=ais");
         }
 
         .slide-2 {
@@ -99,51 +81,519 @@
             background-image: url("https://source.unsplash.com/OlZ1nWLEEgM/1600x900");
         }
 
-        
-        header {
-            border: 2px solid black;    
-            background-color: white;
-            display: flex;
-            justify-content: center;
+        #menu {
+            text-align: center;
             border-radius: 25px;
             width: 80%;
-            height:fit-content;
+            border: 1px solid black;
             margin-left: auto;
             margin-right: auto;
+            position: absolute;
+            top: 50px;
+            left: 108.297px;
+            right: 108.305px;
+            z-index: 10000;
+            background-color: white;
+        }
+
+        #menu nav ul {
+            list-style-type: none;
+        }
+
+        #menu nav ul li {
+            display: inline-block;
+            margin-inline: 50px;
+        }
+
+        #menu nav a {
+            text-decoration: none;
+            color: black;
+            font-size: 125%;
+        }
+
+        #but-sec1 {
+            height: 30px;
+            width: 150px;
+            border-radius: 25px;
+            background-color: rgb(90, 153, 153);
+            color: white;
+            transition: 0.2s color background-color;
+
+            &:hover {
+                color: black;
+                background-color: white;
+            }
+        }
+
+        /* #nav1-sec1 ul {
+    list-style-type: none;
+}
+
+#nav2-sec1 ul {
+    list-style-type: none;
+} */
+        #table1-sec1 {
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* #span1-sec1 {
+    display: inline;
+} */
+        #table1-sec1 select {
+            border: none;
+            margin-right: 50px;
+        }
+
+        #person {
+            width: 330px;
+        }
+
+        #date1 {
+            height: 30px;
+            border-radius: 25px;
+            width: 150px;
+        }
+
+        #div1-sec1 h2,
+        p {
+            text-align: center;
+        }
+
+        #div1-sec1 p {
+            margin-block: 0;
+        }
+
+        #div1-sec1 h2 {
+            margin-bottom: 0;
             margin-top: 20px;
-            z-index: 100;
+        }
+
+        #td-date {
+            padding-right: 20px;
+        }
+
+        /* #td-but1 {
+    width: 200px;
+} */
+        #div1-sec1 {
+            margin-top: 100px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 100px;
+            background-color: aqua;
+            border-radius: 25px;
+        }
+
+        #sec2 {
+            background-color: lightgray;
+        }
+
+        /* #div1-sec2 {
+    width: 200px;
+    height: 200px;
+    background-image: url("https://img.freepik.com/free-photo/fried-shrimps-roulets-vegetables-with-shampaigne_140725-768.jpg?size=626&ext=jpg&ga=GA1.2.104076861.1696649272&semt=sph");
+} */
+        #sec2 table tr td {
+            width: 300px;
+            height: fit-content;
+        }
+
+        #sec2 table tr td div {
+            width: 90%;
+            height: fit-content;
+        }
+
+        .img-table1-sec2 {
+            width: 100%;
+            height: 250px;
+        }
+
+        #pic1-table1-sec2 {
+            height: 600px;
+            width: 100%;
+        }
+
+        .img {
+            border-radius: 25px;
+        }
+
+        #sec2 table {
+            margin-right: auto;
+            margin-left: auto;
+            width: 90%;
+            height: 500px;
+            padding: 0;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+
+        #sec2 table tr td div p {
+            font-size: 125%;
+            position: relative;
+            bottom: 70px;
+            z-index: 10;
+            color: white;
+        }
+
+        #sec3 {
+            margin-top: 100px;
+            background-color: aliceblue;
+            height: max-content;
+        }
+
+        #p1,
+        #p2 {
+            color: aqua;
+        }
+
+        #p1 {
+            font-size: 120%;
+            text-align: start;
+        }
+
+        #p2 {
+            font-size: 120%;
+            float: right;
+            margin-right: 100px;
+        }
+
+        #sec3 h2,
+        #p2 {
+            display: inline-block;
+            margin-top: 0;
+        }
+
+        #sec3 h2,
+        #p1,
+        #p3 {
+            margin-left: 100px;
+        }
+
+        #p3 {
+            position: relative;
+            right: 20px;
+        }
+
+        #div2-sec3,
+        #div3-sec3,
+        #div4-sec3 {
+            width: 100%;
+            border: 20px solid white;
+            border-radius: 25px;
+            background-color: white;
+        }
+
+        #div2-sec3 img,
+        #div3-sec3 img,
+        #div4-sec3 img {
+            width: 100%;
+            height: 300px;
+            border-radius: 25px;
+        }
+
+        small {
+            color: gray;
+        }
+
+        #honeymoon span,
+        #meetings span,
+        #romantic-dining span {
+            float: right;
+        }
+
+        #honeymoon {
+            margin-bottom: 10px;
+        }
+        #sec3 table {
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #sec3 table tr td {
+            width:30%;
+            padding-inline: 30px;
+        }
+        footer {
+            background-color: black;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        footer p {
+            font-size: 200%;
+            text-align: center;
+            color: white;
         }
     </style>
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home </a></li>
-                <li><a href="#">About </a></li>
-                <li><a href="#">Newsletter </a></li>
-                <li><a href="#"><img src="https://www.shutterstock.com/image-vector/palm-tree-golden-logo-coconut-600w-1983111512.jpg"> </a></li>
-                <li><a href="#">Rooms </a></li>
-                <li><a href="#">Services </a></li>
-                <li><a href="#">Pricing </a></li>
-            </ul>
-        </nav>
-    </header>
-    <div id="main">
-        <div class="menu">
-            <label for="slide-dot-1"></label>
-            <label for="slide-dot-2"></label>
-            <label for="slide-dot-3"></label>
+    <div id="header">
+        <div id="menu">
+            <nav>
+                <ul>
+                    <li><a href=".#.">Home</a></li <li><a href=".#.">About</a></li>
+                    <li><a href=".#.">Newsletter</a></li>
+                    <li><a href=".#."> *Logo*</a></li>
+                    <li><a href=".#.">Rooms</a></li>
+                    <li><a href=".#.">Services</a></li>
+                    <li><a href=".#.">Pricing</a></li>
+                </ul>
+            </nav>
         </div>
+        <div class="slider-container">
+            <div class="menu">
+                <label for="slide-dot-1"></label>
+                <label for="slide-dot-2"></label>
+                <label for="slide-dot-3"></label>
+            </div>
 
-        <input id="slide-dot-1" type="radio" name="slides" checked>
-        <div class="slide slide-1"></div>
+            <input id="slide-dot-1" type="radio" name="slides" checked>
+            <div class="slide slide-1"></div>
 
-        <input id="slide-dot-2" type="radio" name="slides">
-        <div class="slide slide-2"></div>
+            <input id="slide-dot-2" type="radio" name="slides">
+            <div class="slide slide-2"></div>
 
-        <input id="slide-dot-3" type="radio" name="slides">
-        <div class="slide slide-3"></div>
+            <input id="slide-dot-3" type="radio" name="slides">
+            <div class="slide slide-3"></div>
+        </div>
     </div>
+    <section id="sec1">
+        <div id="div1-sec1">
+            <p style="height: 20px;"></p>
+            <h2><b>Book a Room</b></h2>
+            <p>Discover the perfect space for you!</p><br>
+            <table id="table1-sec1" border="0">
+                <tr>
+                    <td><b>Date</b></td>
+                    <td><b>Person</b></td>
+                    <td>
+                        <div></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="td-date"><input id="date1" type="date"></td>
+                    <td id="person">
+                        <span style="background-color: white;border-radius: 25px; height:50px;">
+                            <svg fill="#000000" width="64px" height="64px" viewBox="0 0 56 56"
+                                xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px;">
+                                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                <g id="SVGRepo_iconCarrier">
+                                    <path
+                                        d="M 28.0117 27.3672 C 33.0508 27.3672 37.3867 22.8672 37.3867 17.0078 C 37.3867 11.2187 33.0274 6.9297 28.0117 6.9297 C 22.9961 6.9297 18.6367 11.3125 18.6367 17.0547 C 18.6367 22.8672 22.9961 27.3672 28.0117 27.3672 Z M 13.2930 49.0703 L 42.7305 49.0703 C 46.4101 49.0703 47.7226 48.0156 47.7226 45.9531 C 47.7226 39.9062 40.1523 31.5625 28.0117 31.5625 C 15.8477 31.5625 8.2774 39.9062 8.2774 45.9531 C 8.2774 48.0156 9.5898 49.0703 13.2930 49.0703 Z">
+                                    </path>
+                                </g>
+                            </svg> Adults
+                            <span id="span1-sec1">
+                                <!-- <nav id="nav1-sec1">
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                            </ul>
+                        </nav> -->
+                                <select>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </span>
+                            <sub><svg fill="#000000" width="64px" height="64px" viewBox="0 0 1024 1024"
+                                    xmlns="http://www.w3.org/2000/svg" style="width: 24px;height: 24px;">
+                                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                    <g id="SVGRepo_iconCarrier">
+                                        <path
+                                            d="M356.522 303.712c50.542 32.395 76.17 87.364 51.594 125.682-24.565 38.338-85.213 38.014-135.757 5.618a161.796 161.796 0 01-18.258-13.595c-14.54 20.659-34.561 39.64-58.329 54.875-69.395 44.479-151.525 44.924-183.737-5.351-32.225-50.274 2.475-124.708 71.869-169.186 57.754-37.022 124.671-43.701 164.142-15.211 29.97-13.058 72.006-6.215 108.476 17.168zm-22.106 34.483c-29.846-19.136-62.199-21.927-75.69-10.658-8.543 7.136-21.222 6.141-28.548-2.24-20.325-23.251-74.607-20.829-124.17 10.942-52.732 33.798-76.844 85.522-59.487 112.601 17.347 27.073 74.417 26.764 127.147-7.033 26.801-17.179 47.328-39.842 57.785-62.662 6.411-13.99 25.384-16.176 34.809-4.011 7.303 9.427 16.926 18.164 28.203 25.395 33.877 21.713 69.465 21.903 79.168 6.759 9.7-15.124-5.338-47.379-39.217-69.094zm-62.975 280.373c-9.279 22.895-31.566 38.197-56.683 38.197-25.971 0-48.852-16.351-57.527-40.378-3.841-10.639-15.579-16.149-26.218-12.309s-16.149 15.579-12.309 26.218c14.49 40.134 52.685 67.429 96.053 67.429 41.942 0 79.153-25.549 94.644-63.773 4.248-10.483-.806-22.424-11.288-26.673s-22.424.806-26.673 11.288zm-90.552-71.918c0 16.927-13.722 30.638-30.648 30.638-16.916 0-30.638-13.711-30.638-30.638s13.722-30.648 30.638-30.648c16.927 0 30.648 13.722 30.648 30.648zm135.196 0c0 16.927-13.722 30.638-30.638 30.638-16.927 0-30.648-13.711-30.648-30.638s13.722-30.648 30.648-30.648c16.916 0 30.638 13.722 30.638 30.648z">
+                                        </path>
+                                        <path
+                                            d="M360.506 453.639c21.761 29.897 33.659 65.841 33.659 103.629 0 97.369-78.939 176.302-176.323 176.302-97.377 0-176.323-78.937-176.323-176.302 0-25.956 5.596-51.066 16.264-74.059 4.76-10.26.302-22.437-9.959-27.197s-22.437-.302-27.197 9.959C7.466 494.338.559 525.329.559 557.268c0 119.988 97.285 217.262 217.283 217.262 120.005 0 217.283-97.271 217.283-217.262 0-46.524-14.687-90.891-41.502-127.733-6.656-9.145-19.465-11.163-28.61-4.506s-11.163 19.465-4.506 28.61zm445.747 151.383c-9.279 22.895-31.566 38.197-56.683 38.197-25.971 0-48.852-16.351-57.527-40.378-3.841-10.639-15.579-16.149-26.218-12.309s-16.149 15.579-12.309 26.218c14.49 40.134 52.685 67.429 96.053 67.429 41.942 0 79.153-25.549 94.644-63.773 4.248-10.483-.806-22.424-11.288-26.673s-22.424.806-26.673 11.288zm-93.326-66.898c0 16.927-13.722 30.648-30.638 30.648-16.927 0-30.648-13.722-30.648-30.648s13.722-30.638 30.648-30.638c16.916 0 30.638 13.711 30.638 30.638zm135.197 0c0 16.927-13.722 30.648-30.638 30.648-16.927 0-30.648-13.722-30.648-30.648s13.722-30.638 30.648-30.638c16.916 0 30.638 13.711 30.638 30.638z">
+                                        </path>
+                                        <path
+                                            d="M901.307 466.294c16.211 27.09 24.895 58.079 24.895 90.378 0 97.369-78.939 176.302-176.323 176.302-97.377 0-176.323-78.937-176.323-176.302 0-33.625 9.412-65.809 26.904-93.643 6.019-9.577 3.134-22.219-6.442-28.237s-22.219-3.134-28.237 6.442c-21.566 34.315-33.184 74.045-33.184 115.438 0 119.988 97.285 217.262 217.283 217.262 120.005 0 217.283-97.271 217.283-217.262 0-39.758-10.719-78.008-30.708-111.411-5.808-9.706-18.384-12.866-28.09-7.058s-12.866 18.384-7.058 28.09z">
+                                        </path>
+                                        <path
+                                            d="M516.628 520.14c0-128.916 104.505-233.421 233.421-233.421 126.376 0 228.833 102.457 228.833 228.833v113.664h-51.364c-11.311 0-20.48 9.169-20.48 20.48s9.169 20.48 20.48 20.48h54.333c20.977 0 37.99-17.013 37.99-37.99V515.552c0-148.998-120.795-269.793-269.793-269.793-151.537 0-274.381 122.843-274.381 274.381v112.046c0 20.979 17.004 37.99 37.99 37.99h61.471c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48h-58.501V520.14z">
+                                        </path>
+                                        <path
+                                            d="M583.592 472.932h332.913c11.311 0 20.48-9.169 20.48-20.48s-9.169-20.48-20.48-20.48H583.592c-11.311 0-20.48 9.169-20.48 20.48s9.169 20.48 20.48 20.48z">
+                                        </path>
+                                    </g>
+                                </svg></sub> Childrens
+                            <!-- <nav id="nav2-sec1">
+                            <ul>
+                                <li>1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                            </ul>
+                        </nav> -->
+                            <select>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                        </span>
+                    </td>
+                    <td id="td-but1"><button id="but-sec1" type="submit">BOOK NOW</button></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 50px;"></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section id="sec2">
+        <table id="table1-sec2" border="0">
+            <tr>
+                <td rowspan="2">
+                    <div id="div1-sec2">
+                        <img class="img" id="pic1-table1-sec2"
+                            src="https://img.freepik.com/free-photo/bedroom-cute-style_1150-18010.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=ais">
+                        <p style="font-size: 150%;"><b>Rooms</b></p>
+                    </div>
+                </td>
+                <td>
+                    <div id="div2-sec2">
+                        <img class="img img-table1-sec2"
+                            src="https://img.freepik.com/free-photo/fried-shrimps-roulets-vegetables-with-shampaigne_140725-768.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=sph">
+                        <p><b>Dining</b></p>
+                    </div>
+                </td>
+                <td>
+                    <div id="div3-sec2">
+                        <img class="img img-table1-sec2"
+                            src="https://img.freepik.com/free-photo/medium-shot-friends-with-beer-pub_23-2148872452.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=ais">
+                        <p><b>Service & Facilities</b></p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="div4-sec2">
+                        <img class="img img-table1-sec2"
+                            src="https://img.freepik.com/premium-photo/exercise-ball-fitness_43525-147.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=ais">
+                        <p><b>Conferences & Meetings</b></p>
+                    </div>
+                </td>
+                <td>
+                    <div id="div5-sec2">
+                        <img class="img img-table1-sec2"
+                            src="https://img.freepik.com/free-photo/high-angle-wedding-planning-items-arrangement_23-2150328539.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=ais">
+                        <p><b>Weeding Package</b></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section id="sec3">
+        <br>
+        <p id="p1">Special Offers</p>
+        <div id="div1-sec3">
+            <h2>Best offer of the month</h2>
+            <p id="p2"><b>View all</b></p>
+        </div>
+        <p id="p3" style="width: 50%;">Experience Fantastic Benefits and Obtain Better Rates When You Make a Direct
+            Booking on Our Office Website</p><br>
+        <table>
+            <tr>
+                <td>
+                    <div id="div2-sec3">
+                        <img
+                            src="https://img.freepik.com/premium-photo/bedroom-with-bed-lamp-wall_755913-6207.jpg?size=626&ext=jpg&ga=GA1.2.104076861.1696649272&semt=ais"><br>
+                        <div class="down">
+                            <small>Room</small><br><br>
+                            <div id="honeymoon">
+                                <b>Honeymoon</b>
+                                <span>
+                                    <svg fill="#000000" width="64px" height="64px" viewBox="0 0 56 56"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px;">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M 28.0117 27.3672 C 33.0508 27.3672 37.3867 22.8672 37.3867 17.0078 C 37.3867 11.2187 33.0274 6.9297 28.0117 6.9297 C 22.9961 6.9297 18.6367 11.3125 18.6367 17.0547 C 18.6367 22.8672 22.9961 27.3672 28.0117 27.3672 Z M 13.2930 49.0703 L 42.7305 49.0703 C 46.4101 49.0703 47.7226 48.0156 47.7226 45.9531 C 47.7226 39.9062 40.1523 31.5625 28.0117 31.5625 C 15.8477 31.5625 8.2774 39.9062 8.2774 45.9531 C 8.2774 48.0156 9.5898 49.0703 13.2930 49.0703 Z">
+                                            </path>
+                                        </g>
+                                    </svg> 2 </span>
+                            </div>
+                            <small>Indugle in a Memorable One-Time Romantic Dinner for Two</small>
+                            <p id="money"><b>$699 </b><small>/night</small></p>
+                        </div>
+                    </div>
+                </td>
+
+                <td>
+                    <div id="div3-sec3">
+                        <img
+                            src="https://img.freepik.com/premium-photo/rear-view-audience-wearing-listening-speakers-via-interpreter-headset-stage_41418-2937.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=sph"><br>
+                        <div class="down">
+                            <small>Room</small><br><br>
+                            <div id="meetings">
+                                <b>Meetings</b>
+                                <span>
+                                    <svg fill="#000000" width="64px" height="64px" viewBox="0 0 56 56"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px;">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M 28.0117 27.3672 C 33.0508 27.3672 37.3867 22.8672 37.3867 17.0078 C 37.3867 11.2187 33.0274 6.9297 28.0117 6.9297 C 22.9961 6.9297 18.6367 11.3125 18.6367 17.0547 C 18.6367 22.8672 22.9961 27.3672 28.0117 27.3672 Z M 13.2930 49.0703 L 42.7305 49.0703 C 46.4101 49.0703 47.7226 48.0156 47.7226 45.9531 C 47.7226 39.9062 40.1523 31.5625 28.0117 31.5625 C 15.8477 31.5625 8.2774 39.9062 8.2774 45.9531 C 8.2774 48.0156 9.5898 49.0703 13.2930 49.0703 Z">
+                                            </path>
+                                        </g>
+                                    </svg> 30 </span>
+                            </div>
+                            <small>Experience an Exclusively Private Environment to Boots Your Productivity</small>
+                            <p id="money"><b>$999 </b><small>/night</small></p>
+                        </div>
+                    </div>
+                </td>
+
+                <td style="vertical-align: top;">
+                    <div id="div4-sec3">
+                        <img
+                            src="https://img.freepik.com/premium-photo/couple-holding-their-hands-restaurant_392895-96695.jpg?size=626&ext=jpg&ga=GA1.1.104076861.1696649272&semt=ais"><br>
+                        <div class="down">
+                            <small>Room</small><br><br>
+                            <div id="romantic-dining">
+                                <b>Romantic Dining</b>
+                                <span>
+                                    <svg fill="#000000" width="64px" height="64px" viewBox="0 0 56 56"
+                                        xmlns="http://www.w3.org/2000/svg" style="width: 20px;height: 20px;">
+                                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round">
+                                        </g>
+                                        <g id="SVGRepo_iconCarrier">
+                                            <path
+                                                d="M 28.0117 27.3672 C 33.0508 27.3672 37.3867 22.8672 37.3867 17.0078 C 37.3867 11.2187 33.0274 6.9297 28.0117 6.9297 C 22.9961 6.9297 18.6367 11.3125 18.6367 17.0547 C 18.6367 22.8672 22.9961 27.3672 28.0117 27.3672 Z M 13.2930 49.0703 L 42.7305 49.0703 C 46.4101 49.0703 47.7226 48.0156 47.7226 45.9531 C 47.7226 39.9062 40.1523 31.5625 28.0117 31.5625 C 15.8477 31.5625 8.2774 39.9062 8.2774 45.9531 C 8.2774 48.0156 9.5898 49.0703 13.2930 49.0703 Z">
+                                            </path>
+                                        </g>
+                                    </svg> 2 </span>
+                            </div>
+                            <small>Indugle in a Memorable One-Time Romantic Dinner for Two</small>
+                            <p style="height: 7px;"></p>
+                            <p id="money2"><b>$499 </b><small>/table</small></p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br><br><br>
+    </section>
+    <footer>
+        <p>Designer: Khúc Nhân nè he</p>
+    </footer>
 </body>
+
 </html>

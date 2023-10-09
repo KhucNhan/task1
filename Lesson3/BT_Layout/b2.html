@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin:0;
+            padding: 0;
+        }
+        
+        header nav ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul li {
+            display:inline-flex;
+            margin-inline:30px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: black;
+            font-size: 120%;
+        }
+
+        header nav ul li a img {
+            width: 70px;
+            height: 50px;
+        }
+        #main {
+            height: 40%;
+            width: 100%;
+            position: absolute;
+            top:0;
+            overflow: hidden;
+            text-align: center;
+            z-index: -1;
+        }
+
+
+        .menu {
+            position: absolute;
+            left: 0;
+            z-index: 900;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .menu label {
+            cursor: pointer;
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: #fff;
+            border-radius: 50px;
+            margin: 0 .2em 1em;
+            transition: all .3s ease;
+
+            &:hover {
+                background: red;
+            }
+        }
+
+        .slide {
+            width: 100%;
+            height: 500px;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            z-index: 10;
+            padding: 8em 1em 0;
+            background-size: cover;
+            background-position: 50% 50%;
+            transition: left 0s .75s;
+        }
+
+        [id^="slide"]:checked+.slide {
+            left: 0;
+            z-index: 100;
+            transition: left .65s ease-out;
+        }
+
+        .slide-1 {
+            background-image: url("https://source.unsplash.com/t7YycgAoVSw/1600x900");
+        }
+
+        .slide-2 {
+            background-image: url("https://source.unsplash.com/11H1SSVcIxc/1600x900");
+        }
+
+        .slide-3 {
+            background-image: url("https://source.unsplash.com/OlZ1nWLEEgM/1600x900");
+        }
+
+        
+        header {
+            border: 2px solid black;    
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            border-radius: 25px;
+            width: 80%;
+            height:fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home </a></li>
+                <li><a href="#">About </a></li>
+                <li><a href="#">Newsletter </a></li>
+                <li><a href="#"><img src="https://www.shutterstock.com/image-vector/palm-tree-golden-logo-coconut-600w-1983111512.jpg"> </a></li>
+                <li><a href="#">Rooms </a></li>
+                <li><a href="#">Services </a></li>
+                <li><a href="#">Pricing </a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <div class="menu">
+            <label for="slide-dot-1"></label>
+            <label for="slide-dot-2"></label>
+            <label for="slide-dot-3"></label>
+        </div>
+
+        <input id="slide-dot-1" type="radio" name="slides" checked>
+        <div class="slide slide-1"></div>
+
+        <input id="slide-dot-2" type="radio" name="slides">
+        <div class="slide slide-2"></div>
+
+        <input id="slide-dot-3" type="radio" name="slides">
+        <div class="slide slide-3"></div>
+    </div>
+</body>
+</html>

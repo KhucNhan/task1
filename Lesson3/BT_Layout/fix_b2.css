@@ -1,0 +1,14 @@
+ /* for iphone XR */
+@media only screen and (max-width:414px) {
+    .slider-container {
+        height: 207px;
+        width: 414;
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        top:50px;
+    }
+    .slider-container p {
+        font-size: 8px;
+    }
+}

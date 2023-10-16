@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #main {
+            width: 100%;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #navbar {
+            background-color: red;
+            height: 50px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #navbar nav ul {
+            list-style-type: none;
+            display: flex;
+
+        }
+
+        #navbar nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #navbar nav ul li {
+            margin-inline: 30px;
+        }
+
+        #product {
+            display: grid;
+            grid-template-columns: repeat(3, auto) ;
+            grid-template-rows: repeat(2, auto) ;
+            grid-column-gap: 20px;
+            grid-row-gap: 30px;
+        }
+
+        #name {
+            margin-block: 20px;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        #product p {
+            text-align: center;
+        }
+
+        .pic {
+            display: flex;
+            justify-content: center;
+        }
+
+        #product>div {
+            border: 1px solid gray;
+            padding: 10px;
+        }
+
+        .price {
+            font-size: 24px;
+            color: red;
+            margin-bottom: 0;
+        }
+
+        .detail {
+            text-decoration: none;
+            color: black;
+        }
+
+        #footer {
+            background-color: pink;
+            height: 100px;
+            margin-top:20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="logo">
+            <img src="logo1.png">
+        </div>
+        <div id="navbar">
+            <nav>
+                <ul>
+                    <li><a href=".#">Trang chủ</a></li>
+                    <li><a href=".#">Điện thoại</a></li>
+                    <li><a href=".#">Máy tính</a></li>
+                    <li><a href=".#">Phụ kiện</a></li>
+                    <li><a href=".#">Tuyển dụng</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="banner">
+            <img style="width: 100%;" src="hehe.png">
+        </div>
+        <div id="content">
+            <div id="name">KHUYẾN MÃI HOT</div>
+            <div id="product">
+                <div>
+                    <div class="pic">
+                        <img src="hinh.jpg">
+                    </div>
+                    <p>
+                        <a href="##" class="detail">Oppo Reno5 8GB - 128GB</a>
+                    </p>
+                    <p class="price">
+                        8.690.000 Đ
+                    </p>
+                </div>
+                <div>
+                    <div class="pic">
+                        <img src="hinh.jpg">
+                    </div>
+                    <p>
+                        <a href="##" class="detail">Oppo Reno5 8GB - 128GB</a>
+                    </p>
+                    <p class="price">
+                        8.690.000 Đ
+                    </p>
+                </div>
+                <div>
+                    <div class="pic">
+                        <img src="hinh.jpg">
+                    </div>
+                    <p>
+                        <a href="##" class="detail">Oppo Reno5 8GB - 128GB</a>
+                    </p>
+                    <p class="price">
+                        8.690.000 Đ
+                    </p>
+                </div>
+                <div>
+                    <div class="pic">
+                        <img src="hinh.jpg">
+                    </div>
+                    <p>
+                        <a href="##" class="detail">Oppo Reno5 8GB - 128GB</a>
+                    </p>
+                    <p class="price">
+                        8.690.000 Đ
+                    </p>
+                </div>
+                <div>
+                    <div class="pic">
+                        <img src="hinh.jpg">
+                    </div>
+                    <p>
+                        <a href="##" class="detail">Oppo Reno5 8GB - 128GB</a>
+                    </p>
+                    <p class="price">
+                        8.690.000 Đ
+                    </p>
+                </div>
+                <div>
+                    <div class="pic">
+                        <img src="hinh.jpg">
+                    </div>
+                    <p>
+                        <a href="##" class="detail">Oppo Reno5 8GB - 128GB</a>
+                    </p>
+                    <p class="price">
+                        8.690.000 Đ 
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            Khúc Chí Nhân
+        </div>
+    </div>
+</body>
+
+</html>

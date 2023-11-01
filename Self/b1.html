@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            /* background-image: url("https://th.bing.com/th/id/OIP.HG29DXjpg2kYDr6wqeOHnQHaE8?w=327&h=180&c=7&r=0&o=5&dpr=2&pid=1.7"); */
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            /* color:white; */
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+        }
+
+        body nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #theme {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            width: 10%;
+            height: fit-content;
+            margin: 30px;
+            position: relative;
+        }
+
+        #theme nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        #theme nav {
+            position: absolute;
+            /* top:0; */
+            right: 0;
+        }
+
+        #theme nav ul li {
+            padding-inline: 10px;
+        }
+
+        #theme nav ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #call {
+            border: 1px solid black;
+        }
+
+        #introduce {
+            width: 100%;
+            height: 799px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #introduce h1 {
+            font-size: 400%;
+            margin-bottom: 0;
+        }
+
+        #introduce p {
+            font-size: 200%;
+            margin-top: 12px;
+        }
+
+        #contact {
+            position: fixed;
+            left: 0;
+            bottom: 50px;
+        }
+
+        #contact li {
+            margin: 20px;
+        }
+
+        #chat {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            border: 1px solid burlywood;
+            border-radius: 25px;
+            width: 175px;
+            height: 50px;
+            position: fixed;
+            right: 0;
+            bottom: 50px;
+        }
+
+        footer {
+            width: 80%;
+            /* display: grid;
+            grid-template-columns: 25% 30% 20% ;
+            grid-template-rows: auto ; */
+            display: flex;
+            justify-content: space-between;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="theme">
+        <div id="logo">Dịch vụ nội thất Renewel</div>
+        <nav>
+            <ul>
+                <li><a href=".#.">Trang chủ</a></li>
+                <li><a href=".#.">Dịch vụ</a></li>
+                <li><a href=".#.">Dự án</a></li>
+                <li><a href=".#.">Liên hệ</a></li>
+                <li id="call"><a href=".#.">Gọi ngay</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="introduce">
+        <h1>Dịch vụ nội thất Renewel</h1>
+        <p>Cùng bạn tạo nên ngôi nhà trong mơ</p>
+    </div>
+    <div id="contact">
+        <nav>
+            <ul>
+                <li>
+                    <a href=".#">
+                        <svg width="28px" height="28px" viewBox="0 -0.5 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M11.75 19C11.75 19.4142 12.0858 19.75 12.5 19.75C12.9142 19.75 13.25 19.4142 13.25 19H11.75ZM13.25 11C13.25 10.5858 12.9142 10.25 12.5 10.25C12.0858 10.25 11.75 10.5858 11.75 11H13.25ZM15.5 5.75C15.9142 5.75 16.25 5.41421 16.25 5C16.25 4.58579 15.9142 4.25 15.5 4.25V5.75ZM12.5 8H11.75H12.5ZM11.75 11C11.75 11.4142 12.0858 11.75 12.5 11.75C12.9142 11.75 13.25 11.4142 13.25 11H11.75ZM12.5 10.25C12.0858 10.25 11.75 10.5858 11.75 11C11.75 11.4142 12.0858 11.75 12.5 11.75V10.25ZM14.5 11.75C14.9142 11.75 15.25 11.4142 15.25 11C15.25 10.5858 14.9142 10.25 14.5 10.25V11.75ZM12.5 11.75C12.9142 11.75 13.25 11.4142 13.25 11C13.25 10.5858 12.9142 10.25 12.5 10.25V11.75ZM10.5 10.25C10.0858 10.25 9.75 10.5858 9.75 11C9.75 11.4142 10.0858 11.75 10.5 11.75V10.25ZM13.25 19V11H11.75V19H13.25ZM15.5 4.25C13.4289 4.25 11.75 5.92893 11.75 8H13.25C13.25 6.75736 14.2574 5.75 15.5 5.75V4.25ZM11.75 8V11H13.25V8H11.75ZM12.5 11.75H14.5V10.25H12.5V11.75ZM12.5 10.25H10.5V11.75H12.5V10.25Z"
+                                    fill="#000000"></path>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href=".#">
+                        <svg width="28px" height="28px" viewBox="0 -0.5 25 25" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M15.5 5H9.5C7.29086 5 5.5 6.79086 5.5 9V15C5.5 17.2091 7.29086 19 9.5 19H15.5C17.7091 19 19.5 17.2091 19.5 15V9C19.5 6.79086 17.7091 5 15.5 5Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M12.5 15C10.8431 15 9.5 13.6569 9.5 12C9.5 10.3431 10.8431 9 12.5 9C14.1569 9 15.5 10.3431 15.5 12C15.5 12.7956 15.1839 13.5587 14.6213 14.1213C14.0587 14.6839 13.2956 15 12.5 15Z"
+                                    stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <rect x="15.5" y="9" width="2" height="2" rx="1" transform="rotate(-90 15.5 9)"
+                                    fill="#000000"></rect>
+                                <rect x="16" y="8.5" width="1" height="1" rx="0.5" transform="rotate(-90 16 8.5)"
+                                    stroke="#000000" stroke-linecap="round"></rect>
+                            </g>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div id="chat">
+        <span>
+            <svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path d="M8 10.5H16" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path d="M8 14H13.5" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path>
+                    <path
+                        d="M17 3.33782C15.5291 2.48697 13.8214 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22C17.5228 22 22 17.5228 22 12C22 10.1786 21.513 8.47087 20.6622 7"
+                        stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"></path>
+                </g>
+            </svg>
+        </span>
+        <span>
+            Chat with us!
+        </span>
+    </div>
+    <div id="detail">
+        <table>
+            <tr>
+                <td colspan="2"><img
+                        src="https://static.wixstatic.com/media/ea26fd_724a836736c64fc38c4fd21fa32ba9a9~mv2_d_4997_4480_s_4_2.jpg/v1/fill/w_1348,h_1400,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ea26fd_724a836736c64fc38c4fd21fa32ba9a9~mv2_d_4997_4480_s_4_2.jpg">
+                </td>
+                <td colspan="2">
+                    <h2>Dịch vụ</h2>
+                    <nav>
+                        <ul>
+                            <li>Sửa chữa nội thất toàn bộ</li>
+                            <li>Sửa chữa nhà bếp</li>
+                            <li>Sửa chữa phòng tắm</li>
+                            <li>Trang trí nội thất</li>
+                            <li>Lát sàn</li>
+                        </ul>
+                    </nav>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div></div>
+                </td>
+                <td>
+                    <div></div>
+                </td>
+                <td>
+                    <div></div>
+                </td>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td colspan="2"><img src=""></td>
+            </tr>
+        </table>
+    </div>
+    <div id="project">
+        <h1></h1>
+        <div id="table">
+            <div class="item">
+                <div>Số 20 phố Tây Sơn</div>
+            </div>
+            <div class="item">
+                <div>Số 20 phố Tây Sơn</div>
+            </div>
+            <div class="item">
+                <div>Dự án gia đình anh Nam</div>
+            </div>
+            <div class="item">
+                <div>Dự án gia đình anh Nam</div>
+            </div>
+            <div class="item">
+                <div>Biệt thự ven hồ BT01</div>
+            </div>
+        </div>
+        <button type="menu">XEM TẤT CẢ</button>
+    </div>
+    <div id="comment">
+        <table>
+            <tr>
+                <td>ĐÁNH GIÁ</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <table>
+            <tr>
+                <td colspan="2">Liên hệ</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Số 99 Hai Bà Trưng
+                    Hà Nội</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><a href="lienhe@web.com">lienhe@web.com</a></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>024 3456 7890</td>
+            </tr>
+            <tr>
+                <td colspan="2">© Bản quyền của Khúc Chí Nhân.</td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>
+                    Tên <br>
+                    <input type="text">
+                </td>
+                <td>
+                    Họ <br>
+                    <input type="text">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    Email <br>
+                    <input type="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Điện thoại <br>
+                    <input type="number">
+                </td>
+                <td>
+                    Địa chỉ<br>
+                    <input type="address">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="submit">Gửi</button>
+                </td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <td>Trang chủ</td>
+            </tr>
+            <tr>
+                <td>Dịch vụ</td>
+            </tr>
+            <tr>
+                <td>Dự án</td>
+            </tr>
+            <tr>
+                <td>Liên hệ</td>
+            </tr>
+            <tr>
+                <td>
+                    <button type="button">GỌI NGAY</button>
+                </td>
+            </tr>
+        </table>
+    </footer>
+</body>
+
+</html>

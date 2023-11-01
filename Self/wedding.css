@@ -1,0 +1,498 @@
+body,
+html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-brand {
+    width: fit-content;
+}
+
+.nav-brand img {
+    width: 120px;
+    height: 60px;
+}
+
+.nav-item>a {
+    line-height: 44px;
+    font-size: 20px;
+    color: black;
+    transition: 0.25s ease-in-out;
+}
+
+.nav-item a:hover {
+    color: lightgray;
+}
+
+#search {
+    border-radius: 25px;
+    padding-inline: 10px;
+    outline: none;
+}
+
+#call {
+    width: 200px;
+    height: 200px;
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 500px;
+}
+
+.rung {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 50%;
+    z-index: 100;
+    background-color: darkgray;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+#call,
+#cir1,
+#cir2,
+.rung {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cir1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    z-index: 1;
+    border: 1px solid black;
+
+    /* viết bình thường */
+    animation-name: cir1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+
+    /* viết tắt */
+    animation: cir1 2s infinite;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+#cir2 {
+    width: 150px;
+    height: 150px;
+    z-index: 100;
+    background-color: lightgray;
+
+    border-radius: 50%;
+    animation-duration: 1s;
+    animation-name: cir2;
+    animation-iteration-count: infinite;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+@keyframes cir2 {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+
+    50% {
+        width: 125px;
+        height: 125px;
+    }
+
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@keyframes cir1 {
+    0% {
+        width: 150px;
+        height: 150px;
+    }
+
+    67% {
+        width: 177.25px;
+        height: 177.25px;
+        opacity: 0.9;
+    }
+
+    68% {
+        width: 180px;
+        height: 180px;
+        opacity: 0.8;
+    }
+
+    69% {
+        width: 182.25px;
+        height: 182.25px;
+        opacity: 0.7;
+    }
+
+    70% {
+        width: 185px;
+        height: 185px;
+        opacity: 0.6;
+    }
+
+    71% {
+        width: 187.25px;
+        height: 187.25px;
+        opacity: 0.5;
+    }
+
+    72% {
+        width: 190px;
+        height: 190px;
+        opacity: 0.4;
+    }
+
+    73% {
+        width: 192.25px;
+        height: 192.25px;
+        opacity: 0.3;
+    }
+
+    74% {
+        width: 195px;
+        height: 195px;
+        opacity: 0.2;
+    }
+
+    75% {
+        width: 197.25px;
+        height: 197.25px;
+        opacity: 0.1;
+    }
+
+    100% {
+        width: 200px;
+        height: 200px;
+        opacity: 0.0;
+    }
+}
+
+#container-cir1 {
+    width: 200px;
+    height: 200px;
+    z-index: 1000;
+    position: fixed;
+    left: 0;
+    top: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Album ảnh cưới */
+.album {
+    height: 300px;
+    width: 340px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* background-image: url("./hinh.jpg"); */
+    background-size: cover;
+    align-items: center;
+}
+
+.text-album {
+    width: 283.333333333333333333333333333333px;
+    height: 250px;
+    border: 5px solid white;
+    padding:10px;
+
+}
+
+.text-album a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.2s color;
+    text-align: center;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.text-album {
+    background-color: lightgray;
+    opacity: 0.7;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.album:hover div {
+    visibility: visible;
+}
+
+#album1 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_kmlJVPG9jeyinO265o3xOiX4.jpg");
+}
+
+#album2 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_TLVRd7YL8p66NgdrEsGR9PcX.jpg");
+}
+
+#album3 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_EGu6OqVESAd3XeyOqfiCk3Ga.jpg");
+}
+
+#album4 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_5kV6ecNmA1T0wnoJJaw79jQt.jpg");
+}
+
+#album5 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_DDy2tIb9GmVP85e4efqSsJNb.jpg");
+}
+
+#album6 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_1JFDLdvbyaTCNSm9gfYmpVm4.jpg");
+}
+
+.div-body {
+    width: 80%;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 a {
+    color:black;
+    text-decoration: none;
+    transition: 0.3s color;
+    &:hover {
+        color:rgb(84, 84, 219)
+    }
+}
+
+#vest1 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_qvwZK71HanYFFXMznb5OtSiH.jpg");
+}
+
+#vest2 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_fSMN1uNT4k0k9B7s5IrV6ewO.jpg");
+}
+
+#vest3 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_J5jTYpF2q9eSoU14vm2o59Vp.jpg");
+}
+
+#vest4 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_95fgKbVEgMULodvpBzwhY7oa.jpg");
+}
+
+#vest5 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_AWcCG7YiiuPZlJdISJkKdBcf.jpg");
+}
+
+#vest6 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220417_2TrycxrxIuBrRexeG2EzSybM.jpg");
+}
+
+.vest {
+    height: 300px;
+    width: 340px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* background-image: url("./hinh.jpg"); */
+    background-size: cover;
+    align-items: center;
+}
+
+.text-vest {
+    width: 283.333333333333333333333333333333px;
+    height: 250px;
+    border: 5px solid white;
+    padding:10px;
+}
+
+.text-vest {
+    background-color: lightgray;
+    opacity: 0.7;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-vest a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.2s color;
+    text-align: center;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.vest:hover div {
+    visibility: visible;
+}
+
+#dress1 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_96p0TxPowHenLtQz61FaQyKv.jpg");
+}
+
+#dress2 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_n9YFBJRRh2cRg2UafhGPVrco.jpg");
+}
+
+#dress3 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_m8OGcwJgWbPf111muiXdjU2q.jpg");
+}
+
+#dress4 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_d6NpHhaShg8Z9Mz2NCNPMPBS.jpg");
+}
+
+#dress5 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_IFLtnBAlD0YvxABRvVIw3tpJ.jpg");
+}
+
+#dress6 {
+    background-image: url("https://pos.nvncdn.net/226092-118464/album/20220418_EA0iVcihOKdj3grKsup2h5Qr.jpg");
+}
+
+.text-dress {
+    width: 283.333333333333333333333333333333px;
+    height: 250px;
+    border: 5px solid white;
+    padding:10px;
+    background-color: lightgray;
+    opacity: 0.7;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-dress a {
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    transition: 0.2s color;
+    text-align: center;
+    &:hover {
+        color: white;
+    }
+}
+
+.dress:hover div {
+    visibility: visible;
+}
+
+.dress {
+    height: 300px;
+    width: 340px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* background-image: url("./hinh.jpg"); */
+    background-size: cover;
+    align-items: center;
+}
+
+#vid1 {
+    width: fit-content;
+    padding: 15px;
+}
+
+#vid2 {
+    width: fit-content;
+    padding: 15px;
+
+}
+
+#vid3 {
+    width: fit-content;
+    padding: 15px;
+
+}
+
+.vid p {
+    text-align: center;
+}
+
+/* #footer1 {
+    width: 85%;
+} */
+
+#contact, #fanpage, #maps {
+    width: 350px;
+    height: 312px;
+}
+
+.card {
+    border:none;
+    background-color: rgb(237, 237, 237);
+}
+
+h2 {
+    padding-bottom: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+#footer1 {
+    background-color: rgb(237, 237, 237);
+    width: 100%;
+    height: 400px;
+}
+
+#footer2 {
+    height: 60px;
+    background-color: black;
+    color:white;
+    font-size: 24px;
+    text-align: center;
+    position: relative;
+    /* top:100px; */
+}
+
+#chat {
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background-color: rgb(12, 116, 220);
+    color:white;
+    width: 20%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    right:0;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+#chat span {
+    margin-inline: 10px;
+}

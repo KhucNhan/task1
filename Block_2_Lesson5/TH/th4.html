@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let borrow = +prompt('Số tiền vay');
+        let rate = +prompt('Lãi suất 1 năm (%)');
+        let rateCal = rate / 100;
+        let year = +prompt('Số năm vay');
+        document.write('Tổng số tiền cần phải trả sau ' + year + ' năm là: ' + borrow/rateCal * ( Math.pow(( 1 + rateCal ),year) - 1) * ( 1 + rateCal ) );
+    </script>
+</body>
+</html>

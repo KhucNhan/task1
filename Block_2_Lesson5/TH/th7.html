@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <input style="padding-left: 10px;" placeholder="Nhập số thứ 1 vào đây" type="number" name="" id="firstNumber">
+            </td>
+            <td>
+                <input style="padding-left: 10px;" placeholder="Nhập số thứ 1 vào đây" type="number" name="" id="secondNumber">
+            </td>
+            <td>
+                <button onclick="plus()">Plus</button>
+            </td>
+            <td>
+                <button onclick="minus()">Minus</button>
+            </td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+        function plus() {
+            let a = +document.getElementById('firstNumber').value;
+            let b = +document.getElementById('secondNumber').value;
+            document.getElementById('result').innerHTML = a+b;
+        }
+
+        function minus() {
+            let a = +document.getElementById('firstNumber').value;
+            let b = +document.getElementById('secondNumber').value;
+            document.getElementById('result').innerHTML = a-b;   
+        }
+    </script>
+</body>
+
+</html>

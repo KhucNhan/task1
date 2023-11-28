@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Amount</td>
+            <td>From</td>
+            <td>To</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input id="amount" type="text"></td>
+            <td>
+                <select class="select-1">
+                    <option class="VND" value="VND">VND</option>
+                    <option class="USD" value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select class="select-2">
+                    <option class="VND" value="VND">VND</option>
+                    <option class="USD" value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button onclick="count()">Convert</button>
+            </td>
+        </tr>
+    </table>
+    <div id="result"></div>
+    <script>
+        var amount = document.getElementById('amount');
+        function change1() {
+            let a = document.getElementById("select-1").value;
+        }
+
+        function change2() {
+            let b = document.getElementById("select-1").value;
+        }
+
+        function count() {
+            let amount = document.getElementById('amount').value;
+            console.log(amount);
+
+            var a = document.getElementsByClassName("select-1")[0].value;
+            console.log(a);
+
+            var b = document.getElementsByClassName('select-2')[0].value;
+            console.log(b);
+
+            if (a==b) {
+                document.getElementById('result').innerHTML = 'Result: ' + amount ;
+            } else {
+                if (a == 'VND' , b == 'USD' ) {
+                    document.getElementById('result').innerHTML = 'Result: ' + 23000/amount + ' $';
+                } else {
+                    document.getElementById('result').innerHTML = 'Result: ' + 23000*amount + ' VND';
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

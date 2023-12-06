@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        img {
+            width: 374.25px;
+            height: 374.25px;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body onload="docReady()">
+    <img id="move" src="https://storage.googleapis.com/pai-images/1bcc5956b07743ddba39c4ca5ff78f4e.jpeg" alt="">
+    <script>
+        function rightAP() {
+            var element = document.getElementById('move');
+            element.style.left = parseInt(element.style.left) + 10 + 'px';
+        }
+
+        function leftAP() {
+            var element = document.getElementById('move');
+            element.style.left = parseInt(element.style.left) - 10 + 'px';
+        }
+
+        function upAP() {
+            var element = document.getElementById('move');
+            element.style.top = parseInt(element.style.top) - 10 + 'px';
+        }
+
+        function downAP() {
+            var element = document.getElementById('move');
+            element.style.top = parseInt(element.style.top) + 10 + 'px';
+        }
+
+        function moveSelection(evt) {
+            switch (evt.keyCode) {
+                case 37:
+                case 65:
+                    leftAP();
+                    break;
+                case 39:
+                case 68:
+                    rightAP();
+                    break;
+                case 40:
+                case 83:
+                    downAP();
+                    break;
+                case 38:
+                case 87:
+                    upAP();
+                    break;
+            }
+        }
+
+        function docReady() {
+            var element = document.getElementById('move');
+            element.style.left = 0 + 'px';
+            element.style.top = 0 + 'px';
+            element.style.bottom = 0 + 'px';
+            element.style.right = 0 + 'px';
+            window.addEventListener('keydown', moveSelection);
+        }
+    </script>
+</body>
+
+</html>

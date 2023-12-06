@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>+Document</title>
+    <style>
+        td {
+            width: 70px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Tính điểm ĐH khối D</h2>
+    <table>
+        <tr>
+            <td>Môn toán</td>
+            <td>
+                <form>
+                    <input required minlength="1" id="math" type="text">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Môn văn</td>
+            <td>
+                <form>
+                    <input required minlength="1" id="liter" type="text">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td>Môn anh</td>
+            <td>
+                <form>
+                    <input required minlength="1" id="eng" type="text">
+                </form>
+            </td>
+        </tr>
+    </table>
+    <p>Khu vực
+        <select name="" id="area">
+            <option value="KV1">KV1</option>
+            <option value="KV2-NT">KV2-NT</option>
+            <option value="KV2">KV2</option>
+            <option value="KV3">KV3</option>
+        </select>
+    </p>
+    <button onclick="calP()">Tính điểm</button>
+    <div id="result"></div>
+
+    <script>
+        function calP() {
+            let math = +document.getElementById('math').value;
+            let liter = +document.getElementById('liter').value;
+            let eng = +document.getElementById('eng').value;
+            let area = document.getElementById('area').value;
+            console.log(area);
+            let point = math + eng + liter;
+            switch (area) {
+                case "KV1":
+                    document.getElementById('result').innerHTML = "Tổng điểm: " + (point + 0.75);
+                    break;
+                case "KV2-NT":
+                    document.getElementById('result').innerHTML = "Tổng điểm: " + (point + 0.5);
+                    break;
+                case "KV2":
+                    document.getElementById('result').innerHTML = "Tổng điểm: " + (point + 0.25);
+                    break;
+                case "KV3":
+                    document.getElementById('result').innerHTML = "Tổng điểm: " + (point);
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>

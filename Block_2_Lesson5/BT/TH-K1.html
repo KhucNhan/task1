@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, html {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div {
+            height: 500px;
+            width: 500px;
+            border-radius: 50%;
+            border:5px solid aqua;
+        }
+    </style>
+</head>
+<body>
+    <div id="balloon" onclick="move()"></div>
+
+    <script>
+        var img = null;
+        function init() {    
+            img = document.getElementById('balloon');
+            img.style.position = 'relative';
+            img.style.left = '10px';
+        }
+
+        function move() {
+            img.style.left = parseInt(img.style.left) + 10 + 'px';
+        }
+
+        window.onload = init;
+    </script>
+</body>
+</html>

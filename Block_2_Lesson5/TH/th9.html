@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body, html {
+            font-size: 125%;
+        } */
+
+        input {
+            padding-left: 10px;
+        }
+
+        td {
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>Gửi tiền định kỳ</td>
+            <td><input type="text" name="" id="borrowA" placeholder="Nhập số tiền"></td>
+            <td><input type="text" name="" id="rateA" placeholder="Nhập số lãi mỗi năm"></td>
+            <td><input type="text" name="" id="yearA" placeholder="Nhập số năm"></td>
+            <td><button onclick="runCala()">Tính</button></td>
+            <td id="result1"></td>
+        </tr>
+        <tr>
+            <td>Gửi tiền 1 lần</td>
+            <td><input type="text" name="" id="borrowB" placeholder="Nhập số tiền"></td>
+            <td><input type="text" name="" id="rateB" placeholder="Nhập số lãi mỗi năm"></td>
+            <td><input type="text" name="" id="yearB" placeholder="Nhập số năm"></td>
+            <td><button onclick="runCalb()">Tính</button></td>
+            <td id="result2"></td>
+        </tr>
+        <!-- <tr>
+            <td>Lãi suất nhận được</td>
+            <td><input type="text" name="" id="borrowC" placeholder="Nhập số tiền"></td>
+            <td><input type="text" name="" id="rateC" placeholder="Nhập số lãi mỗi năm"></td>
+            <td><input type="text" name="" id="yearC" placeholder="Nhập số năm"></td>
+            <td><button onclick="runCalc()">Tính</button></td>
+            <td id="result3"></td>
+        </tr> -->
+    </table>
+    <script>
+        // let borrow_a = +document.getElementById("borrowA").value;
+        // console.log(borrow_a);
+        // let rate_a = +document.getElementById("rateA").value;
+        // let year_a = +document.getElementById("yearA").value;
+        // let rateCal_a = rate_a / 100;
+
+        // let borrow_b = +document.getElementById("borrowB").value;
+        // let rate_b = +document.getElementById("rateB").value;
+        // let year_b = +document.getElementById("yearB").value;
+        // let rateCal_b = rate_b / 100;
+
+        // let borrow_c = +document.getElementById("borrowC").value;
+        // let rate_c = +document.getElementById("rateC").value;
+        // let year_c = +document.getElementById("yearC").value;
+        // let rateCal_c = rate_c / 100;
+
+        function runCala() {
+            let borrow_a = +document.getElementById("borrowA").value;
+            console.log(borrow_a);
+            let rate_a = +document.getElementById("rateA").value;
+            let year_a = +document.getElementById("yearA").value;
+            let rateCal_a = rate_a / 100;
+            document.getElementById("result1").innerHTML = 'Tổng số tiền sau ' + year_a + ' năm là: ' + borrow_a / rateCal_a * (Math.pow((1 + rateCal_a), year_a) - 1) * (1 + rateCal_a);
+        }
+
+        function runCalb() {
+            let borrow_b = +document.getElementById("borrowB").value;
+            console.log(borrow_b);
+            let rate_b = +document.getElementById("rateB").value;
+            let year_b = +document.getElementById("yearB").value;
+            let rateCal_b = rate_b/100;
+            document.getElementById("result2").innerHTML = 'Tổng số tiền sau ' + year_b + ' năm là: ' + borrow_b * (1 + year_b * rateCal_b);
+        }
+
+        // function runCalc() {
+        //     let borrow_c = +document.getElementById("borrowC").value;
+        //     console.log(borrow_c);
+        //     let rate_c = +document.getElementById("rateC").value;
+        //     console.log(rate_c);
+        //     let year_c = +document.getElementById("yearC").value;
+        //     console.log(year_c);
+        //     let rateCal_c = rate_c / 100;
+        //     document.getElementById("result3").innerHTML = 'Tổng số tiền lãi sau ' + year_c + ' năm là: ' + (borrow_c / rateCal_c * (Math.pow((1 + rateCal_c), year_c) - 1) * (1 + rateCal_c)) - borrow_c ;
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="weight" type="text" style="padding-left: 10px;" placeholder="Nhập vào cân nặng (kg)">
+    <input id="height" type="text" style="padding-left: 10px;" placeholder="Nhập vào chiều cao (mét)">
+    <button onclick="calBmi()">Calculate</button>
+    <div id="result"></div>
+
+    <script>
+        function calBmi() {
+            let weight = +document.getElementById('weight').value;
+            console.log(weight);
+            let height = +document.getElementById('height').value;
+            console.log(height);
+            let bmi = weight / (height * height);
+            console.log(bmi);
+            if (bmi < 16) {
+                document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Gầy độ 3";
+            } else {
+                if (16 <= bmi, bmi < 17 ) {
+                    document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Gầy độ 2";
+                } else {
+                    if (17 <= bmi, bmi < 18.5) {
+                        document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Gầy độ 1";
+                    } else {
+                        if (18.5 <= bmi, bmi < 25) {
+                            document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Bình thường";
+                        } else {
+                            if (25 <= bmi, bmi < 30) {
+                                document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Thừa cân";
+                            } else {
+                                if (30 <= bmi, bmi < 35) {
+                                    document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Béo phì độ 1";
+                                } else {
+                                    if (35 <= bmi, bmi < 40) {
+                                        document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Béo phì độ 2";
+                                    } else {
+                                        document.getElementById('result').innerHTML = "BMI: " + bmi + ": " + "Béo phì độ 3";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: lightblue;
+        }
+
+        .target {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div class="target"></div>
+        <button onclick="shoot()">Shoot</button>
+    </div>
+    <script>
+        function shoot() {
+            var target = document.querySelector('.target');
+            var container = document.getElementById('container');
+            var containerRect = container.getBoundingClientRect();
+
+            // Calculate random position within the container
+            var maxPositionX = containerRect.width - target.offsetWidth;
+            var maxPositionY = containerRect.height - target.offsetHeight;
+            var randomPosX = Math.floor(Math.random() * maxPositionX);
+            var randomPosY = Math.floor(Math.random() * maxPositionY);
+
+            // Move the target
+            target.style.left = randomPosX + 'px';
+            target.style.top = randomPosY + 'px';
+        }
+
+    </script>
+</body>
+
+</html>

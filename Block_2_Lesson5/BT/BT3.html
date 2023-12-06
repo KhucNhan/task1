@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="fruits">
+        <option value="Ổi">Ổi</option>
+        <option value="Dưa hấu">Dưa hấu</option>
+        <option value="Táo">Táo</option>
+        <option value="Mango">Xoài</option>
+        <option value="Cam">Cam</option>
+        <option value="Chôm chôm">Chôm chôm</option>
+        <option value="Măng cụt">Măng cụt</option>
+    </select>
+    <button onclick="search()">Search</button>
+    <div id="result"></div>
+    
+    <script>
+        function search() {
+            let name = document.getElementById('fruits').value;
+            switch (name) {
+                case "Ổi":
+                case "Dưa hấu":
+                    document.getElementById('result').innerHTML = 20000 + " VND / kg";
+                    break;
+                case "Táo":
+                case "Mango":
+                    document.getElementById('result').innerHTML = 30000 + " VND / kg";
+                    break;
+                case "Cam":
+                case "Chôm chôm":
+                    document.getElementById('result').innerHTML = 40000 + " VND / kg";
+                    break;
+                case "Măng cụt":
+                    document.getElementById('result').innerHTML = 50000 + " VND / kg";
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

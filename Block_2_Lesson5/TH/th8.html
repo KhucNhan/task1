@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="firstNumber">
+    <input type="text" id="secondNumber">
+    <input type="text" id="thirdNumber">
+    <button onclick="calculate()">Check</button>
+    <div id="result"></div>
+    <script>
+        function calculate() {
+            var a = +document.getElementById("firstNumber").value;
+            console.log(a);
+            var b = +document.getElementById("secondNumber").value;
+            console.log(b);
+            var c = +document.getElementById("thirdNumber").value;
+            console.log(c);
+            var max = a;
+            console.log(max);
+            if (a > b, a > c) {
+                document.getElementById('result').innerHTML = "Giá trị lớn nhất trong 3 số là: " + a;
+            } else {
+                if (b > c) {
+                    document.getElementById('result').innerHTML = "Giá trị lớn nhất trong 3 số là: " + b;
+                } else {
+                    document.getElementById('result').innerHTML = "Giá trị lớn nhất trong 3 số là: " + c;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Answer it pleaseeeeee</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            font-size: 150%;
+            background-color: rgb(255, 223, 228);
+        }
+
+        h1 {
+            position: relative;
+            font-size: 56px;
+            line-height: 56px;
+            border-bottom: 2px solid gray;
+            color: rgb(255, 164, 179);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background-color: rgb(255, 208, 216);
+            outline: none;
+            border: 1px solid black;
+            cursor: pointer;
+            height: 40px;
+            font-size: 40px;
+            margin-inline: 50px;
+            position: absolute;
+            width: 100px;
+            height: fit-content;
+        }
+
+        div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-right: auto;
+            margin-left: auto;
+            height: 30px;
+        }
+
+        p {
+            position: relative;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media screen and (max-width:500px) {
+            h1 {
+                font-size: 24px;
+                line-height: 24px;
+                padding-bottom: 5px;
+                margin-bottom: 20px;
+                border-bottom: 1px solid gray;
+            }
+
+            button {
+                height: fit-content;
+                font-size: 20px;
+                margin-inline: 20px;
+                width: fit-content;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top:0;
+            }
+
+            body, html {
+                width: 430px;
+                height: 932px;
+                overflow: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>You love me no ? =)))))))</h1>
+    <div>
+        <button onclick="saidYes()" style="right:15px;">Yes</button>
+        <button onmouseover="saidNo()" id="no" style="left:15px;">No</button>
+    </div>
+    <p id="text"></p>
+
+    <script>
+        function saidYes() {
+            document.getElementById('text').innerHTML = "Awwwwwwwwww, me too, i love my self =))))))";
+        }
+
+        function saidNo() {
+            var x = Math.round(Math.random() * 300);
+            var y = Math.round(Math.random() * 300);
+            document.getElementById('no').style.left = x + 'px';
+            document.getElementById('no').style.top = y + 'px';
+        }
+
+        function myFunction(x) {
+            if (x.matches) {
+                var x = Math.round(Math.random());
+                var y = Math.round(Math.random());
+                document.getElementById('no').style.left = x + 'px';
+                console.log(x);
+                document.getElementById('no').style.top = y + 'px';
+                console.log(y);
+
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 500px)")
+
+        myFunction(x);
+
+        x.addEventListener("change", function () {
+            myFunction(x);
+        });
+    </script>
+</body>
+
+</html>

@@ -66,7 +66,7 @@
                 font-size: 24px;
                 line-height: 24px;
                 padding-bottom: 5px;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 border-bottom: 1px solid gray;
             }
 
@@ -94,7 +94,7 @@
     <h1>You love me no ? =)))))))</h1>
     <div>
         <button onclick="saidYes()" style="right:15px;">Yes</button>
-        <button onmouseover="saidNo()" id="no" style="left:15px;">No</button>
+        <button onmouseover="saidNo()" onclick="clickNo()" id="no" style="left:15px;">No</button>
     </div>
     <p id="text"></p>
 
@@ -112,17 +112,14 @@
 
         function myFunction(x) {
             if (x.matches) {
-                var x = Math.round(Math.random());
-                var y = Math.round(Math.random());
-                document.getElementById('no').style.left = x + 'px';
-                console.log(x);
-                document.getElementById('no').style.top = y + 'px';
-                console.log(y);
-
+                function clickNo() {
+                    var a = getElementById('no');
+                    a.style.visibility = 'hidden';
+                }
             }
         }
 
-        var x = window.matchMedia("(max-width: 500px)")
+        var x = window.matchMedia("(max-width: 500px)");
 
         myFunction(x);
 

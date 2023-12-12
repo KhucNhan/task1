@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #contaienr {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #container>div {
+            margin-block: 30px;
+            font-size: 32px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+        }
+
+        div>p {
+            margin-left: 25px;
+        }
+
+        input[type="checkbox"] {
+            width: 100px;
+            height: 40px;
+            appearance: none;
+            background-color: gray;
+            outline: none;
+            border-radius: 25px;
+            box-shadow: inset 0 0 2px black;
+            transition: 0.5s;
+        }
+
+        #good-input:checked[type="checkbox"] {
+            background-color: rgb(98, 255, 98);
+        }
+
+        #cheap-input:checked[type="checkbox"] {
+            background-color: rgb(255, 255, 92);
+        }
+
+        #fast-input:checked[type="checkbox"] {
+            background-color: red;
+        }
+
+        input[type="checkbox"]::before {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 25px;
+            transform: scale(1.1);
+            box-shadow: 0 2px 3px black;
+            background-color: white;
+            transition: 0.5s;
+        }
+
+        input:checked[type="checkbox"]::before {
+            left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" onchange="onChange()">
+        <div id="good">
+            <input type="checkbox" name="select" id="good-input">
+            <p>Good</p>
+        </div>
+
+        <div id="cheap">
+            <input type="checkbox" name="select" id="cheap-input">
+            <p>Cheap</p>
+        </div>
+
+        <div id="fast">
+            <input type="checkbox" name="select" id="fast-input">
+            <p>Fast</p>
+        </div>
+    </div>
+
+    <script>
+        function onChange() {
+            let a = document.getElementById('good-input').checked;
+            console.log(a);
+            let b = document.getElementById('cheap-input').checked;
+            console.log(b);
+            let c = document.getElementById('fast-input').checked;
+            console.log(c);
+
+            if (a, b) {
+                if (Math.random() > 0.5) {
+                    document.getElementById('good-input').checked = false;
+                } else {
+                    document.getElementById('fast-input').checked = false;
+                }
+            } else {
+                if (a, c) {
+                    if (Math.random() > 0.5) {
+                        document.getElementById('good-input').checked = false;
+                    } else {
+                        document.getElementById('fast-input').checked = false;
+                    }
+                } else {
+                    if (b, c) {
+                        if (Math.random() > 0.5) {
+                            document.getElementById('cheap-input').checked = false;
+                        } else {
+                            document.getElementById('fast-input').checked = false;
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

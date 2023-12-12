@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            width: 90px;
+            height: 40px;
+            position: relative;
+            padding: 5px;
+        }
+
+        input {
+            width: 0;
+            height: 0;
+            opacity: 0;
+        }
+
+        span {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: aqua;
+            transition: 0.4s;
+            width: 0;
+        }
+
+        span:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 0, 0);
+        }
+
+        input:checked+.slider:before {
+            /* -webkit-transform: translateX(40px); */
+            /* -ms-transform: translateX(40px); */
+            transform: translateX(40px);
+        }
+    </style>
+</head>
+
+<body>
+    <label for="hehe">
+        <input type="checkbox" id="hehe" checked>
+        <span></span>
+    </label>
+</body>
+
+</html>

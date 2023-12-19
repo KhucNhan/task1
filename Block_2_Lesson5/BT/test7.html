@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>giải pt bậc 2</title>
+    <style>
+        body,
+        html,
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        input {
+            width: 10%;
+            margin-block: 10px;
+        }
+
+        button {
+            width: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <p>PT bậc 2: ax^2 + bx + c = d</p>
+        <input required minlength="1" type="text" name="" id="a" placeholder="Nhập a">
+        <input required minlength="1" type="text" name="" id="b" placeholder="Nhập b">
+        <input required minlength="1" type="text" name="" id="c" placeholder="Nhập c">
+        <input required minlength="1" type="text" name="" id="d" placeholder="Nhập d">
+    </form>
+    <button onclick="cal()">Tính</button>
+    <div id="result"></div>
+
+    <script>
+        function cal() {
+            var a = +document.getElementById('a').value;
+            var b = +document.getElementById('b').value;
+            var c = +document.getElementById('c').value;
+            var d = +document.getElementById('d').value;
+            var del = Math.pow(b, 2) - 4 * a * c;
+            var x0 = -b / (2 * a);
+            var x1 = (-b + Math.sqrt(del)) / 2 * a;
+            var x2 = (-b - Math.sqrt(del)) / 2 * a;
+            if (del < 0) {
+                document.getElementById('result').innerHTML = 'PT vô nghiệm.'
+            } else {
+                if (del == 0) {
+                    document.getElementById('result').innerHTML = 'PT có 1 nghiệm là: ' + x0;
+                } else {
+                    document.getElementById('result').innerHTML = 'PT có 2 nghiệm là: ' + x1 + ' và ' + x2;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

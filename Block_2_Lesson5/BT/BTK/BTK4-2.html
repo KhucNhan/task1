@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #container>div {
+            margin-block: 1px;
+            display: flex;
+            align-items: center;
+        }
+
+        input {
+            height: 144.4px;
+            width: 544.4px;
+            appearance: none;
+            outline: none;
+        }
+
+        #pic1:checked {
+            background-image: url('http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part2x1.jpg');
+            background-size: cover;
+        }
+
+        #pic2:checked {
+            background-image: url('http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part3x1.jpg');
+            background-size: cover;
+        }
+
+        #pic3:checked {
+            background-image: url('http://demo.codegym.vn/8/puzzlegame/img/panda_swap_part4x1.jpg');
+            background-size: cover;
+        }
+
+        #pic1 {
+            background-image: url('http://demo.codegym.vn/8/puzzlegame/img/monkey_part3x1.jpg');
+        }
+
+        #pic2 {
+            background-image: url('http://demo.codegym.vn/8/puzzlegame/img/monkey_part4x1.jpg');
+        }
+
+        #pic3 {
+            background-image: url('http://demo.codegym.vn/8/puzzlegame/img/monkey_part5x1.jpg');
+        }
+
+        input::before {
+            content: '';
+            position: absolute;
+            height: 144.4px;
+            width: 544.4px;
+        }
+
+        input:checked::before {
+            right: 1100px;
+            height: 144.4px;
+            width: 544.4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" onchange="onChange()">
+        <div class="div">
+            <input type="checkbox" name="select" id="pic1">
+        </div>
+
+        <div class="div">
+            <input type="checkbox" name="select" id="pic2">
+        </div>
+
+        <div class="div">
+            <input type="checkbox" name="select" id="pic3">
+        </div> 
+    </div>
+
+    <script>
+        function onChange() {
+            var div = document.querySelectorAll('div.div');
+            var a = document.getElementById('pic1').checked;
+            var b = document.getElementById('pic2').checked;
+            var c = document.getElementById('pic3').checked;
+            console.log(div);
+            if ((a  && c && b) ||  (a == false && b == false && c == false)) {
+                
+            }
+        }
+    </script>
+</body>
+
+</html>

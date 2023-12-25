@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="cal0()">C1</button>
+    <button onclick="cal1()">C2</button>
+
+    <script>
+        function cal0() {
+            var num = prompt('Nhập vào 1 số');
+            var length = num.toString().length;
+            var i = 0, a = 0, b = 0, j = 0;
+            for (j = length; j >= 0; j--) {
+                i = num.charAt(j) % 10;
+                a = a * 10 + i;
+                b = Math.round(num.charAt(j) / 10);
+            }
+            if (j < 0) {
+                console.log('Số đảo ngược của ' + num + ' là: ' + a);
+            }
+        }
+
+        function cal1() {
+            var a = +prompt('Nhập vào 1 số');
+            var b = 0;
+            while (a > 0) {
+                b = b * 10 + Math.round(a %10);
+                a = Math.round(a / 10);
+            }
+            console.log('Số đảo ngược là: ' + b);
+        }
+    </script>
+</body>
+
+</html>

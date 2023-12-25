@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var num = 2;
+        var n = +prompt('Nhập vào n số nguyên tố')
+        var count = 1;
+        var check = true;
+        var index = [];
+
+        while (n <= 0) {
+            alert('Nhập lại N');
+        }
+
+        while (count <= n) {
+            for (i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+
+            if (check == true) {
+                index.push(num);
+                count++;
+            }
+            check = true;
+            num++;
+        }
+    console.log(index);
+    </script>
+</body>
+
+</html>

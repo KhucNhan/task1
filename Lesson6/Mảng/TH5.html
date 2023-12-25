@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caro</title>
+    <style>
+        body, html {
+            font-size: 200%;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var table = [
+            ['o', 'o', 'o', 'o', 'o'],
+            ['o', 'o', 'o', 'o', 'o'],
+            ['o', 'o', 'o', 'o', 'o'],
+            ['o', 'o', 'o', 'o', 'o'],
+            ['o', 'o', 'o', 'o', 'o']
+        ];
+        console.log(table);
+        
+        var t;
+        t = '<table width="25px" height="25px" cellspacing="0">';
+        for (i = 0; i < table.length; i++) {
+            t += '<tr>';
+            let j = 0;
+            while (j < table.length) {
+                t += '<td>' + table[i][j] + '</td>';
+                j++
+            }
+            t += '</tr>';
+        }
+        t += '</table>';
+        document.write(t);
+
+        
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = +prompt('Bạn muốn dãy số có bao nhiêu số ?');
+        var index = [];
+        var i = 0;
+        
+        while (i < a) {
+            index[i] = +prompt('Nhập số thứ ' + (i + 1) + '/' + a);
+            i++;
+        }
+        console.log('Dãy số là:');
+        console.log(index);
+
+        for (y = index.length - 1, x = 0; x < y ; y--, x++) {
+            let z = index[x];
+            index[x] = index[y];
+            index[y] = z;
+        }
+        console.log('Dãy số sau khi đảo ngược là:');
+        console.log(index);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = 1;
+        var j = 2;
+        var x;
+        x = '<table border="1" width="fit-content">';
+        while (i <= 9) {
+            x += "<tr>";
+                while (j <=9) {
+                    x += '<td>' + j + ' x ' + i + ' = ' + i * j + '</td>';
+                    j++;
+                }
+            x += "</tr>";
+            j = 2;
+            i++;
+        }
+        x += '</table>';
+        document.write(x);
+    </script>
+</body>
+</html>

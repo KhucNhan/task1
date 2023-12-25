@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num">
+    <button onclick="cal()">Check</button>
+    <script>
+        function cal() {
+            var a = +document.getElementById('num').value;
+            var i = 0;
+            while (i <= Math.sqrt(a)) {
+                if (Math.sqrt(a) % i == 0) {
+                    alert(a + 'không phải số nguyên tố');
+                } else {
+                    alert(a + 'là số nguyên tố');
+                }
+                i++;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="start()">Play</button>
+    <div id="result"></div>
+    <script>
+        function start() {
+            var max = +prompt('Nhập vào đây số lớn nhất trong dãy');
+            var min = +prompt('Nhập vào đây số bé nhất trong dãy');
+            var random = Math.round((Math.random() * (max - min + 1)) + min);
+            var i = 0;
+            do {
+                var c = +prompt('Đoán số');
+                i++;
+                while (random == c) {
+                    alert("Congratulations !");
+                }
+            } while (i < 3);
+            alert("Số đúng là: " + random);
+        }
+    </script>
+</body>
+
+</html>

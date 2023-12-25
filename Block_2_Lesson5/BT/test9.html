@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            & input {
+                height: 20px;
+                margin-block: 10px;
+            }
+            &  button {
+                margin-block:5px;
+                width: fit-content;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <input style="padding-left: 5px;" placeholder="Nhập điểm kiểm tra" type="text" id="exam">
+        <input style="padding-left: 5px;" placeholder="Nhập điểm giữa kỳ" type="text" id="mid">
+        <input style="padding-left: 5px;" placeholder="Nhập điểm cuối kỳ" type="text" id="final">
+        <button onclick="cal()">Caculate</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function cal() {
+            let exam = +document.getElementById('exam').value;
+            let mid = +document.getElementById('mid').value;
+            let final = +document.getElementById('final').value;
+            console.log(exam, mid, final);
+            let avg = (exam + mid*2 + final*3)/6;
+            console.log(avg);
+
+            if (avg > 8) {
+                document.getElementById('result').innerHTML = 'Điểm: ' + avg + '<br>' + 'Xếp loại: Giỏi';
+            } else {
+                if (avg > 6) {
+                    document.getElementById('result').innerHTML = 'Điểm: ' + avg + '<br>' + 'Xếp loại: Khá';
+                } else {
+                    document.getElementById('result').innerHTML = 'Điểm: ' + avg + '<br>' + 'Xếp loại: Trung Bình';
+                }
+            }
+        }    
+    </script>
+</body>
+
+</html>

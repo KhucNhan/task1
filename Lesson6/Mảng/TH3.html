@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var a = +prompt('Bạn muốn dãy số có bao nhiêu số ?');
+        var index = [];
+        var i = 0;
+        while (i < a) {
+            index[i] = +prompt('Nhập số thứ ' + (i + 1) + '/' + a);
+            i++;
+        }
+
+        for (j = 0, max = index[j]; j < a; j++) {
+            if (max < index[(j + 1)]) {
+                max = index[(j + 1)];
+            }
+        }
+        alert('Max là: ' + max);
+    </script>
+</body>
+
+</html>

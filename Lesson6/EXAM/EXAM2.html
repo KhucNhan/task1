@@ -17,21 +17,22 @@
         function cal() {
             var a = +document.getElementById('day').value;
 
-            if (a > 31) {
-                alert('Hãy nhập đúng số ngày sinh !!!');
-            }
-
-            for (i = 0; i <= a; i++) {
-                if (i % 2 == 0) {
-                    leg.push(i);
-                } else {
-                    alternate.push(i);
+            if (a < 32) {
+                for (i = 0; i <= a; i++) {
+                    if (i % 2 == 0) {
+                        leg.push(i);
+                    } else {
+                        alternate.push(i);
+                    }
                 }
-            }
-            if (a % 2 == 0) {
-                console.log(leg)
+
+                if (a % 2 == 0) {
+                    console.log(leg)
+                } else {
+                    console.log(alternate)
+                }
             } else {
-                console.log(alternate)
+                alert('Hãy nhập đúng số ngày sinh !!!')
             }
         }
     </script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="kiemtra">Mã sinh viên</label>
+    <input type="number" name="kiemtra" id="kiemtra">
+    <button onclick="masinhvien()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function masinhvien() {
+            var kiemtra = document.getElementById('kiemtra').value;
+            var number = true;
+            if (kiemtra === 1) {
+                number = false;
+            } else if (kiemtra > 1) {
+                for (var i = 2; i < kiemtra; i++) {
+                    if (kiemtra % i === 0) {
+                        number = false;
+                        break;
+                    }
+                }
+            } else {
+                number = false;
+            }
+            if (number) {
+                document.getElementById('result').innerText = kiemtra + " là số nguyên tố";
+            } else {
+                document.getElementById('result').innerText = kiemtra + " không phải là số nguyên tố";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        textarea {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            font-size: 40px;
+        }
+
+        div {
+            font-size: 40px;
+            text-align: left;
+            display: flex;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+
+        table {
+            width: 75%;
+            height: 75%;
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1px" onchange="trans()">
+        <tr style="height: 60px; font-size: 40px; padding-block: 10px">
+            <td>English</td>
+            <td>Vietnamese</td>
+        </tr>
+        <tr>
+            <td style="width: 50%;">
+                <textarea id="eng">
+
+                </textarea>
+            </td>
+            <td style="width: 50%; position: relative;">
+                <div id="vie">
+
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        var engDic = ['apple', 'banana', 'mango', 'dragon fruit', 'coconut', 'dragon fruit noodle', 'content', 'sam', 'khanh'];
+        var vieDic = ['táo', 'chuối', 'xoài', 'thanh long', 'dừa', 'mỳ thanh long', 'nội dung', 'djtme Sâm', 'djtme Khánh'];
+
+        function trans() {
+        var eng = document.getElementById('eng').value;
+        var engT = eng.trim();
+        // console.log(engT);
+            for (i = 0; i < engDic.length; i++) {
+                if (engDic[i] == engT) {
+                    document.getElementById('vie').innerHTML = vieDic[i];
+                    break;
+                } else {
+                    document.getElementById('vie').innerHTML = "Dùng free chỉ thế thôi, sang web khác mà tra =))))";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

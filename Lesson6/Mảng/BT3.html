@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var bold = 'ASDFGHJKLZXCVBNMQWERTYUIOP';
+        var unB = 'asdfghjklzxcvbnmqwertyuiop';
+        var index = [];
+        var str = prompt('viết gì đó và tôi sẽ đổi kiểu chữ viết hoa - viết thường');
+        console.log(str);
+
+        for (i = 0; i < str.length; i++) {
+            let j = 0;
+            while (j < bold.length) {
+                if (str[i] == bold[j]) {
+                    index.push(unB[j]);
+                    break;
+                } else if (str[i] == unB[j]) {
+                    index.push(bold[j]);
+                    break;
+                } else if (str[i] == ' ') {
+                    index.push(' ');
+                    break;
+                }
+                j++;
+            }
+        }
+        console.log(index.join(''));
+    </script>
+</body>
+
+</html>

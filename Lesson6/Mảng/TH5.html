@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caro</title>
     <style>
-        body, html {
+        body,
+        html {
             font-size: 200%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        td {
+            vertical-align: middle;
+            height: 75px;
+            width: 75px;
+        }
+
+        button {
+            position: relative;
+            right: 20px;
         }
     </style>
 </head>
+
 <body>
+    <button onclick="play()">Play</button>
+    <div id="result"></div>
     <script>
         var table = [
             ['o', 'o', 'o', 'o', 'o'],
@@ -20,9 +41,9 @@
             ['o', 'o', 'o', 'o', 'o']
         ];
         console.log(table);
-        
+
         var t;
-        t = '<table width="25px" height="25px" cellspacing="0">';
+        t = '<table>';
         for (i = 0; i < table.length; i++) {
             t += '<tr>';
             let j = 0;
@@ -33,9 +54,33 @@
             t += '</tr>';
         }
         t += '</table>';
-        document.write(t);
+        document.getElementById('result').innerHTML = t;
 
-        
-</script>
+        function play() {
+            var a = +prompt('Nhập vị trí hàng');
+            var b = +prompt('Nhập vị trí cột');
+
+            if (a < 6 && b < 6) {
+                table[a - 1][b - 1] = 'x';
+                // console.log(table);
+                var t;
+                t = '<table>';
+                for (i = 0; i < table.length; i++) {
+                    t += '<tr>';
+                    let j = 0;
+                    while (j < table.length) {
+                        t += '<td>' + table[i][j] + '</td>';
+                        j++
+                    }
+                    t += '</tr>';
+                }
+                t += '</table>';
+                document.getElementById('result').innerHTML = t;
+            } else {
+                alert('vui lòng nhập giá trị từ 1 đến 5')
+            }
+        }
+    </script>
 </body>
+
 </html>

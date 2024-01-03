@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function theConfirm(answer) {
+            let result = '';
+            if (answer) {
+                result = "welcome to messenger";
+            } else {
+                result = 'who the hell are you ?';
+            }
+            return result;
+        }
+        
+        let sayAnswer = confirm('are you the owner of this account ?');
+        alert(theConfirm(sayAnswer));
+    </script>
+</body>
+
+</html>

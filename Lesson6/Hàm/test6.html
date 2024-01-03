@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // Truyền tham trị (Passing by value of primitives values)
+        function square(x) {
+            x = x * x;
+        }
+        let y = 10;
+        square(y);
+        console.log(y); // -- no change
+
+
+
+        // Truyền tham chiếu(Passing by value of references)
+        function turnOn(machine) {
+            machine.isOn = true;
+        }
+        let computer = {
+            isOn: false
+        };
+        turnOn(computer);
+        console.log(computer.isOn); // -- change to true;
+    </script>
+</body>
+
+</html>

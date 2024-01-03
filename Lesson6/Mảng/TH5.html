@@ -30,15 +30,16 @@
 </head>
 
 <body>
-    <button onclick="play()">Play</button>
+    <button onclick="playx()">Play x</button>
+    <button onclick="playo()">Play o</button>
     <div id="result"></div>
     <script>
         var table = [
-            ['o', 'o', 'o', 'o', 'o'],
-            ['o', 'o', 'o', 'o', 'o'],
-            ['o', 'o', 'o', 'o', 'o'],
-            ['o', 'o', 'o', 'o', 'o'],
-            ['o', 'o', 'o', 'o', 'o']
+            ['-', '-', '-', '-', '-'],
+            ['-', '-', '-', '-', '-'],
+            ['-', '-', '-', '-', '-'],
+            ['-', '-', '-', '-', '-'],
+            ['-', '-', '-', '-', '-']
         ];
         console.log(table);
 
@@ -56,12 +57,37 @@
         t += '</table>';
         document.getElementById('result').innerHTML = t;
 
-        function play() {
+        function playx() {
             var a = +prompt('Nhập vị trí hàng');
             var b = +prompt('Nhập vị trí cột');
 
             if (a < 6 && b < 6) {
                 table[a - 1][b - 1] = 'x';
+                // console.log(table);
+                var t;
+                t = '<table>';
+                for (i = 0; i < table.length; i++) {
+                    t += '<tr>';
+                    let j = 0;
+                    while (j < table.length) {
+                        t += '<td>' + table[i][j] + '</td>';
+                        j++
+                    }
+                    t += '</tr>';
+                }
+                t += '</table>';
+                document.getElementById('result').innerHTML = t;
+            } else {
+                alert('vui lòng nhập giá trị từ 1 đến 5')
+            }
+        }
+
+        function playo() {
+            var c = +prompt('Nhập vị trí hàng');
+            var d = +prompt('Nhập vị trí cột');
+
+            if (c < 6 && d < 6) {
+                table[c - 1][d - 1] = 'o';
                 // console.log(table);
                 var t;
                 t = '<table>';

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="m" type="number" placeholder=" Meters">
+    <div id="outputF"></div><br>
+
+    <input id="f" placeholder=" Feet" type="number">
+    <div id="outputM"></div> <br><br>
+
+    <button onclick="mm()">Change Meters to Feet</button>
+    <button onclick="ff()">Change Feet to Meters</button>
+
+    <script>
+
+        function mm() {
+            var m = document.getElementById('m').value;
+            document.getElementById('outputF').innerHTML = m + ' meters = ' + m * 3.279 + ' feet';
+        }
+
+        function ff() {
+            var f = document.getElementById('f').value;
+            document.getElementById('outputM').innerHTML = f + ' feet = ' + f * 0.305 + ' meters';
+        }
+    </script>
+</body>
+
+</html>

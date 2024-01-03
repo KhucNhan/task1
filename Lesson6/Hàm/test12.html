@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var index = [1, 3, 4, 2, 5 ,1 ,7];
+        var num = +prompt('Bạn muốn tìm số?');
+        var count = 0;
+        var position = null;
+        function find(arr) {
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i] == num) {
+                    count += 1;
+                    position = i + 1;
+                    alert(num + ' ở vị trí thứ ' + position);
+                } else if (count == 0) {
+                    alert('Không tìm thấy ' + num);
+                }
+            }
+            alert(num + ' lặp lại ' + count + ' lần');
+        }
+        find(index);
+    </script>
+</body>
+</html>

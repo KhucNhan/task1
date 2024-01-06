@@ -68,7 +68,7 @@
 
         function edit(i) {
             let nameProduct = document.getElementById('name' + i);
-            nameProduct = prompt('Đổi tên sản phẩm');
+            nameProduct = prompt('Đổi tên sản phẩm', nameProduct.textContent);
             document.getElementById('name' + i).innerHTML = nameProduct; // thay đổi giao diện
             productList[i] = nameProduct; // thay đổi giá trị trong mảng
         }

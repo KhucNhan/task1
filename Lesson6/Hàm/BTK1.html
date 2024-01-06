@@ -42,7 +42,7 @@
         }
 
         hr {
-            margin-top:20px;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -63,14 +63,14 @@
             let element = document.getElementById('product' + i);
             element.remove(); // xóa sự hiện diện
             productList.splice(i, 1); // xóa dữ liệu trong mảng
-            table();
-            // console.log(productList, i);
+            table(); // tạo lại bảng với dữ liệu mới
         }
 
         function edit(i) {
             let nameProduct = document.getElementById('name' + i);
             nameProduct = prompt('Đổi tên sản phẩm');
-            document.getElementById('name' + i).innerHTML = nameProduct;
+            document.getElementById('name' + i).innerHTML = nameProduct; // thay đổi giao diện
+            productList[i] = nameProduct; // thay đổi giá trị trong mảng
         }
 
 
@@ -78,8 +78,7 @@
         // hàm thêm sản phẩm vào mảng và hiển thị lại trang
         function Add() {
             productList.push(document.getElementById('addItem').value);
-            table();
-            // console.log(productList.length);
+            table(); // tạo lại bảng với dữ liêu mới
         }
 
 
@@ -90,17 +89,14 @@
 
 
         // tạo ô input thêm phần tử.
-        var c = '<input type="text" style="border-radius:5px;" placeholder="Add item here"  id="addItem">';
-
-
-
-        // tạo dòng thông tin
-        var d = '<hr><div style="width:527px;position:relative;"><pre style="font-weight: 700; font-size: 16px;">Product Name</pre><pre style="position:absolute; bottom: -18.5px; right:0; font-size:16px;">' + productList.length + ' Items' + '</pre></div>';
+        var c = '<input type="text" style="border-radius:5px;" placeholder="Add item here"  id="addItem">'
 
 
 
         // hàm tạo và gọi bảng
         function table() {
+            // tạo dòng thông tin
+            var d = '<hr><div style="width:527px;position:relative;"><pre style="font-weight: 700; font-size: 16px;">Product Name</pre><pre style="position:absolute; bottom: -18.5px; right:0; font-size:16px; color: red;">' + productList.length + ' Items' + '</pre></div>';
             var a;
             a = '<table cellspacing="0" id="table">';
             for (i = 0; i < productList.length; i++) {

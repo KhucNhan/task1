@@ -101,20 +101,12 @@
             a = '<table cellspacing="0" id="table">';
             for (i = 0; i < productList.length; i++) {
                 if (i % 2 == 0) {
-                    // a += '<tr>';
-                    // a += '<td style="font-size:700;">Product Name</td>';
-                    // a += '<td style="float:right">' + product.length + '</td>';
-                    // a += '</tr>';
                     a += '<tr style="background-color:white;" id="product' + i + '">';
                     a += '<td id="name' + i + '">' + productList[i] + '</td>';
                     a += '<td><button onclick="edit(' + i + ')">Edit</button></td>';
                     a += '<td><button onclick="del(' + i + ')">Remove</button></td>';
                     a += '</tr>';
                 } else {
-                    // a += '<tr>';
-                    // a += '<td style="font-size:700;">Product Name</td>';
-                    // a += '<td style="float:right">' + product.length + '</td>';
-                    // a += '</tr>';
                     a += '<tr style="background-color:lightgray;" id="product' + i + '">';
                     a += '<td style="background-color:lightgray;" id="name' + i + '">' + productList[i] + '</td>';
                     a += '<td style="background-color:lightgray;"><button onclick="edit(' + i + ')">Edit</button></td>';

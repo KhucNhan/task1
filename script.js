@@ -39,7 +39,7 @@ function spinWheel() {
         
         // Cách xác định số gần nhất với mũi tên
         const angleOffset = (360 / segments) / 2; // Góc giữa các số
-        const finalResultIndex = 9;
+        const finalResultIndex = 5;
 
         document.getElementById('result').innerText = `Kết quả: ${finalResultIndex + 1}`;
 

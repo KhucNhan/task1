@@ -29,8 +29,10 @@ h1 {
 }
 
 canvas {
+    position: relative; /* Để có thể đặt mũi tên lên canvas */
     border: 5px solid rgba(255, 255, 255, 0.8);
     border-radius: 50%;
+    left: 50px;
 }
 
 .arrow {
@@ -46,6 +48,8 @@ canvas {
 }
 
 button {
+    position: relative; /* Để có thể đặt mũi tên lên canvas */
+    top: 60px;
     background: linear-gradient(45deg, #ff0080, #ff8c00);
     border: none;
     padding: 15px 30px;
@@ -61,7 +65,10 @@ button:hover {
     background: linear-gradient(45deg, #ff8c00, #ff0080);
 }
 
-h2 {
+p {
+    position: relative;
+    right: 200px;
     font-size: 1.5rem;
     margin-top: 20px;
+    font-weight: 700;
 }

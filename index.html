@@ -932,6 +932,9 @@
       }
 
 
+      var numbersToShow = ["04", "05"]; // Thay đổi thứ tự tại đây
+      var currentIndex = 0;
+
       function quay() {
          var check2o = document.getElementById('chk2O').checked;
 
@@ -965,7 +968,7 @@
 
 
 
-               
+
 
 
 
@@ -1006,6 +1009,7 @@
                   var arr = catra.split(',');
 
                   var chay = 0;
+
                   var gioihan = parseInt($('#slTocDo').val() + '0');
                   var rd = 0;
                   var audio = new Audio('sm-spin.mp3');
@@ -1015,10 +1019,15 @@
                      rd = Math.floor(Math.random() * arr.length);
 
                      if (chay == gioihan) {
-                        $('#loadingnha').html(fakeData);
-                        var audio2 = new Audio('fanfare-winner.mp3');
-                        audio2.play();
-                        clearInterval(refreshIntervalId);
+                        if (currentIndex < numbersToShow.length) {
+                           $('#loadingnha').html(numbersToShow[currentIndex]);
+                           currentIndex++;
+                           var audio2 = new Audio('fanfare-winner.mp3');
+                           audio2.play();
+                           clearInterval(refreshIntervalId);
+                        } else {
+                           $('#loadingnha').html(fakeData);
+                        }
                      } else {
                         chay += 1;
                         $('#loadingnha').html(arr[rd]);
